@@ -1,20 +1,57 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import { useParams, useRouter } from "next/navigation";
+import { useParams, useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import TitleNodeLogo from "@/components/TitleNodeLogo";
 
-import { getUnverifiedMutation, verifyMutation, BACKEND_HOST } from "@/lib/api";
+import { 
+  getUnverifiedMutation, 
+  verifyMutation, 
+  getSurveyTimeline, 
+  scrapeLandRecord, 
+  aiAutofillMutation,
+  getGeminiStatus,
+  saveGeminiKey,
+  BACKEND_HOST 
+} from "@/lib/api";
+import { fixMojibake } from "@/lib/encoding";
 
 export default function ReviewPipeline() {
   const params = useParams();
   const router = useRouter();
+  const searchParams = useSearchParams();
   const surveyId = params.survey_id as string;
+  const villageCode = searchParams.get("village") || searchParams.get("village_code") || undefined;
   
   const [task, setTask] = useState<any>(null);
   const [formData, setFormData] = useState<any>({});
+  const [prevOwnersInput, setPrevOwnersInput] = useState<string>("");
+  const [newOwnersInput, setNewOwnersInput] = useState<string>("");
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
+
+  // Gemini AI Auto-Fill State
+  const [isAiAutofilling, setIsAiAutofilling] = useState(false);
+  const [aiAutofillMsg, setAiAutofillMsg] = useState<string | null>(null);
+  const [showKeyModal, setShowKeyModal] = useState(false);
+  const [geminiStatus, setGeminiStatus] = useState<{ has_key: boolean; masked_key: string | null; model: string }>({
+    has_key: false,
+    masked_key: null,
+    model: "gemini-3.8-flash"
+  });
+  const [apiKeyInput, setApiKeyInput] = useState("");
+  const [savingKey, setSavingKey] = useState(false);
+  const [keySaveMsg, setKeySaveMsg] = useState<string | null>(null);
+
+  // Multi-page switcher for authentic uncropped deed scans
+  const [currentPageIdx, setCurrentPageIdx] = useState<number>(0);
+
+  // Advanced empty state and in-review scraper
+  const [emptyState, setEmptyState] = useState<"checking" | "not_scraped" | "all_verified">("checking");
+  const [verifiedCount, setVerifiedCount] = useState<number>(0);
+  const [isScrapingLive, setIsScrapingLive] = useState(false);
+  const [scrapeLiveStatus, setScrapeLiveStatus] = useState("Establishing secure connection to AnyRoR...");
+  const [scrapeLiveError, setScrapeLiveError] = useState<string | null>(null);
 
   // Advanced Pan & Zoom Canvas State
   const [zoomLevel, setZoomLevel] = useState(1);
@@ -24,31 +61,72 @@ export default function ReviewPipeline() {
   const [viewMode, setViewMode] = useState<"official" | "raw">("official");
   const containerRef = useRef<HTMLDivElement>(null);
 
+  // Check Gemini Status on mount
+  useEffect(() => {
+    getGeminiStatus()
+      .then(res => setGeminiStatus(res))
+      .catch(e => console.warn("Gemini status check failed:", e));
+  }, []);
+
   // Load real unverified task from PostgreSQL
   const loadNextTask = async () => {
     setLoading(true);
     try {
-      const res = await getUnverifiedMutation(surveyId);
+      const res = await getUnverifiedMutation(surveyId, villageCode);
       if (res && res.data) {
-        setTask(res.data);
-        const draft = res.data.final_verified_data || res.data.ai_draft_data || {};
+        const cleanTask = fixMojibake(res.data);
+        setTask(cleanTask);
+        const draft = fixMojibake(cleanTask.final_verified_data || cleanTask.ai_draft_data || {});
+        const rawHtmlData = fixMojibake(cleanTask.scraped_html_text || {});
         
+        const initialDetails = draft.remarks_summary || rawHtmlData.details || rawHtmlData.Details || "";
+        const initialOfficerRemarks = draft.officer_remarks || rawHtmlData.officer_remarks || "";
+        const initialDate = draft.entry_date || rawHtmlData.entry_date || cleanTask.entry_date || "";
+        const initialType = draft.transaction_type || rawHtmlData.transaction_type || cleanTask.transaction_type || "";
+        const initialStatus = draft.status || rawHtmlData.status || cleanTask.status || "પ્રમાણિત";
+
         // Explicitly lock survey number default to current searched survey
         const cleanSurveyNo = draft.survey_numbers ? String(draft.survey_numbers) : surveyId;
         const targetSurvey = cleanSurveyNo.includes(surveyId) ? surveyId : (cleanSurveyNo || surveyId);
 
         setFormData({
           ...draft,
-          survey_numbers: targetSurvey
+          survey_numbers: targetSurvey,
+          entry_date: initialDate,
+          transaction_type: initialType,
+          status: initialStatus,
+          remarks_summary: initialDetails,
+          officer_remarks: initialOfficerRemarks,
         });
+
+        // Initialize local string inputs for owners
+        const pOwners = draft.previous_owners;
+        setPrevOwnersInput(Array.isArray(pOwners) ? pOwners.join(", ") : (pOwners || ""));
+        const nOwners = draft.new_owners;
+        setNewOwnersInput(Array.isArray(nOwners) ? nOwners.join(", ") : (nOwners || ""));
+
+        setCurrentPageIdx(0);
         setZoomLevel(1);
         setPan({ x: 0, y: 0 });
       } else {
-        setTask(null); // Triggers Queue Cleared / Completed screen
+        setTask(null);
+        try {
+          const timelineRes = await getSurveyTimeline(surveyId, true, villageCode);
+          const entries = timelineRes?.data || [];
+          if (entries.length > 0) {
+            setVerifiedCount(entries.length);
+            setEmptyState("all_verified");
+          } else {
+            setEmptyState("not_scraped");
+          }
+        } catch {
+          setEmptyState("not_scraped");
+        }
       }
     } catch (err) {
       console.error("Error fetching unverified mutation:", err);
       setTask(null);
+      setEmptyState("not_scraped");
     } finally {
       setLoading(false);
     }
@@ -56,19 +134,84 @@ export default function ReviewPipeline() {
 
   useEffect(() => {
     loadNextTask();
-  }, [surveyId]);
+  }, [surveyId, villageCode]);
 
   const handleChange = (field: string, value: any) => {
-    setFormData({ ...formData, [field]: value });
+    setFormData((prev: any) => ({ ...prev, [field]: value }));
+  };
+
+  // Run On-Demand AI Auto-Fill via Gemini
+  const handleAiAutofill = async () => {
+    if (!task) return;
+    setIsAiAutofilling(true);
+    setAiAutofillMsg("Analyzing with Gemini AI...");
+    try {
+      const res = await aiAutofillMutation(task.id);
+      if (res && res.ai_draft_data) {
+        const d = res.ai_draft_data;
+        setFormData((prev: any) => ({
+          ...prev,
+          ...d,
+          survey_numbers: prev.survey_numbers || surveyId,
+        }));
+        const pOwners = d.previous_owners;
+        setPrevOwnersInput(Array.isArray(pOwners) ? pOwners.join(", ") : (pOwners || ""));
+        const nOwners = d.new_owners;
+        setNewOwnersInput(Array.isArray(nOwners) ? nOwners.join(", ") : (nOwners || ""));
+        
+        const sourceLabel = d.ai_source?.startsWith("gemini") ? "Gemini 3.8 Flash" : "Gujarati Revenue NLP";
+        setAiAutofillMsg(`✓ Auto-filled by ${sourceLabel}`);
+        setTimeout(() => setAiAutofillMsg(null), 4000);
+      }
+    } catch (err: any) {
+      console.error("AI Auto-fill error:", err);
+      setAiAutofillMsg("Auto-fill analysis failed");
+      setTimeout(() => setAiAutofillMsg(null), 3000);
+    } finally {
+      setIsAiAutofilling(false);
+    }
+  };
+
+  // Save Gemini Key
+  const handleSaveKey = async () => {
+    if (!apiKeyInput.trim()) return;
+    setSavingKey(true);
+    setKeySaveMsg(null);
+    try {
+      await saveGeminiKey(apiKeyInput.trim());
+      const updated = await getGeminiStatus();
+      setGeminiStatus(updated);
+      setKeySaveMsg("✓ Gemini API Key saved successfully!");
+      setApiKeyInput("");
+      setTimeout(() => {
+        setKeySaveMsg(null);
+        setShowKeyModal(false);
+      }, 1500);
+    } catch (err: any) {
+      setKeySaveMsg("Error: " + (err.message || "Failed to save key"));
+    } finally {
+      setSavingKey(false);
+    }
   };
 
   const handleApprove = async () => {
     if (!task) return;
     setSaving(true);
     try {
+      const parsedPrevOwners = prevOwnersInput
+        .split(",")
+        .map((s: string) => s.trim())
+        .filter(Boolean);
+      const parsedNewOwners = newOwnersInput
+        .split(",")
+        .map((s: string) => s.trim())
+        .filter(Boolean);
+
       const payloadToSave = {
         ...formData,
-        survey_numbers: formData.survey_numbers || surveyId
+        survey_numbers: formData.survey_numbers || surveyId,
+        previous_owners: parsedPrevOwners,
+        new_owners: parsedNewOwners
       };
       await verifyMutation(task.id, payloadToSave);
       await loadNextTask();
@@ -115,6 +258,36 @@ export default function ReviewPipeline() {
     setZoomLevel(prev => Math.min(Math.max(0.5, Number((prev + delta).toFixed(2))), 4.0));
   };
 
+  const handleScrapeFromReview = async () => {
+    setIsScrapingLive(true);
+    setScrapeLiveError(null);
+    setScrapeLiveStatus("Connecting to AnyRoR Revenue Portal...");
+    
+    const messages = [
+      "Connecting to AnyRoR Revenue Portal...",
+      "Resolving ASP.NET Session & Cascading Dropdowns...",
+      "Solving 6-digit dynamic CAPTCHA via PyTorch CNN...",
+      "Downloading VF-7, VF-8A & Historical Deed Scans...",
+      "Ingesting mutation lineage into PostgreSQL..."
+    ];
+    let msgIdx = 0;
+    const interval = setInterval(() => {
+      msgIdx = (msgIdx + 1) % messages.length;
+      setScrapeLiveStatus(messages[msgIdx]);
+    }, 2500);
+
+    try {
+      await scrapeLandRecord("07", "08", villageCode || "001", surveyId);
+      await loadNextTask();
+    } catch (err: any) {
+      console.error("Scrape from review failed:", err);
+      setScrapeLiveError(err?.message || "Failed to extract land record from AnyRoR.");
+    } finally {
+      clearInterval(interval);
+      setIsScrapingLive(false);
+    }
+  };
+
   if (loading) return (
     <div className="flex h-screen flex-col items-center justify-center bg-[#F8F0E5]">
       <svg className="animate-spin h-8 w-8 text-[#0F2C59] mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
@@ -122,36 +295,121 @@ export default function ReviewPipeline() {
     </div>
   );
   
-  if (!task) return (
-    <div className="flex flex-col h-screen items-center justify-center gap-6 bg-[#F8F0E5]">
-      <div className="w-20 h-20 bg-[#0F2C59] rotate-90 rounded-sm flex items-center justify-center text-[#DAC0A3] shadow-lg">
-        <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+  if (!task) {
+    if (isScrapingLive) {
+      return (
+        <div className="flex flex-col h-screen items-center justify-center gap-6 bg-[#F8F0E5] p-6 text-center">
+          <div className="w-16 h-16 rounded-full border-4 border-[#0F2C59]/20 border-t-[#0F2C59] animate-spin mb-2"></div>
+          <h2 className="text-2xl font-bold text-[#0F2C59]">Extracting Survey {surveyId} from AnyRoR</h2>
+          <p className="text-[#7A5C2E] font-mono text-sm max-w-md bg-white px-4 py-2 border border-[#0F2C59]/10 rounded shadow-sm">
+            &gt;&amp;_ {scrapeLiveStatus}
+          </p>
+          <span className="text-xs text-slate-500">Government portal query in progress. Please do not close this window.</span>
+        </div>
+      );
+    }
+
+    if (emptyState === "not_scraped") {
+      return (
+        <div className="flex flex-col h-screen items-center justify-center gap-6 bg-[#F8F0E5] p-6">
+          <div className="w-20 h-20 bg-amber-100 rounded-sm flex items-center justify-center text-amber-800 shadow-md border border-amber-300">
+            <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+          </div>
+          <div className="text-center max-w-lg">
+            <h2 className="text-2xl font-bold text-[#0F2C59] mb-2">Survey {surveyId} Not Yet Extracted</h2>
+            <p className="text-[#7A5C2E] text-sm mb-6">
+              No land records or mutation deeds currently exist in the database for <strong>Survey {surveyId}</strong> (Village {villageCode || "Hasannagar - 001"}).
+            </p>
+
+            {scrapeLiveError && (
+              <div className="mb-6 p-3 bg-red-50 border border-red-200 text-red-800 text-xs rounded text-left">
+                <strong>Notice:</strong> {scrapeLiveError}
+              </div>
+            )}
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <button
+                onClick={handleScrapeFromReview}
+                className="w-full sm:w-auto bg-[#0F2C59] hover:bg-[#1a407e] text-[#F8F0E5] font-bold py-3 px-8 shadow-md transition-all uppercase tracking-widest text-xs rounded-sm"
+              >
+                🚀 Extract Live from AnyRoR Now
+              </button>
+              <Link 
+                href="/advocate"
+                className="w-full sm:w-auto bg-white hover:bg-slate-100 text-[#0F2C59] border border-[#0F2C59]/30 font-bold py-3 px-6 shadow-sm transition-all uppercase tracking-widest text-xs rounded-sm text-center"
+              >
+                ← Back to Dashboard
+              </Link>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    return (
+      <div className="flex flex-col h-screen items-center justify-center gap-6 bg-[#F8F0E5]">
+        <div className="w-20 h-20 bg-emerald-600 rounded-sm flex items-center justify-center text-white shadow-lg">
+          <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+        </div>
+        <div className="text-center max-w-lg">
+          <h2 className="text-3xl font-bold text-[#0F2C59] mb-2">All Records Verified</h2>
+          <p className="text-[#7A5C2E] font-medium mb-6">
+            All {verifiedCount > 0 ? verifiedCount : ""} mutation deeds and portal entries for <strong className="text-[#0F2C59]">Survey {surveyId}</strong> have been reviewed and committed to the title ledger.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link 
+              href={`/advocate/tree/${surveyId}${villageCode ? `?village=${villageCode}` : ""}`}
+              className="bg-[#0F2C59] hover:bg-[#1a407e] text-[#F8F0E5] font-bold py-3.5 px-8 shadow-xl transition-all uppercase tracking-widest text-xs rounded-sm inline-block"
+            >
+              Compile Final Report & Tree →
+            </Link>
+            <Link 
+              href="/advocate"
+              className="bg-white hover:bg-slate-50 text-[#0F2C59] border border-[#0F2C59]/20 font-bold py-3.5 px-6 shadow-sm transition-all uppercase tracking-widest text-xs rounded-sm inline-block"
+            >
+              ← Dashboard
+            </Link>
+          </div>
+        </div>
       </div>
-      <div className="text-center">
-        <h2 className="text-3xl font-bold text-[#0F2C59] mb-2">Data Structured</h2>
-        <p className="text-[#7A5C2E] font-medium mb-8">All raw nodes for Survey {surveyId} have been successfully verified.</p>
-        <Link 
-          href={`/advocate/tree/${surveyId}`}
-          className="bg-[#0F2C59] hover:bg-[#1a407e] text-[#F8F0E5] font-bold py-4 px-10 shadow-xl transition-all uppercase tracking-widest text-sm rounded-sm inline-block"
-        >
-          Compile Final Report & Tree →
-        </Link>
-      </div>
-    </div>
-  );
+    );
+  }
+
+  // Pages list for authentic uncropped deed scans
+  const allPages: string[] = (
+    task?.ai_draft_data?.all_page_urls && 
+    Array.isArray(task.ai_draft_data.all_page_urls) && 
+    task.ai_draft_data.all_page_urls.length > 0
+  ) 
+    ? task.ai_draft_data.all_page_urls 
+    : (task?.image_file_path ? [task.image_file_path] : []);
+
+  const currentImage = allPages[currentPageIdx] || task?.image_file_path || "";
+  const activeImageUrl = currentImage.startsWith("http") ? currentImage : `${BACKEND_HOST}${currentImage}`;
 
   // Extract raw details from scraped HTML text
-  const rawHtml = task.scraped_html_text;
-  const rawDetails = rawHtml?.Details || rawHtml?.["વિગત"] || rawHtml?.["નોંધની વિગત"] || 
+  const rawHtml = fixMojibake(task.scraped_html_text);
+  const rawDetails = fixMojibake(
+    rawHtml?.details || rawHtml?.Details || rawHtml?.["વિગત"] || rawHtml?.["નોંધની વિગત"] || 
     (typeof rawHtml === "string" ? rawHtml : "") || 
     task.ai_draft_data?.remarks_summary || 
-    "મહેસૂલી ખાતા સુધારણા અને ઇ-ધરા પોર્ટલ ડિજિટલ અપડેટ નોંધ";
+    "વિગત ઉપલબ્ધ નથી"
+  );
 
-  const rawEntryNo = rawHtml?.["Entry Number"] || rawHtml?.["નોંધ નંબર"] || task.entry_number;
-  const rawDate = rawHtml?.Date || rawHtml?.["તારીખ"] || rawHtml?.["નોંધની તારીખ"] || formData.entry_date || "૨૦/૧૧/૨૦૨૩";
-  const rawType = rawHtml?.Type || rawHtml?.["ફેરફારનો પ્રકાર"] || formData.transaction_type || "હુકમથી / ડિજિટલ";
-  const rawStatus = rawHtml?.Status || rawHtml?.["નોંધની સ્થિતિ"] || "પ્રમાણિત";
-  const rawOfficerRemarks = rawHtml?.["Officer Remarks"] || rawHtml?.["તપાસણી કરનાર અધિકારીનો શેરો"] || "નોટીસ બજી છે. હુકમ થી ખાત્રી કરી = પ્રમાણીત = ઇ-ધરા કેન્દ્ર બાવળા";
+  const rawEntryNo = fixMojibake(rawHtml?.entry_number || rawHtml?.["Entry Number"] || rawHtml?.["નોંધ નંબર"] || task.entry_number);
+  const rawDate = fixMojibake(rawHtml?.entry_date || rawHtml?.Date || rawHtml?.["તારીખ"] || rawHtml?.["નોંધની તારીખ"] || task.entry_date || formData.entry_date || "તારીખ ઉપલબ્ધ નથી");
+  const rawType = fixMojibake(rawHtml?.transaction_type || rawHtml?.Type || rawHtml?.["ફેરફારનો પ્રકાર"] || task.transaction_type || formData.transaction_type || "ફેરફાર નોંધ");
+  const rawStatus = fixMojibake(rawHtml?.status || rawHtml?.Status || rawHtml?.["નોંધની સ્થિતિ"] || task.status || formData.status || "પ્રમાણિત");
+  const rawOfficerRemarks = fixMojibake(rawHtml?.officer_remarks || rawHtml?.["Officer Remarks"] || rawHtml?.["તપાસણી કરનાર અધિકારીનો શેરો"] || task.officer_remarks || formData.officer_remarks || "શેરો ઉપલબ્ધ નથી");
+  const rawSurveyNumbers = fixMojibake(rawHtml?.survey_numbers || rawHtml?.["ફેરફારને સંબંધિત સરવે નંબર"] || task.ai_draft_data?.survey_numbers || surveyId);
+
+  // Parse comma or space separated list of survey numbers in Col 3
+  const surveyNumberList = String(rawSurveyNumbers)
+    .split(",")
+    .map((s: string) => s.trim())
+    .filter(Boolean);
+
+  const aiSource = formData.ai_source || task.ai_draft_data?.ai_source || "nlp_fallback";
 
   return (
     <div className="flex h-screen bg-[#F8F0E5] overflow-hidden font-sans">
@@ -177,6 +435,35 @@ export default function ReviewPipeline() {
         
         {task.image_file_path ? (
           <>
+            {/* Multi-page Navigation Bar if deed has multiple scanned pages */}
+            {allPages.length > 1 && (
+              <div className="absolute top-16 left-6 z-20 flex items-center gap-2 bg-[#0F2C59]/95 px-3 py-1.5 rounded-sm backdrop-blur-md border border-[#DAC0A3]/30 shadow-2xl">
+                <button
+                  disabled={currentPageIdx === 0}
+                  onClick={() => {
+                    setCurrentPageIdx(prev => Math.max(0, prev - 1));
+                    resetZoom();
+                  }}
+                  className="text-xs text-[#DAC0A3] hover:text-white px-2 py-1 rounded hover:bg-white/10 disabled:opacity-30 disabled:hover:bg-transparent transition-colors font-bold uppercase"
+                >
+                  ◀ Prev
+                </button>
+                <span className="text-[#F8F0E5] text-xs font-mono font-bold px-1">
+                  Page {currentPageIdx + 1} of {allPages.length}
+                </span>
+                <button
+                  disabled={currentPageIdx === allPages.length - 1}
+                  onClick={() => {
+                    setCurrentPageIdx(prev => Math.min(allPages.length - 1, prev + 1));
+                    resetZoom();
+                  }}
+                  className="text-xs text-[#DAC0A3] hover:text-white px-2 py-1 rounded hover:bg-white/10 disabled:opacity-30 disabled:hover:bg-transparent transition-colors font-bold uppercase"
+                >
+                  Next ▶
+                </button>
+              </div>
+            )}
+
             {/* Zoom & Pan Floating Controls Bar */}
             <div className="absolute top-16 right-8 z-20 flex items-center gap-1.5 bg-[#0F2C59]/95 px-3 py-1.5 rounded-sm backdrop-blur-md border border-[#DAC0A3]/30 shadow-2xl">
               <button 
@@ -216,7 +503,7 @@ export default function ReviewPipeline() {
 
             {/* Hint Badge */}
             <div className="absolute bottom-6 left-8 z-20 bg-black/70 text-[#DAC0A3] px-3 py-1 rounded text-[11px] font-mono backdrop-blur-sm pointer-events-none border border-white/10">
-              ✋ Drag anywhere to pan • 🔍 Scroll wheel to zoom
+              ✋ Drag anywhere to pan • 🔍 Scroll wheel to zoom {allPages.length > 1 ? `• Page ${currentPageIdx + 1}/${allPages.length}` : ""}
             </div>
 
             {/* Infinite Drag & Pan Viewport */}
@@ -238,8 +525,8 @@ export default function ReviewPipeline() {
                 className="relative inline-block"
               >
                 <img 
-                  src={task.image_file_path.startsWith("http") ? task.image_file_path : `${BACKEND_HOST}${task.image_file_path}`} 
-                  alt={`Mutation Entry ${task.entry_number}`} 
+                  src={activeImageUrl} 
+                  alt={`Mutation Entry ${task.entry_number} (Page ${currentPageIdx + 1})`} 
                   draggable={false}
                   className="max-w-none shadow-2xl rounded-sm pointer-events-none select-none"
                   style={{ maxHeight: "75vh" }}
@@ -278,7 +565,7 @@ export default function ReviewPipeline() {
                 {/* Government Header Banner */}
                 <div className="mb-3 flex items-center justify-between text-[#0F2C59] pb-2 border-b border-[#0F2C59]/20">
                   <div className="text-xs font-bold uppercase tracking-wide">
-                    મહેસૂલ વિભાગ, ગુજરાત સરકાર • AnyRoR ગ્રામ્ય મહેસૂલી નોંધ પત્રક
+                    મહેસૂલ વિભાગ, ગુજરાત સરકાર • AnyRoR ગ્રામ્ય મહેસૂલી નોંધ પત્રક (VF-6)
                   </div>
                   <div className="text-xs font-mono font-bold bg-white px-2 py-0.5 border border-[#0F2C59]/20 rounded">
                     સરવે નંબર: {surveyId}
@@ -296,13 +583,13 @@ export default function ReviewPipeline() {
                       <span>ફેરફારનો પ્રકાર</span>
                       <span>નોંધની સ્થિતિ</span>
                     </div>
-                    <div className="col-span-6 p-3 border-r border-[#5c8cd6] flex items-center justify-center">
+                    <div className="col-span-5 p-3 border-r border-[#5c8cd6] flex items-center justify-center">
                       <span>નોંધની વિગત</span>
                     </div>
                     <div className="col-span-2 p-3 border-r border-[#5c8cd6] flex items-center justify-center">
                       <span>ફેરફારને સંબંધિત સરવે નંબર</span>
                     </div>
-                    <div className="col-span-2 p-3 flex items-center justify-center">
+                    <div className="col-span-3 p-3 flex items-center justify-center">
                       <span>તપાસણી કરનાર અધિકારીનો શેરો</span>
                     </div>
                   </div>
@@ -310,7 +597,7 @@ export default function ReviewPipeline() {
                   {/* Table Content Row */}
                   <div className="grid grid-cols-12 bg-[#fdfbf2] text-[13px] leading-relaxed border-b border-[#5c8cd6]">
                     
-                    {/* Col 1: Details / Status */}
+                    {/* Col 1: Entry No, Date, Type, Status */}
                     <div className="col-span-2 p-3.5 border-r border-[#5c8cd6] space-y-1.5 font-medium">
                       <div className="text-base font-extrabold text-[#072d63] tracking-tight">
                         {rawEntryNo}
@@ -326,20 +613,38 @@ export default function ReviewPipeline() {
                       </div>
                     </div>
 
-                    {/* Col 2: Whole Narrative Text Message from AnyRoR */}
-                    <div className="col-span-6 p-4 border-r border-[#5c8cd6] text-slate-900 text-[13.5px] leading-relaxed font-normal whitespace-pre-wrap">
+                    {/* Col 2: Complete Transaction Narrative */}
+                    <div className="col-span-5 p-4 border-r border-[#5c8cd6] text-slate-900 text-[13px] leading-relaxed font-normal whitespace-pre-wrap">
                       {rawDetails}
                     </div>
 
-                    {/* Col 3: Target Survey Number (Strictly clean surveyed number) */}
-                    <div className="col-span-2 p-3.5 border-r border-[#5c8cd6] text-center font-bold text-[#072d63]">
-                      <span className="inline-block bg-blue-50 border border-blue-200 px-2.5 py-1 rounded text-xs">
-                        સરવે નં. {surveyId}
-                      </span>
+                    {/* Col 3: Related Survey Numbers */}
+                    <div className="col-span-2 p-3 border-r border-[#5c8cd6] flex flex-wrap gap-1.5 justify-center items-start content-start">
+                      {surveyNumberList.length > 0 ? (
+                        surveyNumberList.map((sNum: string, idx: number) => {
+                          const isCurrent = sNum.startsWith(surveyId + "(") || sNum === surveyId;
+                          return (
+                            <span
+                              key={idx}
+                              className={`px-2 py-0.5 rounded text-xs font-mono font-bold border ${
+                                isCurrent
+                                  ? "bg-[#072d63] text-white border-[#072d63] shadow-sm ring-1 ring-amber-400"
+                                  : "bg-blue-50 text-blue-900 border-blue-200"
+                              }`}
+                            >
+                              {sNum}
+                            </span>
+                          );
+                        })
+                      ) : (
+                        <span className="bg-blue-50 text-blue-900 border border-blue-200 px-2 py-0.5 rounded text-xs font-mono font-bold">
+                          {surveyId}
+                        </span>
+                      )}
                     </div>
 
                     {/* Col 4: Officer Remarks */}
-                    <div className="col-span-2 p-3 text-xs text-slate-700 leading-relaxed font-medium">
+                    <div className="col-span-3 p-3.5 text-xs text-slate-800 leading-relaxed font-medium whitespace-pre-line bg-amber-50/40">
                       {rawOfficerRemarks}
                     </div>
                   </div>
@@ -361,16 +666,59 @@ export default function ReviewPipeline() {
 
       {/* RIGHT HALF: Advocate Resolution Editor */}
       <div className="w-1/2 p-8 overflow-y-auto bg-[#F8F0E5] flex flex-col">
-        <div className="mb-6 pb-4 border-b border-[#0F2C59]/10 flex justify-between items-start">
+        
+        {/* Title & Phase Bar */}
+        <div className="mb-4 pb-4 border-b border-[#0F2C59]/10 flex justify-between items-start">
           <div>
             <h1 className="text-3xl font-bold text-[#0F2C59] tracking-tight">Node Resolution</h1>
             <p className="text-sm text-[#7A5C2E] mt-1 font-medium">
               Verify title integrity for <strong className="text-[#0F2C59]">Survey {surveyId}</strong> before committing to ledger.
             </p>
           </div>
-          <div className={`px-3 py-1 rounded-sm text-[11px] font-bold uppercase tracking-widest border shadow-sm ${task.image_file_path ? 'bg-indigo-50 text-indigo-800 border-indigo-200' : 'bg-emerald-50 text-emerald-800 border-emerald-200'}`}>
-            {task.image_file_path ? 'Phase 1: Historical OCR' : 'Phase 2: Digital Entry'}
+          <div className="flex flex-col items-end gap-1.5">
+            <span className={`px-3 py-1 rounded-sm text-[11px] font-bold uppercase tracking-widest border shadow-sm ${task.image_file_path ? 'bg-indigo-50 text-indigo-800 border-indigo-200' : 'bg-emerald-50 text-emerald-800 border-emerald-200'}`}>
+              {task.image_file_path ? 'Phase 1: Historical OCR' : 'Phase 2: Digital Entry'}
+            </span>
+            <span className="text-[10px] font-mono text-slate-600 bg-white px-2 py-0.5 rounded border border-[#0F2C59]/10">
+              {aiSource.startsWith("gemini") ? "🤖 Gemini 3.8 Flash Active" : "⚡ Gujarati NLP Active"}
+            </span>
           </div>
+        </div>
+
+        {/* Gemini AI Auto-Fill Action Toolbar */}
+        <div className="mb-5 p-3 bg-white rounded-sm border border-[#0F2C59]/15 shadow-sm flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <button
+              onClick={handleAiAutofill}
+              disabled={isAiAutofilling}
+              className="bg-[#0F2C59] hover:bg-[#1a407e] text-white text-xs font-bold py-2 px-4 rounded-sm shadow-sm flex items-center gap-2 transition-all disabled:opacity-50 uppercase tracking-wider"
+            >
+              {isAiAutofilling ? (
+                <>
+                  <div className="w-3.5 h-3.5 border-2 border-white/20 border-t-white rounded-full animate-spin"></div>
+                  Analyzing with Gemini...
+                </>
+              ) : (
+                <>
+                  ⚡ Auto-Fill with Gemini AI
+                </>
+              )}
+            </button>
+
+            {aiAutofillMsg && (
+              <span className="text-xs font-semibold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded border border-emerald-200 animate-fadeIn">
+                {aiAutofillMsg}
+              </span>
+            )}
+          </div>
+
+          <button
+            onClick={() => setShowKeyModal(true)}
+            className="text-xs text-[#7A5C2E] hover:text-[#0F2C59] font-bold flex items-center gap-1.5 px-3 py-1.5 rounded hover:bg-slate-50 border border-slate-200 transition-colors"
+          >
+            <span>{geminiStatus.has_key ? "🟢 Gemini API Key" : "⚪ Set Gemini Key"}</span>
+            <span className="text-[10px] text-slate-400">({geminiStatus.masked_key || "Not Set"})</span>
+          </button>
         </div>
 
         <div className="space-y-5 flex-1">
@@ -403,38 +751,67 @@ export default function ReviewPipeline() {
             </div>
           </div>
 
-          <div>
-            <label className="block text-xs font-bold text-[#0F2C59] uppercase tracking-wider mb-2">
-              Transaction Type (ફેરફારનો પ્રકાર)
-            </label>
-            <input 
-              type="text" 
-              value={formData.transaction_type || ""} 
-              onChange={(e) => handleChange("transaction_type", e.target.value)} 
-              className="w-full border-b-2 border-[#0F2C59]/20 px-4 py-2.5 bg-white outline-none focus:border-[#0F2C59] text-[#0F2C59] font-medium shadow-sm transition-colors" 
-            />
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="block text-xs font-bold text-[#0F2C59] uppercase tracking-wider mb-2">
+                Transaction Type (ફેરફારનો પ્રકાર)
+              </label>
+              <input 
+                type="text" 
+                value={formData.transaction_type || ""} 
+                onChange={(e) => handleChange("transaction_type", e.target.value)} 
+                className="w-full border-b-2 border-[#0F2C59]/20 px-4 py-2.5 bg-white outline-none focus:border-[#0F2C59] text-[#0F2C59] font-medium shadow-sm transition-colors" 
+              />
+            </div>
+            <div>
+              <label className="block text-xs font-bold text-[#0F2C59] uppercase tracking-wider mb-2">
+                Status (નોંધની સ્થિતિ)
+              </label>
+              <input 
+                type="text" 
+                value={formData.status || "પ્રમાણિત"} 
+                onChange={(e) => handleChange("status", e.target.value)} 
+                className="w-full border-b-2 border-[#0F2C59]/20 px-4 py-2.5 bg-white outline-none focus:border-[#0F2C59] text-[#0F2C59] font-medium shadow-sm transition-colors" 
+              />
+            </div>
           </div>
 
           <div>
-            <label className="block text-xs font-bold text-[#7A5C2E] uppercase tracking-wider mb-2">
-              Previous Owners / Relinquishing Parties (હક જતો કરનાર)
-            </label>
+            <div className="flex justify-between items-center mb-2">
+              <label className="block text-xs font-bold text-[#7A5C2E] uppercase tracking-wider">
+                Previous Owners / Relinquishing Parties (હક જતો કરનાર / ખાતેદાર)
+              </label>
+              {prevOwnersInput && (
+                <span className="text-[10px] text-[#7A5C2E] bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
+                  {prevOwnersInput.split(",").filter(Boolean).length} party/parties extracted
+                </span>
+              )}
+            </div>
             <textarea 
               rows={2} 
-              value={Array.isArray(formData.previous_owners) ? formData.previous_owners.join(", ") : (formData.previous_owners || "")} 
-              onChange={(e) => handleChange("previous_owners", e.target.value.split(",").map((s: string) => s.trim()))} 
+              value={prevOwnersInput} 
+              onChange={(e) => setPrevOwnersInput(e.target.value)} 
+              placeholder="Auto-filled by Gemini AI (e.g. રમેશભાઈ પટેલ, સુરેશભાઈ પટેલ)"
               className="w-full border-l-4 border-[#7A5C2E] px-4 py-2.5 bg-white outline-none focus:ring-1 focus:ring-[#7A5C2E] text-[#0F2C59] shadow-sm resize-none transition-shadow" 
             />
           </div>
 
           <div>
-            <label className="block text-xs font-bold text-green-700 uppercase tracking-wider mb-2">
-              New Owners / Acquiring Parties (હક મેળવનાર)
-            </label>
+            <div className="flex justify-between items-center mb-2">
+              <label className="block text-xs font-bold text-green-700 uppercase tracking-wider">
+                New Owners / Acquiring Parties / Bank (હક મેળવનાર / ધિરાણ આપનાર)
+              </label>
+              {newOwnersInput && (
+                <span className="text-[10px] text-green-800 bg-green-50 px-2 py-0.5 rounded border border-green-200">
+                  {newOwnersInput.split(",").filter(Boolean).length} party/parties extracted
+                </span>
+              )}
+            </div>
             <textarea 
               rows={2} 
-              value={Array.isArray(formData.new_owners) ? formData.new_owners.join(", ") : (formData.new_owners || "")} 
-              onChange={(e) => handleChange("new_owners", e.target.value.split(",").map((s: string) => s.trim()))} 
+              value={newOwnersInput} 
+              onChange={(e) => setNewOwnersInput(e.target.value)} 
+              placeholder="Auto-filled by Gemini AI (e.g. મહેશભાઈ પટેલ અથવા સહકારી બેંક)"
               className="w-full border-l-4 border-green-700 px-4 py-2.5 bg-white outline-none focus:ring-1 focus:ring-green-700 text-[#0F2C59] shadow-sm resize-none transition-shadow" 
             />
           </div>
@@ -450,6 +827,20 @@ export default function ReviewPipeline() {
               className="w-full border-b-2 border-[#0F2C59]/20 px-4 py-2.5 bg-white outline-none focus:border-[#0F2C59] text-[#0F2C59] font-medium shadow-sm resize-none transition-colors leading-relaxed" 
             />
           </div>
+
+          {formData.officer_remarks && (
+            <div>
+              <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-2">
+                Officer Remarks (તપાસણી કરનાર અધિકારીનો શેરો)
+              </label>
+              <textarea 
+                rows={2} 
+                value={formData.officer_remarks || ""} 
+                onChange={(e) => handleChange("officer_remarks", e.target.value)} 
+                className="w-full border-b-2 border-slate-300 px-4 py-2 bg-slate-50 outline-none focus:border-[#0F2C59] text-slate-800 text-xs shadow-sm resize-none" 
+              />
+            </div>
+          )}
         </div>
 
         {/* Commitment Bar */}
@@ -467,6 +858,79 @@ export default function ReviewPipeline() {
           </button>
         </div>
       </div>
+
+      {/* GEMINI API KEY MODAL */}
+      {showKeyModal && (
+        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="bg-white rounded-sm shadow-2xl max-w-md w-full p-6 border border-[#0F2C59]/20 animate-scaleUp">
+            <div className="flex justify-between items-center mb-4 pb-2 border-b border-slate-100">
+              <h3 className="font-bold text-lg text-[#0F2C59]">Google Gemini AI API Key</h3>
+              <button 
+                onClick={() => setShowKeyModal(false)}
+                className="text-slate-400 hover:text-slate-600 text-lg font-bold"
+              >
+                ✕
+              </button>
+            </div>
+
+            <p className="text-xs text-slate-600 mb-4 leading-relaxed">
+              Connect your Google Gemini API Key to enable automated AI OCR on historical deed scans and natural language extraction of parties and mortgagors from AnyRoR Gujarati text records.
+            </p>
+
+            <div className="mb-4 p-3 bg-slate-50 border border-slate-200 rounded text-xs space-y-1">
+              <div className="flex justify-between">
+                <span className="font-semibold text-slate-700">Active Model:</span>
+                <span className="font-mono text-[#0F2C59] font-bold">{geminiStatus.model}</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="font-semibold text-slate-700">Key Status:</span>
+                <span className={`font-bold ${geminiStatus.has_key ? "text-emerald-700" : "text-amber-700"}`}>
+                  {geminiStatus.has_key ? `Connected (${geminiStatus.masked_key})` : "Using Gujarati NLP Fallback"}
+                </span>
+              </div>
+            </div>
+
+            <div className="mb-4">
+              <label className="block text-xs font-bold text-[#0F2C59] uppercase tracking-wider mb-2">
+                Enter Gemini API Key
+              </label>
+              <input
+                type="password"
+                placeholder="AIzaSy..."
+                value={apiKeyInput}
+                onChange={(e) => setApiKeyInput(e.target.value)}
+                className="w-full px-3 py-2 border border-slate-300 rounded text-sm font-mono focus:border-[#0F2C59] outline-none"
+              />
+              <span className="text-[11px] text-slate-500 mt-1 block">
+                Get a free key at <a href="https://aistudio.google.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">aistudio.google.com</a>
+              </span>
+            </div>
+
+            {keySaveMsg && (
+              <div className={`p-2 mb-4 text-xs rounded ${keySaveMsg.startsWith("✓") ? "bg-emerald-50 text-emerald-800 border border-emerald-200" : "bg-red-50 text-red-800 border border-red-200"}`}>
+                {keySaveMsg}
+              </div>
+            )}
+
+            <div className="flex justify-end gap-2 pt-2">
+              <button
+                onClick={() => setShowKeyModal(false)}
+                className="px-4 py-2 text-xs font-bold text-slate-600 hover:bg-slate-100 rounded"
+              >
+                Close
+              </button>
+              <button
+                onClick={handleSaveKey}
+                disabled={savingKey || !apiKeyInput.trim()}
+                className="px-5 py-2 text-xs font-bold text-white bg-[#0F2C59] hover:bg-[#1a407e] rounded disabled:opacity-50 uppercase tracking-wider"
+              >
+                {savingKey ? "Saving..." : "Save Key"}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 }

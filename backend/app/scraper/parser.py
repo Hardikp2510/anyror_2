@@ -2,6 +2,7 @@ import re
 from bs4 import BeautifulSoup
 from pydantic import BaseModel
 from typing import Dict, Any, List
+from app.utils.encoding import fix_mojibake
 
 class ParsedRecordResult(BaseModel):
     status: str
@@ -148,6 +149,9 @@ class IntegratedParser:
         pdf_link = soup.find('a', href=lambda href: href and "DownloadPDF" in href)
         if pdf_link:
             pdf_postback = pdf_link['href']
+
+        # Clean any CP437 mojibake to pure Gujarati UTF-8
+        master_data = fix_mojibake(master_data)
 
         return ParsedRecordResult(
             status="SUCCESS",

@@ -1,0 +1,2120 @@
+[
+  {
+    "entry_number": "1",
+    "image_file_path": "/static/images/survey_2/mutation_entry_1.jpg",
+    "is_verified": true,
+    "scraped_html": null,
+    "ai_draft": {
+      "ai_source": "manual",
+      "entry_date": "",
+      "new_owners": [],
+      "all_page_urls": [
+        "/static/images/survey_2/mutation_entry_1.jpg",
+        "/static/images/survey_2/mutation_entry_1_p0.jpg",
+        "/static/images/survey_2/mutation_entry_1_p1.jpg",
+        "/static/images/survey_2/mutation_entry_1_p10.jpg",
+        "/static/images/survey_2/mutation_entry_1_p11.jpg",
+        "/static/images/survey_2/mutation_entry_1_p12.jpg",
+        "/static/images/survey_2/mutation_entry_1_p13.jpg",
+        "/static/images/survey_2/mutation_entry_1_p14.jpg",
+        "/static/images/survey_2/mutation_entry_1_p15.jpg",
+        "/static/images/survey_2/mutation_entry_1_p16.jpg",
+        "/static/images/survey_2/mutation_entry_1_p2.jpg",
+        "/static/images/survey_2/mutation_entry_1_p3.jpg",
+        "/static/images/survey_2/mutation_entry_1_p4.jpg",
+        "/static/images/survey_2/mutation_entry_1_p5.jpg",
+        "/static/images/survey_2/mutation_entry_1_p6.jpg",
+        "/static/images/survey_2/mutation_entry_1_p7.jpg",
+        "/static/images/survey_2/mutation_entry_1_p8.jpg",
+        "/static/images/survey_2/mutation_entry_1_p9.jpg"
+      ],
+      "survey_numbers": "2",
+      "previous_owners": [],
+      "remarks_summary": "Scanned VF-6 deed entry #1. Authentic uncropped scan.",
+      "transaction_type": "Historical Handwritten Entry (VF-6)",
+      "low_confidence_flags": [
+        "Handwritten scan requiring advocate verification"
+      ],
+      "mutation_entry_number": "1"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "manual",
+      "entry_date": "",
+      "new_owners": [],
+      "all_page_urls": [
+        "/static/images/survey_2/mutation_entry_1.jpg",
+        "/static/images/survey_2/mutation_entry_1_p0.jpg",
+        "/static/images/survey_2/mutation_entry_1_p1.jpg",
+        "/static/images/survey_2/mutation_entry_1_p10.jpg",
+        "/static/images/survey_2/mutation_entry_1_p11.jpg",
+        "/static/images/survey_2/mutation_entry_1_p12.jpg",
+        "/static/images/survey_2/mutation_entry_1_p13.jpg",
+        "/static/images/survey_2/mutation_entry_1_p14.jpg",
+        "/static/images/survey_2/mutation_entry_1_p15.jpg",
+        "/static/images/survey_2/mutation_entry_1_p16.jpg",
+        "/static/images/survey_2/mutation_entry_1_p2.jpg",
+        "/static/images/survey_2/mutation_entry_1_p3.jpg",
+        "/static/images/survey_2/mutation_entry_1_p4.jpg",
+        "/static/images/survey_2/mutation_entry_1_p5.jpg",
+        "/static/images/survey_2/mutation_entry_1_p6.jpg",
+        "/static/images/survey_2/mutation_entry_1_p7.jpg",
+        "/static/images/survey_2/mutation_entry_1_p8.jpg",
+        "/static/images/survey_2/mutation_entry_1_p9.jpg"
+      ],
+      "survey_numbers": "2",
+      "officer_remarks": "",
+      "previous_owners": [],
+      "remarks_summary": "Scanned VF-6 deed entry #1. Authentic uncropped scan.",
+      "transaction_type": "Historical Handwritten Entry (VF-6)",
+      "low_confidence_flags": [
+        "Handwritten scan requiring advocate verification"
+      ],
+      "mutation_entry_number": "1"
+    }
+  },
+  {
+    "entry_number": "12",
+    "image_file_path": "/static/images/survey_2/mutation_entry_12.jpg",
+    "is_verified": true,
+    "scraped_html": null,
+    "ai_draft": {
+      "ai_source": "manual",
+      "entry_date": "",
+      "new_owners": [],
+      "all_page_urls": [
+        "/static/images/survey_2/mutation_entry_12.jpg"
+      ],
+      "survey_numbers": "2",
+      "previous_owners": [],
+      "remarks_summary": "Scanned VF-6 deed entry #12. Authentic uncropped scan.",
+      "transaction_type": "Historical Handwritten Entry (VF-6)",
+      "low_confidence_flags": [
+        "Handwritten scan requiring advocate verification"
+      ],
+      "mutation_entry_number": "12"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "manual",
+      "entry_date": "",
+      "new_owners": [],
+      "all_page_urls": [
+        "/static/images/survey_2/mutation_entry_12.jpg"
+      ],
+      "survey_numbers": "2",
+      "officer_remarks": "",
+      "previous_owners": [],
+      "remarks_summary": "Scanned VF-6 deed entry #12. Authentic uncropped scan.",
+      "transaction_type": "Historical Handwritten Entry (VF-6)",
+      "low_confidence_flags": [
+        "Handwritten scan requiring advocate verification"
+      ],
+      "mutation_entry_number": "12"
+    }
+  },
+  {
+    "entry_number": "123",
+    "image_file_path": "/static/images/survey_2/mutation_entry_123.jpg",
+    "is_verified": true,
+    "scraped_html": null,
+    "ai_draft": {
+      "ai_source": "manual",
+      "entry_date": "",
+      "new_owners": [],
+      "all_page_urls": [
+        "/static/images/survey_2/mutation_entry_123.jpg"
+      ],
+      "survey_numbers": "2",
+      "previous_owners": [],
+      "remarks_summary": "Scanned VF-6 deed entry #123. Authentic uncropped scan.",
+      "transaction_type": "Historical Handwritten Entry (VF-6)",
+      "low_confidence_flags": [
+        "Handwritten scan requiring advocate verification"
+      ],
+      "mutation_entry_number": "123"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "manual",
+      "entry_date": "",
+      "new_owners": [],
+      "all_page_urls": [
+        "/static/images/survey_2/mutation_entry_123.jpg"
+      ],
+      "survey_numbers": "2",
+      "officer_remarks": "",
+      "previous_owners": [],
+      "remarks_summary": "Scanned VF-6 deed entry #123. Authentic uncropped scan.",
+      "transaction_type": "Historical Handwritten Entry (VF-6)",
+      "low_confidence_flags": [
+        "Handwritten scan requiring advocate verification"
+      ],
+      "mutation_entry_number": "123"
+    }
+  },
+  {
+    "entry_number": "132",
+    "image_file_path": "/static/images/survey_2/mutation_entry_132.jpg",
+    "is_verified": true,
+    "scraped_html": null,
+    "ai_draft": {
+      "ai_source": "manual",
+      "entry_date": "",
+      "new_owners": [],
+      "all_page_urls": [
+        "/static/images/survey_2/mutation_entry_132.jpg",
+        "/static/images/survey_2/mutation_entry_132_p0.jpg",
+        "/static/images/survey_2/mutation_entry_132_p1.jpg",
+        "/static/images/survey_2/mutation_entry_132_p2.jpg"
+      ],
+      "survey_numbers": "2",
+      "previous_owners": [],
+      "remarks_summary": "Scanned VF-6 deed entry #132. Authentic uncropped scan.",
+      "transaction_type": "Historical Handwritten Entry (VF-6)",
+      "low_confidence_flags": [
+        "Handwritten scan requiring advocate verification"
+      ],
+      "mutation_entry_number": "132"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "manual",
+      "entry_date": "",
+      "new_owners": [],
+      "all_page_urls": [
+        "/static/images/survey_2/mutation_entry_132.jpg",
+        "/static/images/survey_2/mutation_entry_132_p0.jpg",
+        "/static/images/survey_2/mutation_entry_132_p1.jpg",
+        "/static/images/survey_2/mutation_entry_132_p2.jpg"
+      ],
+      "survey_numbers": "2",
+      "officer_remarks": "",
+      "previous_owners": [],
+      "remarks_summary": "Scanned VF-6 deed entry #132. Authentic uncropped scan.",
+      "transaction_type": "Historical Handwritten Entry (VF-6)",
+      "low_confidence_flags": [
+        "Handwritten scan requiring advocate verification"
+      ],
+      "mutation_entry_number": "132"
+    }
+  },
+  {
+    "entry_number": "134",
+    "image_file_path": "/static/images/survey_2/mutation_entry_134.jpg",
+    "is_verified": true,
+    "scraped_html": null,
+    "ai_draft": {
+      "ai_source": "manual",
+      "entry_date": "",
+      "new_owners": [],
+      "all_page_urls": [
+        "/static/images/survey_2/mutation_entry_134.jpg"
+      ],
+      "survey_numbers": "2",
+      "previous_owners": [],
+      "remarks_summary": "Scanned VF-6 deed entry #134. Authentic uncropped scan.",
+      "transaction_type": "Historical Handwritten Entry (VF-6)",
+      "low_confidence_flags": [
+        "Handwritten scan requiring advocate verification"
+      ],
+      "mutation_entry_number": "134"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "manual",
+      "entry_date": "",
+      "new_owners": [],
+      "all_page_urls": [
+        "/static/images/survey_2/mutation_entry_134.jpg"
+      ],
+      "survey_numbers": "2",
+      "officer_remarks": "",
+      "previous_owners": [],
+      "remarks_summary": "Scanned VF-6 deed entry #134. Authentic uncropped scan.",
+      "transaction_type": "Historical Handwritten Entry (VF-6)",
+      "low_confidence_flags": [
+        "Handwritten scan requiring advocate verification"
+      ],
+      "mutation_entry_number": "134"
+    }
+  },
+  {
+    "entry_number": "185",
+    "image_file_path": "/static/images/survey_2/mutation_entry_185.jpg",
+    "is_verified": true,
+    "scraped_html": null,
+    "ai_draft": {
+      "ai_source": "manual",
+      "entry_date": "",
+      "new_owners": [],
+      "all_page_urls": [
+        "/static/images/survey_2/mutation_entry_185.jpg"
+      ],
+      "survey_numbers": "2",
+      "previous_owners": [],
+      "remarks_summary": "Scanned VF-6 deed entry #185. Authentic uncropped scan.",
+      "transaction_type": "Historical Handwritten Entry (VF-6)",
+      "low_confidence_flags": [
+        "Handwritten scan requiring advocate verification"
+      ],
+      "mutation_entry_number": "185"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "manual",
+      "entry_date": "",
+      "new_owners": [],
+      "all_page_urls": [
+        "/static/images/survey_2/mutation_entry_185.jpg"
+      ],
+      "survey_numbers": "2",
+      "officer_remarks": "",
+      "previous_owners": [],
+      "remarks_summary": "Scanned VF-6 deed entry #185. Authentic uncropped scan.",
+      "transaction_type": "Historical Handwritten Entry (VF-6)",
+      "low_confidence_flags": [
+        "Handwritten scan requiring advocate verification"
+      ],
+      "mutation_entry_number": "185"
+    }
+  },
+  {
+    "entry_number": "223",
+    "image_file_path": "/static/images/survey_2/mutation_entry_223.jpg",
+    "is_verified": true,
+    "scraped_html": null,
+    "ai_draft": {
+      "ai_source": "manual",
+      "entry_date": "",
+      "new_owners": [],
+      "all_page_urls": [
+        "/static/images/survey_2/mutation_entry_223.jpg"
+      ],
+      "survey_numbers": "2",
+      "previous_owners": [],
+      "remarks_summary": "Scanned VF-6 deed entry #223. Authentic uncropped scan.",
+      "transaction_type": "Historical Handwritten Entry (VF-6)",
+      "low_confidence_flags": [
+        "Handwritten scan requiring advocate verification"
+      ],
+      "mutation_entry_number": "223"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "manual",
+      "entry_date": "",
+      "new_owners": [],
+      "all_page_urls": [
+        "/static/images/survey_2/mutation_entry_223.jpg"
+      ],
+      "survey_numbers": "2",
+      "officer_remarks": "",
+      "previous_owners": [],
+      "remarks_summary": "Scanned VF-6 deed entry #223. Authentic uncropped scan.",
+      "transaction_type": "Historical Handwritten Entry (VF-6)",
+      "low_confidence_flags": [
+        "Handwritten scan requiring advocate verification"
+      ],
+      "mutation_entry_number": "223"
+    }
+  },
+  {
+    "entry_number": "225",
+    "image_file_path": "/static/images/survey_2/mutation_entry_225.jpg",
+    "is_verified": true,
+    "scraped_html": null,
+    "ai_draft": {
+      "ai_source": "manual",
+      "entry_date": "",
+      "new_owners": [],
+      "all_page_urls": [
+        "/static/images/survey_2/mutation_entry_225.jpg",
+        "/static/images/survey_2/mutation_entry_225_p0.jpg",
+        "/static/images/survey_2/mutation_entry_225_p1.jpg"
+      ],
+      "survey_numbers": "2",
+      "previous_owners": [],
+      "remarks_summary": "Scanned VF-6 deed entry #225. Authentic uncropped scan.",
+      "transaction_type": "Historical Handwritten Entry (VF-6)",
+      "low_confidence_flags": [
+        "Handwritten scan requiring advocate verification"
+      ],
+      "mutation_entry_number": "225"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "manual",
+      "entry_date": "",
+      "new_owners": [],
+      "all_page_urls": [
+        "/static/images/survey_2/mutation_entry_225.jpg",
+        "/static/images/survey_2/mutation_entry_225_p0.jpg",
+        "/static/images/survey_2/mutation_entry_225_p1.jpg"
+      ],
+      "survey_numbers": "2",
+      "officer_remarks": "",
+      "previous_owners": [],
+      "remarks_summary": "Scanned VF-6 deed entry #225. Authentic uncropped scan.",
+      "transaction_type": "Historical Handwritten Entry (VF-6)",
+      "low_confidence_flags": [
+        "Handwritten scan requiring advocate verification"
+      ],
+      "mutation_entry_number": "225"
+    }
+  },
+  {
+    "entry_number": "256",
+    "image_file_path": "/static/images/survey_2/mutation_entry_256.jpg",
+    "is_verified": true,
+    "scraped_html": null,
+    "ai_draft": {
+      "ai_source": "manual",
+      "entry_date": "",
+      "new_owners": [],
+      "all_page_urls": [
+        "/static/images/survey_2/mutation_entry_256.jpg"
+      ],
+      "survey_numbers": "2",
+      "previous_owners": [],
+      "remarks_summary": "Scanned VF-6 deed entry #256. Authentic uncropped scan.",
+      "transaction_type": "Historical Handwritten Entry (VF-6)",
+      "low_confidence_flags": [
+        "Handwritten scan requiring advocate verification"
+      ],
+      "mutation_entry_number": "256"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "manual",
+      "entry_date": "",
+      "new_owners": [],
+      "all_page_urls": [
+        "/static/images/survey_2/mutation_entry_256.jpg"
+      ],
+      "survey_numbers": "2",
+      "officer_remarks": "",
+      "previous_owners": [],
+      "remarks_summary": "Scanned VF-6 deed entry #256. Authentic uncropped scan.",
+      "transaction_type": "Historical Handwritten Entry (VF-6)",
+      "low_confidence_flags": [
+        "Handwritten scan requiring advocate verification"
+      ],
+      "mutation_entry_number": "256"
+    }
+  },
+  {
+    "entry_number": "262",
+    "image_file_path": "/static/images/survey_2/mutation_entry_262.jpg",
+    "is_verified": true,
+    "scraped_html": null,
+    "ai_draft": {
+      "ai_source": "manual",
+      "entry_date": "",
+      "new_owners": [],
+      "all_page_urls": [
+        "/static/images/survey_2/mutation_entry_262.jpg",
+        "/static/images/survey_2/mutation_entry_262_p0.jpg",
+        "/static/images/survey_2/mutation_entry_262_p1.jpg",
+        "/static/images/survey_2/mutation_entry_262_p2.jpg",
+        "/static/images/survey_2/mutation_entry_262_p3.jpg",
+        "/static/images/survey_2/mutation_entry_262_p4.jpg"
+      ],
+      "survey_numbers": "2",
+      "previous_owners": [],
+      "remarks_summary": "Scanned VF-6 deed entry #262. Authentic uncropped scan.",
+      "transaction_type": "Historical Handwritten Entry (VF-6)",
+      "low_confidence_flags": [
+        "Handwritten scan requiring advocate verification"
+      ],
+      "mutation_entry_number": "262"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "manual",
+      "entry_date": "",
+      "new_owners": [],
+      "all_page_urls": [
+        "/static/images/survey_2/mutation_entry_262.jpg",
+        "/static/images/survey_2/mutation_entry_262_p0.jpg",
+        "/static/images/survey_2/mutation_entry_262_p1.jpg",
+        "/static/images/survey_2/mutation_entry_262_p2.jpg",
+        "/static/images/survey_2/mutation_entry_262_p3.jpg",
+        "/static/images/survey_2/mutation_entry_262_p4.jpg"
+      ],
+      "survey_numbers": "2",
+      "officer_remarks": "",
+      "previous_owners": [],
+      "remarks_summary": "Scanned VF-6 deed entry #262. Authentic uncropped scan.",
+      "transaction_type": "Historical Handwritten Entry (VF-6)",
+      "low_confidence_flags": [
+        "Handwritten scan requiring advocate verification"
+      ],
+      "mutation_entry_number": "262"
+    }
+  },
+  {
+    "entry_number": "337",
+    "image_file_path": "/static/images/survey_2/mutation_entry_337.jpg",
+    "is_verified": true,
+    "scraped_html": null,
+    "ai_draft": {
+      "ai_source": "manual",
+      "entry_date": "",
+      "new_owners": [],
+      "all_page_urls": [
+        "/static/images/survey_2/mutation_entry_337.jpg"
+      ],
+      "survey_numbers": "2",
+      "previous_owners": [],
+      "remarks_summary": "Scanned VF-6 deed entry #337. Authentic uncropped scan.",
+      "transaction_type": "Historical Handwritten Entry (VF-6)",
+      "low_confidence_flags": [
+        "Handwritten scan requiring advocate verification"
+      ],
+      "mutation_entry_number": "337"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "manual",
+      "entry_date": "",
+      "new_owners": [],
+      "all_page_urls": [
+        "/static/images/survey_2/mutation_entry_337.jpg"
+      ],
+      "survey_numbers": "2",
+      "officer_remarks": "",
+      "previous_owners": [],
+      "remarks_summary": "Scanned VF-6 deed entry #337. Authentic uncropped scan.",
+      "transaction_type": "Historical Handwritten Entry (VF-6)",
+      "low_confidence_flags": [
+        "Handwritten scan requiring advocate verification"
+      ],
+      "mutation_entry_number": "337"
+    }
+  },
+  {
+    "entry_number": "410",
+    "image_file_path": "/static/images/survey_2/mutation_entry_410.jpg",
+    "is_verified": true,
+    "scraped_html": null,
+    "ai_draft": {
+      "ai_source": "manual",
+      "entry_date": "",
+      "new_owners": [],
+      "all_page_urls": [
+        "/static/images/survey_2/mutation_entry_410.jpg",
+        "/static/images/survey_2/mutation_entry_410_p0.jpg",
+        "/static/images/survey_2/mutation_entry_410_p1.jpg"
+      ],
+      "survey_numbers": "2",
+      "previous_owners": [],
+      "remarks_summary": "Scanned VF-6 deed entry #410. Authentic uncropped scan.",
+      "transaction_type": "Historical Handwritten Entry (VF-6)",
+      "low_confidence_flags": [
+        "Handwritten scan requiring advocate verification"
+      ],
+      "mutation_entry_number": "410"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "manual",
+      "entry_date": "",
+      "new_owners": [],
+      "all_page_urls": [
+        "/static/images/survey_2/mutation_entry_410.jpg",
+        "/static/images/survey_2/mutation_entry_410_p0.jpg",
+        "/static/images/survey_2/mutation_entry_410_p1.jpg"
+      ],
+      "survey_numbers": "2",
+      "officer_remarks": "",
+      "previous_owners": [],
+      "remarks_summary": "Scanned VF-6 deed entry #410. Authentic uncropped scan.",
+      "transaction_type": "Historical Handwritten Entry (VF-6)",
+      "low_confidence_flags": [
+        "Handwritten scan requiring advocate verification"
+      ],
+      "mutation_entry_number": "410"
+    }
+  },
+  {
+    "entry_number": "416",
+    "image_file_path": "/static/images/survey_2/mutation_entry_416.jpg",
+    "is_verified": true,
+    "scraped_html": null,
+    "ai_draft": {
+      "ai_source": "manual",
+      "entry_date": "",
+      "new_owners": [],
+      "all_page_urls": [
+        "/static/images/survey_2/mutation_entry_416.jpg"
+      ],
+      "survey_numbers": "2",
+      "previous_owners": [],
+      "remarks_summary": "Scanned VF-6 deed entry #416. Authentic uncropped scan.",
+      "transaction_type": "Historical Handwritten Entry (VF-6)",
+      "low_confidence_flags": [
+        "Handwritten scan requiring advocate verification"
+      ],
+      "mutation_entry_number": "416"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "manual",
+      "entry_date": "",
+      "new_owners": [],
+      "all_page_urls": [
+        "/static/images/survey_2/mutation_entry_416.jpg"
+      ],
+      "survey_numbers": "2",
+      "officer_remarks": "",
+      "previous_owners": [],
+      "remarks_summary": "Scanned VF-6 deed entry #416. Authentic uncropped scan.",
+      "transaction_type": "Historical Handwritten Entry (VF-6)",
+      "low_confidence_flags": [
+        "Handwritten scan requiring advocate verification"
+      ],
+      "mutation_entry_number": "416"
+    }
+  },
+  {
+    "entry_number": "476",
+    "image_file_path": null,
+    "is_verified": true,
+    "scraped_html": {
+      "status": "પ્રમાણિત",
+      "details": "બાવળા તાલુકાના હસનનગર ગામના માર્જીનમા જણાવેલ સર્વે નંબર/બ્લોક નંબરોવાળીજમીનમારેકર્ડ પ્રમોલગેશન દરમ્યાન પકડાયેલ ભુલો સુઘારવાબાબતેમામલતદારશ્રીબાવળાનાતા.૧૧/૦૬/૨૦૦૮ ના હુકમ નંબર ગામફદતર/ક્ષતીસુઘારો/હસનનગર ના હુકમઆઘારે ફેરફાર કરવા હુકમ નોઘ કરી.",
+      "raw_row": {
+        "નોંધની વિગત": "બાવળા તાલુકાના હસનનગર ગામના માર્જીનમા જણાવેલ સર્વે નંબર/બ્લોક નંબરોવાળીજમીનમારેકર્ડ પ્રમોલગેશન દરમ્યાન પકડાયેલ ભુલો સુઘારવાબાબતેમામલતદારશ્રીબાવળાનાતા.૧૧/૦૬/૨૦૦૮ ના હુકમ નંબર ગામફદતર/ક્ષતીસુઘારો/હસનનગર ના હુકમઆઘારે ફેરફાર કરવા હુકમ નોઘ કરી.",
+        "ફેરફારને સંબંધિત સરવે નંબર": "૬૩/અ(૨૨), ૬૩/બ(૭૭), ૬૪(૭૧), ૬પ(૩૬), ૬૬/અ(૭પ),૬૬/બ(૭પ), ૬૭/અ(૧૯), ૬૭/બ(૭પ), ૬૮(૩૦),૬૯(૬૭), ૭૦(૨૪), ૭૧(૧૦૪), ૭૨(૭૪), ૭૩p(૩૨),૭૪(૧૧૩), ૭પ(૪૩), ૭૬/અ(૩૯), ૭૬/બ(૩૯), ૭૭(પ),૭૮(૧૩), ૭૯(૨૦), ૮૦(૧), ૮૧/અ(૧૦૩), ૮૧/બ(૭૧),૮૨/અ(પ), ૮૨/બ(પ), ૮૩(૬૧), ૮૪(૩૩), ૮પ(૧૦૮),૮૬(૨૨), ૮૭(પ૬), ૮૮(૧પ), ૮૯(૬૯), ૯૦(પ૭),૯૧(૧૦૯), ૯૨p૧(૨૧), ૯૨p૧૦(૪૧), ૯૨p૧૧(૩૩),૯૨p૧૨(૪૯), ૯૨p૧૩(૨પ), ૯૨p૨(૩પ), ૯૨p૩(૬પ),૯૨p૪(૧૬), ૯૨pપ(૩૬), ૯૨p૬(૭૭), ૯૨p૭(૪૪),૯૨p૮(૭૯), ૯૨p૯(૮૦),",
+        "તપાસણી કરનાર અધિકારીનો શેરો": "મામલતદારશ્રી, બાવળાના તારીખ.૧૧/૦૬/૨૦૦૮ ના હુકમ ક્ષતી રજીસ્ટરે, પાંત અઘિકારીશ્રી, કક્ષા સુઘી થયેલ વેરીફીકેશન તથા ૧૩પડીની નોટીસ જાહેર પ્રસીઘ્ઘીથી ખાત્રી કરી\n   \"પ્રમાણીત\"\n તારીખ.૧૮/૧૨/૨૦૦૮\n ( આર.ડી.મકવાણા )\n સર્કલ ઓફીસર, બાવળા.",
+        "નોંધ નંબરનોંધની તારીખફેરફારનો પ્રકારનોંધની સ્થિતિ": "476 | 17/08/2008 | હુકમથી | પ્રમાણિત"
+      },
+      "entry_date": "17/08/2008",
+      "entry_number": "476",
+      "survey_numbers": "૬૩/અ(૨૨), ૬૩/બ(૭૭), ૬૪(૭૧), ૬પ(૩૬), ૬૬/અ(૭પ),૬૬/બ(૭પ), ૬૭/અ(૧૯), ૬૭/બ(૭પ), ૬૮(૩૦),૬૯(૬૭), ૭૦(૨૪), ૭૧(૧૦૪), ૭૨(૭૪), ૭૩p(૩૨),૭૪(૧૧૩), ૭પ(૪૩), ૭૬/અ(૩૯), ૭૬/બ(૩૯), ૭૭(પ),૭૮(૧૩), ૭૯(૨૦), ૮૦(૧), ૮૧/અ(૧૦૩), ૮૧/બ(૭૧),૮૨/અ(પ), ૮૨/બ(પ), ૮૩(૬૧), ૮૪(૩૩), ૮પ(૧૦૮),૮૬(૨૨), ૮૭(પ૬), ૮૮(૧પ), ૮૯(૬૯), ૯૦(પ૭),૯૧(૧૦૯), ૯૨p૧(૨૧), ૯૨p૧૦(૪૧), ૯૨p૧૧(૩૩),૯૨p૧૨(૪૯), ૯૨p૧૩(૨પ), ૯૨p૨(૩પ), ૯૨p૩(૬પ),૯૨p૪(૧૬), ૯૨pપ(૩૬), ૯૨p૬(૭૭), ૯૨p૭(૪૪),૯૨p૮(૭૯), ૯૨p૯(૮૦),",
+      "officer_remarks": "મામલતદારશ્રી, બાવળાના તારીખ.૧૧/૦૬/૨૦૦૮ ના હુકમ ક્ષતી રજીસ્ટરે, પાંત અઘિકારીશ્રી, કક્ષા સુઘી થયેલ વેરીફીકેશન તથા ૧૩પડીની નોટીસ જાહેર પ્રસીઘ્ઘીથી ખાત્રી કરી\n   \"પ્રમાણીત\"\n તારીખ.૧૮/૧૨/૨૦૦૮\n ( આર.ડી.મકવાણા )\n સર્કલ ઓફીસર, બાવળા.",
+      "transaction_type": "હુકમથી"
+    },
+    "ai_draft": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "17/08/2008",
+      "new_owners": [
+        "સરવે 2 હિતધારકો / ખાતેદારો"
+      ],
+      "survey_numbers": "૬૩/અ(૨૨), ૬૩/બ(૭૭), ૬૪(૭૧), ૬પ(૩૬), ૬૬/અ(૭પ),૬૬/બ(૭પ), ૬૭/અ(૧૯), ૬૭/બ(૭પ), ૬૮(૩૦),૬૯(૬૭), ૭૦(૨૪), ૭૧(૧૦૪), ૭૨(૭૪), ૭૩p(૩૨),૭૪(૧૧૩), ૭પ(૪૩), ૭૬/અ(૩૯), ૭૬/બ(૩૯), ૭૭(પ),૭૮(૧૩), ૭૯(૨૦), ૮૦(૧), ૮૧/અ(૧૦૩), ૮૧/બ(૭૧),૮૨/અ(પ), ૮૨/બ(પ), ૮૩(૬૧), ૮૪(૩૩), ૮પ(૧૦૮),૮૬(૨૨), ૮૭(પ૬), ૮૮(૧પ), ૮૯(૬૯), ૯૦(પ૭),૯૧(૧૦૯), ૯૨p૧(૨૧), ૯૨p૧૦(૪૧), ૯૨p૧૧(૩૩),૯૨p૧૨(૪૯), ૯૨p૧૩(૨પ), ૯૨p૨(૩પ), ૯૨p૩(૬પ),૯૨p૪(૧૬), ૯૨pપ(૩૬), ૯૨p૬(૭૭), ૯૨p૭(૪૪),૯૨p૮(૭૯), ૯૨p૯(૮૦),",
+      "officer_remarks": "મામલતદારશ્રી, બાવળાના તારીખ.૧૧/૦૬/૨૦૦૮ ના હુકમ ક્ષતી રજીસ્ટરે, પાંત અઘિકારીશ્રી, કક્ષા સુઘી થયેલ વેરીફીકેશન તથા ૧૩પડીની નોટીસ જાહેર પ્રસીઘ્ઘીથી ખાત્રી કરી\n   \"પ્રમાણીત\"\n તારીખ.૧૮/૧૨/૨૦૦૮\n ( આર.ડી.મકવાણા )\n સર્કલ ઓફીસર, બાવળા.",
+      "previous_owners": [
+        "મામલતદારશ્રીબાવળાનાતા.૧૧/૦૬/૨૦૦૮"
+      ],
+      "remarks_summary": "બાવળા તાલુકાના હસનનગર ગામના માર્જીનમા જણાવેલ સર્વે નંબર/બ્લોક નંબરોવાળીજમીનમારેકર્ડ પ્રમોલગેશન દરમ્યાન પકડાયેલ ભુલો સુઘારવાબાબતેમામલતદારશ્રીબાવળાનાતા.૧૧/૦૬/૨૦૦૮ ના હુકમ નંબર ગામફદતર/ક્ષતીસુઘારો/હસનનગર ના હુકમઆઘારે ફેરફાર...",
+      "transaction_type": "હુકમથી",
+      "mutation_entry_number": "476"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "17/08/2008",
+      "new_owners": [
+        "સરવે 2 હિતધારકો / ખાતેદારો"
+      ],
+      "survey_numbers": "૬૩/અ(૨૨), ૬૩/બ(૭૭), ૬૪(૭૧), ૬પ(૩૬), ૬૬/અ(૭પ),૬૬/બ(૭પ), ૬૭/અ(૧૯), ૬૭/બ(૭પ), ૬૮(૩૦),૬૯(૬૭), ૭૦(૨૪), ૭૧(૧૦૪), ૭૨(૭૪), ૭૩p(૩૨),૭૪(૧૧૩), ૭પ(૪૩), ૭૬/અ(૩૯), ૭૬/બ(૩૯), ૭૭(પ),૭૮(૧૩), ૭૯(૨૦), ૮૦(૧), ૮૧/અ(૧૦૩), ૮૧/બ(૭૧),૮૨/અ(પ), ૮૨/બ(પ), ૮૩(૬૧), ૮૪(૩૩), ૮પ(૧૦૮),૮૬(૨૨), ૮૭(પ૬), ૮૮(૧પ), ૮૯(૬૯), ૯૦(પ૭),૯૧(૧૦૯), ૯૨p૧(૨૧), ૯૨p૧૦(૪૧), ૯૨p૧૧(૩૩),૯૨p૧૨(૪૯), ૯૨p૧૩(૨પ), ૯૨p૨(૩પ), ૯૨p૩(૬પ),૯૨p૪(૧૬), ૯૨pપ(૩૬), ૯૨p૬(૭૭), ૯૨p૭(૪૪),૯૨p૮(૭૯), ૯૨p૯(૮૦),",
+      "officer_remarks": "મામલતદારશ્રી, બાવળાના તારીખ.૧૧/૦૬/૨૦૦૮ ના હુકમ ક્ષતી રજીસ્ટરે, પાંત અઘિકારીશ્રી, કક્ષા સુઘી થયેલ વેરીફીકેશન તથા ૧૩પડીની નોટીસ જાહેર પ્રસીઘ્ઘીથી ખાત્રી કરી\n   \"પ્રમાણીત\"\n તારીખ.૧૮/૧૨/૨૦૦૮\n ( આર.ડી.મકવાણા )\n સર્કલ ઓફીસર, બાવળા.",
+      "previous_owners": [
+        "મામલતદારશ્રીબાવળાનાતા.૧૧/૦૬/૨૦૦૮"
+      ],
+      "remarks_summary": "બાવળા તાલુકાના હસનનગર ગામના માર્જીનમા જણાવેલ સર્વે નંબર/બ્લોક નંબરોવાળીજમીનમારેકર્ડ પ્રમોલગેશન દરમ્યાન પકડાયેલ ભુલો સુઘારવાબાબતેમામલતદારશ્રીબાવળાનાતા.૧૧/૦૬/૨૦૦૮ ના હુકમ નંબર ગામફદતર/ક્ષતીસુઘારો/હસનનગર ના હુકમઆઘારે ફેરફાર...",
+      "transaction_type": "હુકમથી",
+      "mutation_entry_number": "476"
+    }
+  },
+  {
+    "entry_number": "600",
+    "image_file_path": null,
+    "is_verified": true,
+    "scraped_html": {
+      "status": "પ્રમાણિત",
+      "details": "બાવળા તાલુકા ના મોજે- હસનનગર ગામે ખેડ ખાતા નંબર-૧ ૧ થી માર્જીન મા જણાવેલ સર્વે નંબરોવાળી જમીન શ્રી હીરાબેન અભુભાઇ ના નામે ચાલતા ખેડ ખાતા ની જમીન ઉપર જે તે વખતે  ધી ગુજરાત સ્ટેટ કો.ઓ. એગ્રી એન્ડ રૂરલ ડેવલપમેન્ટ બેંક લિ. માંથી ધિરાણલેતા તે અંગે જમીન પર બોજા નોંધ કરેલ હતી. અરજદાર તરફથીઅરજી તથા લેણુ બાકી ન હોવા અંગે ના રજુ કરેલ દાખલા આધારે  જમીન ઉકત તારણ માંથી બોજા મુકત કરવા નોંધ કરી",
+      "raw_row": {
+        "નોંધની વિગત": "બાવળા તાલુકા ના મોજે- હસનનગર ગામે ખેડ ખાતા નંબર-૧ ૧ થી માર્જીન મા જણાવેલ સર્વે નંબરોવાળી જમીન શ્રી હીરાબેન અભુભાઇ ના નામે ચાલતા ખેડ ખાતા ની જમીન ઉપર જે તે વખતે  ધી ગુજરાત સ્ટેટ કો.ઓ. એગ્રી એન્ડ રૂરલ ડેવલપમેન્ટ બેંક લિ. માંથી ધિરાણલેતા તે અંગે જમીન પર બોજા નોંધ કરેલ હતી. અરજદાર તરફથીઅરજી તથા લેણુ બાકી ન હોવા અંગે ના રજુ કરેલ દાખલા આધારે  જમીન ઉકત તારણ માંથી બોજા મુકત કરવા નોંધ કરી",
+        "ફેરફારને સંબંધિત સરવે નંબર": "34p૨(1), 80(1)",
+        "તપાસણી કરનાર અધિકારીનો શેરો": "૧૩૫ડી ની નોટીસ rpad થી બજેલ છે.\n  અરજી તથા બેંકના પ્રમાણપત્રથી ખાત્રીકરી પ્રમાણીત\nએમ એ શેખ\nસ ઓ બાવળા\nતા-૨૭/૫/૧૩",
+        "નોંધ નંબરનોંધની તારીખફેરફારનો પ્રકારનોંધની સ્થિતિ": "600 | 03/04/2013 | બોજા મુક્તિ | પ્રમાણિત"
+      },
+      "entry_date": "03/04/2013",
+      "entry_number": "600",
+      "survey_numbers": "34p૨(1), 80(1)",
+      "officer_remarks": "૧૩૫ડી ની નોટીસ rpad થી બજેલ છે.\n  અરજી તથા બેંકના પ્રમાણપત્રથી ખાત્રીકરી પ્રમાણીત\nએમ એ શેખ\nસ ઓ બાવળા\nતા-૨૭/૫/૧૩",
+      "transaction_type": "બોજા મુક્તિ"
+    },
+    "ai_draft": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "03/04/2013",
+      "new_owners": [
+        "બાવળા તાલુકા ના મોજે- હસનનગર ગામે ખેડ ખાતા નંબર-૧ ૧ થી માર્જીન મા જણાવેલ સર્વે નંબરોવાળી જમીન શ્રી હીરાબેન અભુભાઇ ના નામે ચાલતા ખેડ ખાતા ની જમીન ઉપર જે તે વખતે ધી ગુજરાત સ્ટેટ કો.ઓ. એગ્રી એન્ડ રૂરલ ડેવલપમેન્ટ બેંક લિ."
+      ],
+      "survey_numbers": "34p૨(1), 80(1)",
+      "officer_remarks": "૧૩૫ડી ની નોટીસ rpad થી બજેલ છે.\n  અરજી તથા બેંકના પ્રમાણપત્રથી ખાત્રીકરી પ્રમાણીત\nએમ એ શેખ\nસ ઓ બાવળા\nતા-૨૭/૫/૧૩",
+      "previous_owners": [],
+      "remarks_summary": "બાવળા તાલુકા ના મોજે- હસનનગર ગામે ખેડ ખાતા નંબર-૧ ૧ થી માર્જીન મા જણાવેલ સર્વે નંબરોવાળી જમીન શ્રી હીરાબેન અભુભાઇ ના નામે ચાલતા ખેડ ખાતા ની જમીન ઉપર જે તે વખતે ધી ગુજરાત સ્ટેટ કો.ઓ. એગ્રી એન્ડ રૂરલ ડેવલપમેન્ટ બેંક લિ. મા...",
+      "transaction_type": "બોજા મુક્તિ",
+      "mutation_entry_number": "600"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "03/04/2013",
+      "new_owners": [
+        "બાવળા તાલુકા ના મોજે- હસનનગર ગામે ખેડ ખાતા નંબર-૧ ૧ થી માર્જીન મા જણાવેલ સર્વે નંબરોવાળી જમીન શ્રી હીરાબેન અભુભાઇ ના નામે ચાલતા ખેડ ખાતા ની જમીન ઉપર જે તે વખતે ધી ગુજરાત સ્ટેટ કો.ઓ. એગ્રી એન્ડ રૂરલ ડેવલપમેન્ટ બેંક લિ."
+      ],
+      "survey_numbers": "34p૨(1), 80(1)",
+      "officer_remarks": "૧૩૫ડી ની નોટીસ rpad થી બજેલ છે.\n  અરજી તથા બેંકના પ્રમાણપત્રથી ખાત્રીકરી પ્રમાણીત\nએમ એ શેખ\nસ ઓ બાવળા\nતા-૨૭/૫/૧૩",
+      "previous_owners": [],
+      "remarks_summary": "બાવળા તાલુકા ના મોજે- હસનનગર ગામે ખેડ ખાતા નંબર-૧ ૧ થી માર્જીન મા જણાવેલ સર્વે નંબરોવાળી જમીન શ્રી હીરાબેન અભુભાઇ ના નામે ચાલતા ખેડ ખાતા ની જમીન ઉપર જે તે વખતે ધી ગુજરાત સ્ટેટ કો.ઓ. એગ્રી એન્ડ રૂરલ ડેવલપમેન્ટ બેંક લિ. મા...",
+      "transaction_type": "બોજા મુક્તિ",
+      "mutation_entry_number": "600"
+    }
+  },
+  {
+    "entry_number": "633",
+    "image_file_path": null,
+    "is_verified": true,
+    "scraped_html": {
+      "status": "પ્રમાણિત",
+      "details": "રી -સર્વે સંબધી તૈયાર કરવામા આવેલ રેકર્ડનું  પ્રાંત ઓફિસર   SLR (Supt of Land Records) Office અમદાવાદ  શ્રી   VIJAY KANAIYALAL SHAH (SLR)  દ્વારા    jamin/promulgation/notice/decelaration  તા. 11/06/2014 થી જાહેર નોટીસ પ્રસિધ્ધ કરવામા આવેલ અને દિવસ-૩૦ મા લેખીત વાંધા અરજીઓ રજુ કરવા જણાવવામા આવેલ. જાહેર નોટીસના સમયગાળા દરમ્યાન રજુ થયેલ વાંધા અરજીઓ અન્વયે કરવાપાત્ર સુધારાઓ સાંકળી નવુ  રેકર્ડ  તૈયાર કરી મોકલવામા આવેલ. \n\t\tરી -સર્વે સંબધી તૈયાર થયેલ નવા રેકર્ડ ની સો ટકા ખરાઈ મામલતદાર શ્રી  બાવળા દ્વારા કરવામા આવેલ. બાદ પ્રાંતઅધિકારી શ્રી   SLR (Supt of Land Records) Office અમદાવાદ ,VIJAY KANAIYALAL SHAH (SLR) દ્વારા ચકાસણી કરી હુકમ નં. dso/resurvey/record/promulgation  તા.20/10/2014 ના હુકમથી નવુ તૈયાર  કરેલ રી -સર્વે સંબધી  રેકર્ડનું  \n\t\tપ્રમોલગેશન કરી આખરી કરવામા આવેલ છે. જે મુજબ જુના-નવા સરવે નંબર । ક્ષેત્રફળ । આકાર । કબ્જેદાર ની વિગતો અલગથી પત્રકમા સામેલ છે. આ સાથે હસનનગર ગામના સરવે નંબર  1  થી  સરવે નંબર 9010 એમ કુલ પાનિયા  222 ના પ્રમોલગેશનની નોંધ પાડવામા આવી.",
+      "raw_row": {
+        "નોંધની વિગત": "રી -સર્વે સંબધી તૈયાર કરવામા આવેલ રેકર્ડનું  પ્રાંત ઓફિસર   SLR (Supt of Land Records) Office અમદાવાદ  શ્રી   VIJAY KANAIYALAL SHAH (SLR)  દ્વારા    jamin/promulgation/notice/decelaration  તા. 11/06/2014 થી જાહેર નોટીસ પ્રસિધ્ધ કરવામા આવેલ અને દિવસ-૩૦ મા લેખીત વાંધા અરજીઓ રજુ કરવા જણાવવામા આવેલ. જાહેર નોટીસના સમયગાળા દરમ્યાન રજુ થયેલ વાંધા અરજીઓ અન્વયે કરવાપાત્ર સુધારાઓ સાંકળી નવુ  રેકર્ડ  તૈયાર કરી મોકલવામા આવેલ. \n\t\tરી -સર્વે સંબધી તૈયાર થયેલ નવા રેકર્ડ ની સો ટકા ખરાઈ મામલતદાર શ્રી  બાવળા દ્વારા કરવામા આવેલ. બાદ પ્રાંતઅધિકારી શ્રી   SLR (Supt of Land Records) Office અમદાવાદ ,VIJAY KANAIYALAL SHAH (SLR) દ્વારા ચકાસણી કરી હુકમ નં. dso/resurvey/record/promulgation  તા.20/10/2014 ના હુકમથી નવુ તૈયાર  કરેલ રી -સર્વે સંબધી  રેકર્ડનું  \n\t\tપ્રમોલગેશન કરી આખરી કરવામા આવેલ છે. જે મુજબ જુના-નવા સરવે નંબર । ક્ષેત્રફળ । આકાર । કબ્જેદાર ની વિગતો અલગથી પત્રકમા સામેલ છે. આ સાથે હસનનગર ગામના સરવે નંબર  1  થી  સરવે નંબર 9010 એમ કુલ પાનિયા  222 ના પ્રમોલગેશનની નોંધ પાડવામા આવી.",
+        "ફેરફારને સંબંધિત સરવે નંબર": "Resurvey Promulgation : survey no : 1 to 9010",
+        "તપાસણી કરનાર અધિકારીનો શેરો": "પ્રમાણિત",
+        "નોંધ નંબરનોંધની તારીખફેરફારનો પ્રકારનોંધની સ્થિતિ": "633 | 30/10/2014 | પ્રમોલગેશન | પ્રમાણિત"
+      },
+      "entry_date": "30/10/2014",
+      "entry_number": "633",
+      "survey_numbers": "Resurvey Promulgation : survey no : 1 to 9010",
+      "officer_remarks": "પ્રમાણિત",
+      "transaction_type": "પ્રમોલગેશન"
+    },
+    "ai_draft": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "30/10/2014",
+      "new_owners": [],
+      "survey_numbers": "Resurvey Promulgation : survey no : 1 to 9010",
+      "officer_remarks": "પ્રમાણિત",
+      "previous_owners": [],
+      "remarks_summary": "રી -સર્વે સંબધી તૈયાર કરવામા આવેલ રેકર્ડનું પ્રાંત ઓફિસર SLR (Supt of Land Records) Office અમદાવાદ શ્રી VIJAY KANAIYALAL SHAH (SLR) દ્વારા jamin/promulgation/notice/decelaration તા. 11/06/2014 થી જાહેર નોટીસ પ્રસિધ્ધ કરવ...",
+      "transaction_type": "પ્રમોલગેશન",
+      "mutation_entry_number": "633"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "30/10/2014",
+      "new_owners": [],
+      "survey_numbers": "Resurvey Promulgation : survey no : 1 to 9010",
+      "officer_remarks": "પ્રમાણિત",
+      "previous_owners": [],
+      "remarks_summary": "રી -સર્વે સંબધી તૈયાર કરવામા આવેલ રેકર્ડનું પ્રાંત ઓફિસર SLR (Supt of Land Records) Office અમદાવાદ શ્રી VIJAY KANAIYALAL SHAH (SLR) દ્વારા jamin/promulgation/notice/decelaration તા. 11/06/2014 થી જાહેર નોટીસ પ્રસિધ્ધ કરવ...",
+      "transaction_type": "પ્રમોલગેશન",
+      "mutation_entry_number": "633"
+    }
+  },
+  {
+    "entry_number": "645",
+    "image_file_path": null,
+    "is_verified": true,
+    "scraped_html": {
+      "status": "પ્રમાણિત",
+      "details": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ સગીરના વાલી, જશીબેન ભયરામભાઇ અભુભાઈ ની વિધવ, હીરાબેનતે અભુભાઈ મેરુભાઈની દીક, પુરીબેન અભુભાઈ મેરુભાઈ ની દિકર, માલીબેન અભુભાઈ મેરુભાઈ ની દિકર, કાનીબેન અભુભાઈ મેરુભાઈ ની દિકર, કંચનબેન અભુભાઈ મેરુભાઈ ની દિકર, મઘીબેન અભુભાઈ મેરુભાઈ ની દિકરી ના ખાતા નંબર ૧૦૧ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. આ જમીન ઉપર હસનનગર સેવા સહકારી મંડળી લી માંથી ખેત ધિરાણ મેળવતા તા.૨૯/૦પ/૨૦૧પ નાં એકરારનામાં અને અરજીના આધારે જમીન તારણમાં મૂકતા ગામ નમુના નં ૭ ના બોજા/બીજા હકમાં નોંધ દાખલ કરવા આ નોંધ પાડવામાં આવી.",
+      "raw_row": {
+        "નોંધની વિગત": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ સગીરના વાલી, જશીબેન ભયરામભાઇ અભુભાઈ ની વિધવ, હીરાબેનતે અભુભાઈ મેરુભાઈની દીક, પુરીબેન અભુભાઈ મેરુભાઈ ની દિકર, માલીબેન અભુભાઈ મેરુભાઈ ની દિકર, કાનીબેન અભુભાઈ મેરુભાઈ ની દિકર, કંચનબેન અભુભાઈ મેરુભાઈ ની દિકર, મઘીબેન અભુભાઈ મેરુભાઈ ની દિકરી ના ખાતા નંબર ૧૦૧ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. આ જમીન ઉપર હસનનગર સેવા સહકારી મંડળી લી માંથી ખેત ધિરાણ મેળવતા તા.૨૯/૦પ/૨૦૧પ નાં એકરારનામાં અને અરજીના આધારે જમીન તારણમાં મૂકતા ગામ નમુના નં ૭ ના બોજા/બીજા હકમાં નોંધ દાખલ કરવા આ નોંધ પાડવામાં આવી.",
+        "ફેરફારને સંબંધિત સરવે નંબર": "2(101), 108(101), 173(101)",
+        "તપાસણી કરનાર અધિકારીનો શેરો": "અરજદારની અરજી અને મંડળી ના એકરારનામાથી ખાત્રી કરી.\n- પ્રમાણીત -\nએ.કે.પટેલ\nસ.ઓ.બાવળા\nતા. ૧૪/૦૮/૧૫",
+        "નોંધ નંબરનોંધની તારીખફેરફારનો પ્રકારનોંધની સ્થિતિ": "645 | 06/06/2015 | બોજો દાખલ | પ્રમાણિત"
+      },
+      "entry_date": "06/06/2015",
+      "entry_number": "645",
+      "survey_numbers": "2(101), 108(101), 173(101)",
+      "officer_remarks": "અરજદારની અરજી અને મંડળી ના એકરારનામાથી ખાત્રી કરી.\n- પ્રમાણીત -\nએ.કે.પટેલ\nસ.ઓ.બાવળા\nતા. ૧૪/૦૮/૧૫",
+      "transaction_type": "બોજો દાખલ"
+    },
+    "ai_draft": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "06/06/2015",
+      "new_owners": [
+        "મઘીબેન અભુભાઈ મેરુભાઈ ની દિકરી ના ખાતા નંબર ૧૦૧ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. આ જમીન ઉપર હસનનગર સેવા સહકારી મંડળી"
+      ],
+      "survey_numbers": "2(101), 108(101), 173(101)",
+      "officer_remarks": "અરજદારની અરજી અને મંડળી ના એકરારનામાથી ખાત્રી કરી.\n- પ્રમાણીત -\nએ.કે.પટેલ\nસ.ઓ.બાવળા\nતા. ૧૪/૦૮/૧૫",
+      "previous_owners": [
+        "રણજીતભાઇ ભયરામભાઇ સગીરના વાલી",
+        "જશીબેન ભયરામભાઇ અભુભાઈ ની વિધવ",
+        "હીરાબેનતે અભુભાઈ મેરુભાઈની દીક",
+        "પુરીબેન અભુભાઈ મેરુભાઈ ની દિકર",
+        "માલીબેન અભુભાઈ મેરુભાઈ ની દિકર",
+        "કાનીબેન અભુભાઈ મેરુભાઈ ની દિકર",
+        "કંચનબેન અભુભાઈ મેરુભાઈ ની દિકર",
+        "મઘીબેન અભુભાઈ મેરુભાઈ ની દિકરી"
+      ],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ સગીરના વાલી, જશીબેન ભયરામભાઇ અભુભાઈ ની વિધવ, હીરાબેનતે અભુભાઈ મેરુભાઈની દીક, પુરીબેન અભુભાઈ મેરુભાઈ ની દિકર, માલીબેન અભુભાઈ મેરુભાઈ ની દિકર, કાનીબેન અભુભાઈ...",
+      "transaction_type": "બોજો દાખલ",
+      "mutation_entry_number": "645"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "06/06/2015",
+      "new_owners": [
+        "મઘીબેન અભુભાઈ મેરુભાઈ ની દિકરી ના ખાતા નંબર ૧૦૧ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. આ જમીન ઉપર હસનનગર સેવા સહકારી મંડળી"
+      ],
+      "survey_numbers": "2",
+      "officer_remarks": "અરજદારની અરજી અને મંડળી ના એકરારનામાથી ખાત્રી કરી.\n- પ્રમાણીત -\nએ.કે.પટેલ\nસ.ઓ.બાવળા\nતા. ૧૪/૦૮/૧૫",
+      "previous_owners": [
+        "રણજીતભાઇ ભયરામભાઇ સગીરના વાલી",
+        "જશીબેન ભયરામભાઇ અભુભાઈ ની વિધવ",
+        "હીરાબેનતે અભુભાઈ મેરુભાઈની દીક",
+        "પુરીબેન અભુભાઈ મેરુભાઈ ની દિકર",
+        "માલીબેન અભુભાઈ મેરુભાઈ ની દિકર",
+        "કાનીબેન અભુભાઈ મેરુભાઈ ની દિકર",
+        "કંચનબેન અભુભાઈ મેરુભાઈ ની દિકર",
+        "મઘીબેન અભુભાઈ મેરુભાઈ ની દિકરી"
+      ],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ સગીરના વાલી, જશીબેન ભયરામભાઇ અભુભાઈ ની વિધવ, હીરાબેનતે અભુભાઈ મેરુભાઈની દીક, પુરીબેન અભુભાઈ મેરુભાઈ ની દિકર, માલીબેન અભુભાઈ મેરુભાઈ ની દિકર, કાનીબેન અભુભાઈ...",
+      "transaction_type": "બોજો દાખલ",
+      "mutation_entry_number": "645"
+    }
+  },
+  {
+    "entry_number": "654",
+    "image_file_path": null,
+    "is_verified": true,
+    "scraped_html": {
+      "status": "પ્રમાણિત",
+      "details": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ સગીરના વાલી, જશીબેન ભયરામભાઇ અભુભાઈ ની વિધવ, હીરાબેનતે અભુભાઈ મેરુભાઈની દીક, પુરીબેન અભુભાઈ મેરુભાઈ ની દિકર, માલીબેન અભુભાઈ મેરુભાઈ ની દિકર, કાનીબેન અભુભાઈ મેરુભાઈ ની દિકર, કંચનબેન અભુભાઈ મેરુભાઈ ની દિકર, મઘીબેન અભુભાઈ મેરુભાઈ ની દિકરી એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે અરજી કરતા ઘી કોચરીયા ગૃપ સેવા સહકારી મંડળી લી. ના તા.૩૦/૦૩/૨૦૧૬ નાં દાખલા અને અરજદારની અરજીના આધારે બોજા મુક્તિની નોંધ પાડવામાં આવી.",
+      "raw_row": {
+        "નોંધની વિગત": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ સગીરના વાલી, જશીબેન ભયરામભાઇ અભુભાઈ ની વિધવ, હીરાબેનતે અભુભાઈ મેરુભાઈની દીક, પુરીબેન અભુભાઈ મેરુભાઈ ની દિકર, માલીબેન અભુભાઈ મેરુભાઈ ની દિકર, કાનીબેન અભુભાઈ મેરુભાઈ ની દિકર, કંચનબેન અભુભાઈ મેરુભાઈ ની દિકર, મઘીબેન અભુભાઈ મેરુભાઈ ની દિકરી એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે અરજી કરતા ઘી કોચરીયા ગૃપ સેવા સહકારી મંડળી લી. ના તા.૩૦/૦૩/૨૦૧૬ નાં દાખલા અને અરજદારની અરજીના આધારે બોજા મુક્તિની નોંધ પાડવામાં આવી.",
+        "ફેરફારને સંબંધિત સરવે નંબર": "2(101)",
+        "તપાસણી કરનાર અધિકારીનો શેરો": "નોટીસ બજવેલ છે.\nમંડળીના બોજામુકિત પ્રમાણપત્ર આઘારે પ્રમાણીત\nબી બી સોલંકી\nઇ સ ઓ બાવળા\nતા-૫/૭/૧૬",
+        "નોંધ નંબરનોંધની તારીખફેરફારનો પ્રકારનોંધની સ્થિતિ": "654 | 19/04/2016 | બોજા મુક્તિ | પ્રમાણિત"
+      },
+      "entry_date": "19/04/2016",
+      "entry_number": "654",
+      "survey_numbers": "2(101)",
+      "officer_remarks": "નોટીસ બજવેલ છે.\nમંડળીના બોજામુકિત પ્રમાણપત્ર આઘારે પ્રમાણીત\nબી બી સોલંકી\nઇ સ ઓ બાવળા\nતા-૫/૭/૧૬",
+      "transaction_type": "બોજા મુક્તિ"
+    },
+    "ai_draft": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "19/04/2016",
+      "new_owners": [
+        "મઘીબેન અભુભાઈ મેરુભાઈ ની દિકરી એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે અરજી કરતા ઘી કોચરીયા ગૃપ સેવા સહકારી મંડળી લી."
+      ],
+      "survey_numbers": "2(101)",
+      "officer_remarks": "નોટીસ બજવેલ છે.\nમંડળીના બોજામુકિત પ્રમાણપત્ર આઘારે પ્રમાણીત\nબી બી સોલંકી\nઇ સ ઓ બાવળા\nતા-૫/૭/૧૬",
+      "previous_owners": [],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ સગીરના વાલી, જશીબેન ભયરામભાઇ અભુભાઈ ની વિધવ, હીરાબેનતે અભુભાઈ મેરુભાઈની દીક, પુરીબેન અભુભાઈ મેરુભાઈ ની દિકર, માલીબેન અભુભાઈ મેરુભાઈ ની દિકર, કાનીબેન અભુભાઈ...",
+      "transaction_type": "બોજા મુક્તિ",
+      "mutation_entry_number": "654"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "19/04/2016",
+      "new_owners": [
+        "મઘીબેન અભુભાઈ મેરુભાઈ ની દિકરી એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે અરજી કરતા ઘી કોચરીયા ગૃપ સેવા સહકારી મંડળી લી."
+      ],
+      "survey_numbers": "2",
+      "officer_remarks": "નોટીસ બજવેલ છે.\nમંડળીના બોજામુકિત પ્રમાણપત્ર આઘારે પ્રમાણીત\nબી બી સોલંકી\nઇ સ ઓ બાવળા\nતા-૫/૭/૧૬",
+      "previous_owners": [],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ સગીરના વાલી, જશીબેન ભયરામભાઇ અભુભાઈ ની વિધવ, હીરાબેનતે અભુભાઈ મેરુભાઈની દીક, પુરીબેન અભુભાઈ મેરુભાઈ ની દિકર, માલીબેન અભુભાઈ મેરુભાઈ ની દિકર, કાનીબેન અભુભાઈ...",
+      "transaction_type": "બોજા મુક્તિ",
+      "mutation_entry_number": "654"
+    }
+  },
+  {
+    "entry_number": "657",
+    "image_file_path": null,
+    "is_verified": true,
+    "scraped_html": {
+      "status": "પ્રમાણિત",
+      "details": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ સગીરના વાલી, જશીબેન ભયરામભાઇ અભુભાઈ ની વિધવ, હીરાબેનતે અભુભાઈ મેરુભાઈની દીક, પુરીબેન અભુભાઈ મેરુભાઈ ની દિકર, માલીબેન અભુભાઈ મેરુભાઈ ની દિકર, કાનીબેન અભુભાઈ મેરુભાઈ ની દિકર, કંચનબેન અભુભાઈ મેરુભાઈ ની દિકર, મઘીબેન અભુભાઈ મેરુભાઈ ની દિકરી એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે અરજી કરતા ઘી આદરોડા સેવા સહકારી મંડળી લી. ના તા.૨૧/૦૩/૨૦૧૬ નાં દાખલા અને અરજદારની અરજીના આધારે બોજા મુક્તિની નોંધ પાડવામાં આવી.",
+      "raw_row": {
+        "નોંધની વિગત": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ સગીરના વાલી, જશીબેન ભયરામભાઇ અભુભાઈ ની વિધવ, હીરાબેનતે અભુભાઈ મેરુભાઈની દીક, પુરીબેન અભુભાઈ મેરુભાઈ ની દિકર, માલીબેન અભુભાઈ મેરુભાઈ ની દિકર, કાનીબેન અભુભાઈ મેરુભાઈ ની દિકર, કંચનબેન અભુભાઈ મેરુભાઈ ની દિકર, મઘીબેન અભુભાઈ મેરુભાઈ ની દિકરી એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે અરજી કરતા ઘી આદરોડા સેવા સહકારી મંડળી લી. ના તા.૨૧/૦૩/૨૦૧૬ નાં દાખલા અને અરજદારની અરજીના આધારે બોજા મુક્તિની નોંધ પાડવામાં આવી.",
+        "ફેરફારને સંબંધિત સરવે નંબર": "2(101), 108(101), 173(101)",
+        "તપાસણી કરનાર અધિકારીનો શેરો": "અરજદારની અરજી તથા બોજામુકિતના પ્રમાણપત્રથી ખાત્રીકરી પ્રમાણીત\nબી બી સોલંકી\nઇ સ ઓ બાવળા\nતા-૨૦/૭/૧૬",
+        "નોંધ નંબરનોંધની તારીખફેરફારનો પ્રકારનોંધની સ્થિતિ": "657 | 26/04/2016 | બોજા મુક્તિ | પ્રમાણિત"
+      },
+      "entry_date": "26/04/2016",
+      "entry_number": "657",
+      "survey_numbers": "2(101), 108(101), 173(101)",
+      "officer_remarks": "અરજદારની અરજી તથા બોજામુકિતના પ્રમાણપત્રથી ખાત્રીકરી પ્રમાણીત\nબી બી સોલંકી\nઇ સ ઓ બાવળા\nતા-૨૦/૭/૧૬",
+      "transaction_type": "બોજા મુક્તિ"
+    },
+    "ai_draft": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "26/04/2016",
+      "new_owners": [
+        "મઘીબેન અભુભાઈ મેરુભાઈ ની દિકરી એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે અરજી કરતા ઘી આદરોડા સેવા સહકારી મંડળી લી."
+      ],
+      "survey_numbers": "2(101), 108(101), 173(101)",
+      "officer_remarks": "અરજદારની અરજી તથા બોજામુકિતના પ્રમાણપત્રથી ખાત્રીકરી પ્રમાણીત\nબી બી સોલંકી\nઇ સ ઓ બાવળા\nતા-૨૦/૭/૧૬",
+      "previous_owners": [],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ સગીરના વાલી, જશીબેન ભયરામભાઇ અભુભાઈ ની વિધવ, હીરાબેનતે અભુભાઈ મેરુભાઈની દીક, પુરીબેન અભુભાઈ મેરુભાઈ ની દિકર, માલીબેન અભુભાઈ મેરુભાઈ ની દિકર, કાનીબેન અભુભાઈ...",
+      "transaction_type": "બોજા મુક્તિ",
+      "mutation_entry_number": "657"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "26/04/2016",
+      "new_owners": [
+        "મઘીબેન અભુભાઈ મેરુભાઈ ની દિકરી એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે અરજી કરતા ઘી આદરોડા સેવા સહકારી મંડળી લી."
+      ],
+      "survey_numbers": "2",
+      "officer_remarks": "અરજદારની અરજી તથા બોજામુકિતના પ્રમાણપત્રથી ખાત્રીકરી પ્રમાણીત\nબી બી સોલંકી\nઇ સ ઓ બાવળા\nતા-૨૦/૭/૧૬",
+      "previous_owners": [],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ સગીરના વાલી, જશીબેન ભયરામભાઇ અભુભાઈ ની વિધવ, હીરાબેનતે અભુભાઈ મેરુભાઈની દીક, પુરીબેન અભુભાઈ મેરુભાઈ ની દિકર, માલીબેન અભુભાઈ મેરુભાઈ ની દિકર, કાનીબેન અભુભાઈ...",
+      "transaction_type": "બોજા મુક્તિ",
+      "mutation_entry_number": "657"
+    }
+  },
+  {
+    "entry_number": "677",
+    "image_file_path": null,
+    "is_verified": true,
+    "scraped_html": {
+      "status": "પ્રમાણિત",
+      "details": "મોજે. હસનનગર ગામના ખાતેદાર ખેડુત શ્રી રણજીતભાઇ ભાઇરામભાઇ ના માર્જીનમા\nજણાવેલ ખેડ ખાતા નંબર તથા સર્વે નંબર વાળી જમીન આવેલ છે. તેમાંથી રણજીતભાઇ\nભાઇરામભાઇ પુખ્ત ઉમરના થતા તેમનુ સગીર ના વાલી તરીકે નામ કમી કરવા અરજદાર\nતરફથી સોગંદનામુ,શાળા છોડયાનું પ્રમાણપત્ર,ચુટણી કાર્ડ ની નકલ આઘારે સગીરપુખ્ત \nની નોઘ કરી.",
+      "raw_row": {
+        "નોંધની વિગત": "મોજે. હસનનગર ગામના ખાતેદાર ખેડુત શ્રી રણજીતભાઇ ભાઇરામભાઇ ના માર્જીનમા\nજણાવેલ ખેડ ખાતા નંબર તથા સર્વે નંબર વાળી જમીન આવેલ છે. તેમાંથી રણજીતભાઇ\nભાઇરામભાઇ પુખ્ત ઉમરના થતા તેમનુ સગીર ના વાલી તરીકે નામ કમી કરવા અરજદાર\nતરફથી સોગંદનામુ,શાળા છોડયાનું પ્રમાણપત્ર,ચુટણી કાર્ડ ની નકલ આઘારે સગીરપુખ્ત \nની નોઘ કરી.",
+        "ફેરફારને સંબંધિત સરવે નંબર": "2(101), 108(101), 173(101)",
+        "તપાસણી કરનાર અધિકારીનો શેરો": "રણજીતભાઇ ના લીવીંગ સર્ટી સોગદનામા તથા ચુટણી કાર્ડની ઝેરોક્ષથી ખાત્રીકરી પ્રમાણિત\nએ જી સોલંકી\nઇ.ચા મામલતદા બાવળા\nતા-૬/૭/૧૭",
+        "નોંધ નંબરનોંધની તારીખફેરફારનો પ્રકારનોંધની સ્થિતિ": "677 | 11/04/2017 | સગીર પુખ્ત | પ્રમાણિત"
+      },
+      "entry_date": "11/04/2017",
+      "entry_number": "677",
+      "survey_numbers": "2(101), 108(101), 173(101)",
+      "officer_remarks": "રણજીતભાઇ ના લીવીંગ સર્ટી સોગદનામા તથા ચુટણી કાર્ડની ઝેરોક્ષથી ખાત્રીકરી પ્રમાણિત\nએ જી સોલંકી\nઇ.ચા મામલતદા બાવળા\nતા-૬/૭/૧૭",
+      "transaction_type": "સગીર પુખ્ત"
+    },
+    "ai_draft": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "11/04/2017",
+      "new_owners": [],
+      "survey_numbers": "2(101), 108(101), 173(101)",
+      "officer_remarks": "રણજીતભાઇ ના લીવીંગ સર્ટી સોગદનામા તથા ચુટણી કાર્ડની ઝેરોક્ષથી ખાત્રીકરી પ્રમાણિત\nએ જી સોલંકી\nઇ.ચા મામલતદા બાવળા\nતા-૬/૭/૧૭",
+      "previous_owners": [],
+      "remarks_summary": "મોજે. હસનનગર ગામના ખાતેદાર ખેડુત શ્રી રણજીતભાઇ ભાઇરામભાઇ ના માર્જીનમા જણાવેલ ખેડ ખાતા નંબર તથા સર્વે નંબર વાળી જમીન આવેલ છે. તેમાંથી રણજીતભાઇ ભાઇરામભાઇ પુખ્ત ઉમરના થતા તેમનુ સગીર ના વાલી તરીકે નામ કમી કરવા અરજદાર તરફથી સ...",
+      "transaction_type": "સગીર પુખ્ત",
+      "mutation_entry_number": "677"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "11/04/2017",
+      "new_owners": [],
+      "survey_numbers": "2",
+      "officer_remarks": "રણજીતભાઇ ના લીવીંગ સર્ટી સોગદનામા તથા ચુટણી કાર્ડની ઝેરોક્ષથી ખાત્રીકરી પ્રમાણિત\nએ જી સોલંકી\nઇ.ચા મામલતદા બાવળા\nતા-૬/૭/૧૭",
+      "previous_owners": [],
+      "remarks_summary": "મોજે. હસનનગર ગામના ખાતેદાર ખેડુત શ્રી રણજીતભાઇ ભાઇરામભાઇ ના માર્જીનમા જણાવેલ ખેડ ખાતા નંબર તથા સર્વે નંબર વાળી જમીન આવેલ છે. તેમાંથી રણજીતભાઇ ભાઇરામભાઇ પુખ્ત ઉમરના થતા તેમનુ સગીર ના વાલી તરીકે નામ કમી કરવા અરજદાર તરફથી સ...",
+      "transaction_type": "સગીર પુખ્ત",
+      "mutation_entry_number": "677"
+    }
+  },
+  {
+    "entry_number": "678",
+    "image_file_path": null,
+    "is_verified": true,
+    "scraped_html": {
+      "status": "પ્રમાણિત",
+      "details": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ સગીરના વાલી, જશીબેન ભયરામભાઇ અભુભાઈ ની વિધવ, હીરાબેનતે અભુભાઈ મેરુભાઈની દીક, પુરીબેન અભુભાઈ મેરુભાઈ ની દિકર, માલીબેન અભુભાઈ મેરુભાઈ ની દિકર, કાનીબેન અભુભાઈ મેરુભાઈ ની દિકર, કંચનબેન અભુભાઈ મેરુભાઈ ની દિકર, મઘીબેન અભુભાઈ મેરુભાઈ ની દિકરી એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે અરજી કરતા સેન્ટ્રલ બેન્ક ઓફ ઇન્ડીયા મીઠાખળી શાખા ના તા.૨૪/૦૪/૨૦૧૭ નાં દાખલા અને અરજદારની અરજીના આધારે બોજા મુક્તિની નોંધ પાડવામાં આવી.",
+      "raw_row": {
+        "નોંધની વિગત": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ સગીરના વાલી, જશીબેન ભયરામભાઇ અભુભાઈ ની વિધવ, હીરાબેનતે અભુભાઈ મેરુભાઈની દીક, પુરીબેન અભુભાઈ મેરુભાઈ ની દિકર, માલીબેન અભુભાઈ મેરુભાઈ ની દિકર, કાનીબેન અભુભાઈ મેરુભાઈ ની દિકર, કંચનબેન અભુભાઈ મેરુભાઈ ની દિકર, મઘીબેન અભુભાઈ મેરુભાઈ ની દિકરી એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે અરજી કરતા સેન્ટ્રલ બેન્ક ઓફ ઇન્ડીયા મીઠાખળી શાખા ના તા.૨૪/૦૪/૨૦૧૭ નાં દાખલા અને અરજદારની અરજીના આધારે બોજા મુક્તિની નોંધ પાડવામાં આવી.",
+        "ફેરફારને સંબંધિત સરવે નંબર": "2(101), 108(101), 173(101)",
+        "તપાસણી કરનાર અધિકારીનો શેરો": "અરજદારની અરજી તથા બોજામુકિતના દાખલાથી ખાત્રીકરી પ્રમાણિત\nએ જી સોલંકી\nઇ.ચા મામલતદાર બાવળા\nતા-૧૧/૭/૧૭",
+        "નોંધ નંબરનોંધની તારીખફેરફારનો પ્રકારનોંધની સ્થિતિ": "678 | 27/04/2017 | બોજા મુક્તિ | પ્રમાણિત"
+      },
+      "entry_date": "27/04/2017",
+      "entry_number": "678",
+      "survey_numbers": "2(101), 108(101), 173(101)",
+      "officer_remarks": "અરજદારની અરજી તથા બોજામુકિતના દાખલાથી ખાત્રીકરી પ્રમાણિત\nએ જી સોલંકી\nઇ.ચા મામલતદાર બાવળા\nતા-૧૧/૭/૧૭",
+      "transaction_type": "બોજા મુક્તિ"
+    },
+    "ai_draft": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "27/04/2017",
+      "new_owners": [
+        "મઘીબેન અભુભાઈ મેરુભાઈ ની દિકરી એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે અરજી કરતા સેન્ટ્રલ બેન્ક"
+      ],
+      "survey_numbers": "2(101), 108(101), 173(101)",
+      "officer_remarks": "અરજદારની અરજી તથા બોજામુકિતના દાખલાથી ખાત્રીકરી પ્રમાણિત\nએ જી સોલંકી\nઇ.ચા મામલતદાર બાવળા\nતા-૧૧/૭/૧૭",
+      "previous_owners": [],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ સગીરના વાલી, જશીબેન ભયરામભાઇ અભુભાઈ ની વિધવ, હીરાબેનતે અભુભાઈ મેરુભાઈની દીક, પુરીબેન અભુભાઈ મેરુભાઈ ની દિકર, માલીબેન અભુભાઈ મેરુભાઈ ની દિકર, કાનીબેન અભુભાઈ...",
+      "transaction_type": "બોજા મુક્તિ",
+      "mutation_entry_number": "678"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "27/04/2017",
+      "new_owners": [
+        "મઘીબેન અભુભાઈ મેરુભાઈ ની દિકરી એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે અરજી કરતા સેન્ટ્રલ બેન્ક"
+      ],
+      "survey_numbers": "2",
+      "officer_remarks": "અરજદારની અરજી તથા બોજામુકિતના દાખલાથી ખાત્રીકરી પ્રમાણિત\nએ જી સોલંકી\nઇ.ચા મામલતદાર બાવળા\nતા-૧૧/૭/૧૭",
+      "previous_owners": [],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ સગીરના વાલી, જશીબેન ભયરામભાઇ અભુભાઈ ની વિધવ, હીરાબેનતે અભુભાઈ મેરુભાઈની દીક, પુરીબેન અભુભાઈ મેરુભાઈ ની દિકર, માલીબેન અભુભાઈ મેરુભાઈ ની દિકર, કાનીબેન અભુભાઈ...",
+      "transaction_type": "બોજા મુક્તિ",
+      "mutation_entry_number": "678"
+    }
+  },
+  {
+    "entry_number": "680",
+    "image_file_path": null,
+    "is_verified": true,
+    "scraped_html": {
+      "status": "પ્રમાણિત",
+      "details": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ સગીરના વાલી, જશીબેન ભયરામભાઇ અભુભાઈ ની વિધવ, હીરાબેનતે અભુભાઈ મેરુભાઈની દીક, પુરીબેન અભુભાઈ મેરુભાઈ ની દિકર, માલીબેન અભુભાઈ મેરુભાઈ ની દિકર, કાનીબેન અભુભાઈ મેરુભાઈ ની દિકર, કંચનબેન અભુભાઈ મેરુભાઈ ની દિકર, મઘીબેન અભુભાઈ મેરુભાઈ ની દિકરી એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે અરજી કરતા હસનનગર સેવા સહકારી મંડળી લી. ના તા.૦૮/૦પ/૨૦૧૭ નાં દાખલા અને અરજદારની અરજીના આધારે બોજા મુક્તિની નોંધ પાડવામાં આવી.",
+      "raw_row": {
+        "નોંધની વિગત": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ સગીરના વાલી, જશીબેન ભયરામભાઇ અભુભાઈ ની વિધવ, હીરાબેનતે અભુભાઈ મેરુભાઈની દીક, પુરીબેન અભુભાઈ મેરુભાઈ ની દિકર, માલીબેન અભુભાઈ મેરુભાઈ ની દિકર, કાનીબેન અભુભાઈ મેરુભાઈ ની દિકર, કંચનબેન અભુભાઈ મેરુભાઈ ની દિકર, મઘીબેન અભુભાઈ મેરુભાઈ ની દિકરી એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે અરજી કરતા હસનનગર સેવા સહકારી મંડળી લી. ના તા.૦૮/૦પ/૨૦૧૭ નાં દાખલા અને અરજદારની અરજીના આધારે બોજા મુક્તિની નોંધ પાડવામાં આવી.",
+        "ફેરફારને સંબંધિત સરવે નંબર": "2(101)",
+        "તપાસણી કરનાર અધિકારીનો શેરો": "હસનનગર સેવા સહકારી મંડળીના બોજામુકિતના પ્રમાણપત્રથી ખાત્રીકરી પ્રમાણિત\nબી પી પરમાર\nસ ઓ બાવળા\nતા-૧/૮/૧૭",
+        "નોંધ નંબરનોંધની તારીખફેરફારનો પ્રકારનોંધની સ્થિતિ": "680 | 15/05/2017 | બોજા મુક્તિ | પ્રમાણિત"
+      },
+      "entry_date": "15/05/2017",
+      "entry_number": "680",
+      "survey_numbers": "2(101)",
+      "officer_remarks": "હસનનગર સેવા સહકારી મંડળીના બોજામુકિતના પ્રમાણપત્રથી ખાત્રીકરી પ્રમાણિત\nબી પી પરમાર\nસ ઓ બાવળા\nતા-૧/૮/૧૭",
+      "transaction_type": "બોજા મુક્તિ"
+    },
+    "ai_draft": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "15/05/2017",
+      "new_owners": [
+        "મઘીબેન અભુભાઈ મેરુભાઈ ની દિકરી એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે અરજી કરતા હસનનગર સેવા સહકારી મંડળી લી."
+      ],
+      "survey_numbers": "2(101)",
+      "officer_remarks": "હસનનગર સેવા સહકારી મંડળીના બોજામુકિતના પ્રમાણપત્રથી ખાત્રીકરી પ્રમાણિત\nબી પી પરમાર\nસ ઓ બાવળા\nતા-૧/૮/૧૭",
+      "previous_owners": [],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ સગીરના વાલી, જશીબેન ભયરામભાઇ અભુભાઈ ની વિધવ, હીરાબેનતે અભુભાઈ મેરુભાઈની દીક, પુરીબેન અભુભાઈ મેરુભાઈ ની દિકર, માલીબેન અભુભાઈ મેરુભાઈ ની દિકર, કાનીબેન અભુભાઈ...",
+      "transaction_type": "બોજા મુક્તિ",
+      "mutation_entry_number": "680"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "15/05/2017",
+      "new_owners": [
+        "મઘીબેન અભુભાઈ મેરુભાઈ ની દિકરી એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે અરજી કરતા હસનનગર સેવા સહકારી મંડળી લી."
+      ],
+      "survey_numbers": "2",
+      "officer_remarks": "હસનનગર સેવા સહકારી મંડળીના બોજામુકિતના પ્રમાણપત્રથી ખાત્રીકરી પ્રમાણિત\nબી પી પરમાર\nસ ઓ બાવળા\nતા-૧/૮/૧૭",
+      "previous_owners": [],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ સગીરના વાલી, જશીબેન ભયરામભાઇ અભુભાઈ ની વિધવ, હીરાબેનતે અભુભાઈ મેરુભાઈની દીક, પુરીબેન અભુભાઈ મેરુભાઈ ની દિકર, માલીબેન અભુભાઈ મેરુભાઈ ની દિકર, કાનીબેન અભુભાઈ...",
+      "transaction_type": "બોજા મુક્તિ",
+      "mutation_entry_number": "680"
+    }
+  },
+  {
+    "entry_number": "682",
+    "image_file_path": null,
+    "is_verified": true,
+    "scraped_html": {
+      "status": "પ્રમાણિત",
+      "details": "ખેતીની જમીનનું રજીસ્ટર દસ્તાવેજથી વેચાણ : - બાજુમાં બતાવેલ સરવે નંબરવાળી જમીન જેનું ક્ષેત્રફળ  : 2    0.3463 કુલ :  1 સરવે નંબર  .. કુલ  : 0.3463 હે.-આરે-ચો.મી. મોજે : હસનનગર તા. બાવળા જી. અમદાવાદ  ખાતે ના કબ્જેદાર (ખાતા નં.)માલીબેન અભુભાઈ મેરુભાઈ ની દિકરી(101), પુરીબેન અભુભાઈ મેરુભાઈ ની દિકરી(101), કાનીબેન અભુભાઈ મેરુભાઈ ની દિકરી(101), કંચનબેન અભુભાઈ મેરુભાઈ ની દિકરી(101), હીરાબેનતે અભુભાઈ મેરુભાઈની દીકરી(101), મઘીબેન અભુભાઈ મેરુભાઈ ની દિકરી(101), રણજીતભાઇ ભયરામભાઇ સગીરના વાલી(101), જશીબેન ભયરામભાઇ અભુભાઈ ની વિધવા(101), ના નામે ચાલે છે. જે જમીન તેમણે 30/05/2017 ના રોજ ર.દ.નં. 1567/2017 થી માર્કેટ વેલ્યુ રૂ. 477894/-  અને અવેજની રકમ  રૂ. 478000/- માં વેચાણ આપેલ છે. મોજે . (હસનનગર) તા. (બાવળા) જી. (અમદાવાદ) શ્રી (ખાતે ખાતા નં.) ગોવિંદભાઈ મનજીભાઈ(0),  થી ખેતીની જમીન ધારણ કરે છે. ર.વે.દ. આધારે વેચાણ આપનારનું નામ કમી કરી વેચાણ લેનારનું નામ દાખલ કરવા નોંધ કરી.",
+      "raw_row": {
+        "નોંધની વિગત": "ખેતીની જમીનનું રજીસ્ટર દસ્તાવેજથી વેચાણ : - બાજુમાં બતાવેલ સરવે નંબરવાળી જમીન જેનું ક્ષેત્રફળ  : 2    0.3463 કુલ :  1 સરવે નંબર  .. કુલ  : 0.3463 હે.-આરે-ચો.મી. મોજે : હસનનગર તા. બાવળા જી. અમદાવાદ  ખાતે ના કબ્જેદાર (ખાતા નં.)માલીબેન અભુભાઈ મેરુભાઈ ની દિકરી(101), પુરીબેન અભુભાઈ મેરુભાઈ ની દિકરી(101), કાનીબેન અભુભાઈ મેરુભાઈ ની દિકરી(101), કંચનબેન અભુભાઈ મેરુભાઈ ની દિકરી(101), હીરાબેનતે અભુભાઈ મેરુભાઈની દીકરી(101), મઘીબેન અભુભાઈ મેરુભાઈ ની દિકરી(101), રણજીતભાઇ ભયરામભાઇ સગીરના વાલી(101), જશીબેન ભયરામભાઇ અભુભાઈ ની વિધવા(101), ના નામે ચાલે છે. જે જમીન તેમણે 30/05/2017 ના રોજ ર.દ.નં. 1567/2017 થી માર્કેટ વેલ્યુ રૂ. 477894/-  અને અવેજની રકમ  રૂ. 478000/- માં વેચાણ આપેલ છે. મોજે . (હસનનગર) તા. (બાવળા) જી. (અમદાવાદ) શ્રી (ખાતે ખાતા નં.) ગોવિંદભાઈ મનજીભાઈ(0),  થી ખેતીની જમીન ધારણ કરે છે. ર.વે.દ. આધારે વેચાણ આપનારનું નામ કમી કરી વેચાણ લેનારનું નામ દાખલ કરવા નોંધ કરી.",
+        "ફેરફારને સંબંધિત સરવે નંબર": ",2(101)",
+        "તપાસણી કરનાર અધિકારીનો શેરો": "ઓનલાઇન દસ્તાવેજ છે. નોટીસો આપેલ છે રજીસ્ટર દસ્તાવેજની નકલ ઇન્ડેક્ષ તથા વેચાણ લેનાર મોજે.છબાસર ના ખાતા નં-૪૩૦ થી સર્વે નં-૧૧૦૪ થી જમીન ઘારણ કરે છે. તેની નકલ આઘારે પ્રમાણિત\nબી પી પરમાર\nસ ઓ બાવળા\nતા-૧૯/૭/૧૭",
+        "નોંધ નંબરનોંધની તારીખફેરફારનો પ્રકારનોંધની સ્થિતિ": "682 | 30/05/2017 | વેચાણ | પ્રમાણિત"
+      },
+      "entry_date": "30/05/2017",
+      "entry_number": "682",
+      "survey_numbers": ",2(101)",
+      "officer_remarks": "ઓનલાઇન દસ્તાવેજ છે. નોટીસો આપેલ છે રજીસ્ટર દસ્તાવેજની નકલ ઇન્ડેક્ષ તથા વેચાણ લેનાર મોજે.છબાસર ના ખાતા નં-૪૩૦ થી સર્વે નં-૧૧૦૪ થી જમીન ઘારણ કરે છે. તેની નકલ આઘારે પ્રમાણિત\nબી પી પરમાર\nસ ઓ બાવળા\nતા-૧૯/૭/૧૭",
+      "transaction_type": "વેચાણ"
+    },
+    "ai_draft": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "30/05/2017",
+      "new_owners": [],
+      "survey_numbers": ",2(101)",
+      "officer_remarks": "ઓનલાઇન દસ્તાવેજ છે. નોટીસો આપેલ છે રજીસ્ટર દસ્તાવેજની નકલ ઇન્ડેક્ષ તથા વેચાણ લેનાર મોજે.છબાસર ના ખાતા નં-૪૩૦ થી સર્વે નં-૧૧૦૪ થી જમીન ઘારણ કરે છે. તેની નકલ આઘારે પ્રમાણિત\nબી પી પરમાર\nસ ઓ બાવળા\nતા-૧૯/૭/૧૭",
+      "previous_owners": [],
+      "remarks_summary": "ખેતીની જમીનનું રજીસ્ટર દસ્તાવેજથી વેચાણ : - બાજુમાં બતાવેલ સરવે નંબરવાળી જમીન જેનું ક્ષેત્રફળ : 2 0.3463 કુલ : 1 સરવે નંબર .. કુલ : 0.3463 હે.-આરે-ચો.મી. મોજે : હસનનગર તા. બાવળા જી. અમદાવાદ ખાતે ના કબ્જેદાર (ખાતા નં.)મા...",
+      "transaction_type": "વેચાણ",
+      "mutation_entry_number": "682"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "30/05/2017",
+      "new_owners": [],
+      "survey_numbers": "2",
+      "officer_remarks": "ઓનલાઇન દસ્તાવેજ છે. નોટીસો આપેલ છે રજીસ્ટર દસ્તાવેજની નકલ ઇન્ડેક્ષ તથા વેચાણ લેનાર મોજે.છબાસર ના ખાતા નં-૪૩૦ થી સર્વે નં-૧૧૦૪ થી જમીન ઘારણ કરે છે. તેની નકલ આઘારે પ્રમાણિત\nબી પી પરમાર\nસ ઓ બાવળા\nતા-૧૯/૭/૧૭",
+      "previous_owners": [],
+      "remarks_summary": "ખેતીની જમીનનું રજીસ્ટર દસ્તાવેજથી વેચાણ : - બાજુમાં બતાવેલ સરવે નંબરવાળી જમીન જેનું ક્ષેત્રફળ : 2 0.3463 કુલ : 1 સરવે નંબર .. કુલ : 0.3463 હે.-આરે-ચો.મી. મોજે : હસનનગર તા. બાવળા જી. અમદાવાદ ખાતે ના કબ્જેદાર (ખાતા નં.)મા...",
+      "transaction_type": "વેચાણ",
+      "mutation_entry_number": "682"
+    }
+  },
+  {
+    "entry_number": "694",
+    "image_file_path": null,
+    "is_verified": true,
+    "scraped_html": {
+      "status": "પ્રમાણિત",
+      "details": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ, જશીબેન ભયરામભાઇ અભુભાઈ ની વિધવ, હીરાબેનતે અભુભાઈ મેરુભાઈની દીક, પુરીબેન અભુભાઈ મેરુભાઈ ની દિકર, માલીબેન અભુભાઈ મેરુભાઈ ની દિકર, કાનીબેન અભુભાઈ મેરુભાઈ ની દિકર, કંચનબેન અભુભાઈ મેરુભાઈ ની દિકર, મઘીબેન અભુભાઈ મેરુભાઈ ની દિકરી ના ખાતા નંબર ૧૦૧ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. આ જમીન ઉપર ઘી હસનનગર સેવા સહકારી મંડળી લી. માંથી ધિરાણ મેળવતા તા.૦૯/૦પ/૨૦૧૭ નાં એકરારનામાં અને અરજીના આધારે જમીન તારણમાં મૂકતા ગામ નમુના નં ૭ ના બોજા/બીજા હકમાં નોંધ દાખલ કરવા આ નોંધ પાડવામાં આવી.",
+      "raw_row": {
+        "નોંધની વિગત": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ, જશીબેન ભયરામભાઇ અભુભાઈ ની વિધવ, હીરાબેનતે અભુભાઈ મેરુભાઈની દીક, પુરીબેન અભુભાઈ મેરુભાઈ ની દિકર, માલીબેન અભુભાઈ મેરુભાઈ ની દિકર, કાનીબેન અભુભાઈ મેરુભાઈ ની દિકર, કંચનબેન અભુભાઈ મેરુભાઈ ની દિકર, મઘીબેન અભુભાઈ મેરુભાઈ ની દિકરી ના ખાતા નંબર ૧૦૧ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. આ જમીન ઉપર ઘી હસનનગર સેવા સહકારી મંડળી લી. માંથી ધિરાણ મેળવતા તા.૦૯/૦પ/૨૦૧૭ નાં એકરારનામાં અને અરજીના આધારે જમીન તારણમાં મૂકતા ગામ નમુના નં ૭ ના બોજા/બીજા હકમાં નોંધ દાખલ કરવા આ નોંધ પાડવામાં આવી.",
+        "ફેરફારને સંબંધિત સરવે નંબર": "2(101)",
+        "તપાસણી કરનાર અધિકારીનો શેરો": "ઘી હસનનગર સેવા સહકારી મંડળીના એકરારનામાથી ખાત્રીકરી પ્રમાણિત\nબી પી પરમાર\nસ ઓ બાવળા\nતા-૪/૯/૧૭",
+        "નોંધ નંબરનોંધની તારીખફેરફારનો પ્રકારનોંધની સ્થિતિ": "694 | 25/07/2017 | બોજો દાખલ | પ્રમાણિત"
+      },
+      "entry_date": "25/07/2017",
+      "entry_number": "694",
+      "survey_numbers": "2(101)",
+      "officer_remarks": "ઘી હસનનગર સેવા સહકારી મંડળીના એકરારનામાથી ખાત્રીકરી પ્રમાણિત\nબી પી પરમાર\nસ ઓ બાવળા\nતા-૪/૯/૧૭",
+      "transaction_type": "બોજો દાખલ"
+    },
+    "ai_draft": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "25/07/2017",
+      "new_owners": [
+        "ઘી હસનનગર સેવા સહકારી મંડળી લી."
+      ],
+      "survey_numbers": "2(101)",
+      "officer_remarks": "ઘી હસનનગર સેવા સહકારી મંડળીના એકરારનામાથી ખાત્રીકરી પ્રમાણિત\nબી પી પરમાર\nસ ઓ બાવળા\nતા-૪/૯/૧૭",
+      "previous_owners": [
+        "રણજીતભાઇ ભયરામભાઇ",
+        "જશીબેન ભયરામભાઇ અભુભાઈ ની વિધવ",
+        "હીરાબેનતે અભુભાઈ મેરુભાઈની દીક",
+        "પુરીબેન અભુભાઈ મેરુભાઈ ની દિકર",
+        "માલીબેન અભુભાઈ મેરુભાઈ ની દિકર",
+        "કાનીબેન અભુભાઈ મેરુભાઈ ની દિકર",
+        "કંચનબેન અભુભાઈ મેરુભાઈ ની દિકર",
+        "મઘીબેન અભુભાઈ મેરુભાઈ ની દિકરી"
+      ],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ, જશીબેન ભયરામભાઇ અભુભાઈ ની વિધવ, હીરાબેનતે અભુભાઈ મેરુભાઈની દીક, પુરીબેન અભુભાઈ મેરુભાઈ ની દિકર, માલીબેન અભુભાઈ મેરુભાઈ ની દિકર, કાનીબેન અભુભાઈ મેરુભાઈ ની ...",
+      "transaction_type": "બોજો દાખલ",
+      "mutation_entry_number": "694"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "25/07/2017",
+      "new_owners": [
+        "ઘી હસનનગર સેવા સહકારી મંડળી લી."
+      ],
+      "survey_numbers": "2",
+      "officer_remarks": "ઘી હસનનગર સેવા સહકારી મંડળીના એકરારનામાથી ખાત્રીકરી પ્રમાણિત\nબી પી પરમાર\nસ ઓ બાવળા\nતા-૪/૯/૧૭",
+      "previous_owners": [
+        "રણજીતભાઇ ભયરામભાઇ",
+        "જશીબેન ભયરામભાઇ અભુભાઈ ની વિધવ",
+        "હીરાબેનતે અભુભાઈ મેરુભાઈની દીક",
+        "પુરીબેન અભુભાઈ મેરુભાઈ ની દિકર",
+        "માલીબેન અભુભાઈ મેરુભાઈ ની દિકર",
+        "કાનીબેન અભુભાઈ મેરુભાઈ ની દિકર",
+        "કંચનબેન અભુભાઈ મેરુભાઈ ની દિકર",
+        "મઘીબેન અભુભાઈ મેરુભાઈ ની દિકરી"
+      ],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ, જશીબેન ભયરામભાઇ અભુભાઈ ની વિધવ, હીરાબેનતે અભુભાઈ મેરુભાઈની દીક, પુરીબેન અભુભાઈ મેરુભાઈ ની દિકર, માલીબેન અભુભાઈ મેરુભાઈ ની દિકર, કાનીબેન અભુભાઈ મેરુભાઈ ની ...",
+      "transaction_type": "બોજો દાખલ",
+      "mutation_entry_number": "694"
+    }
+  },
+  {
+    "entry_number": "712",
+    "image_file_path": null,
+    "is_verified": true,
+    "scraped_html": {
+      "status": "પ્રમાણિત",
+      "details": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર ગોવિંદભાઇ મનજીભાઇ (હે ૦-૩૪-૬૩ ના ખાતા નંબર ૨પ૦ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. આ જમીન ઉપર ઘી હસનનગર સેવા સહકારી મંડળી લી. માંથી ધિરાણ મેળવતા તા.૦૧/૦પ/૨૦૧૮ નાં એકરારનામાં અને અરજીના આધારે જમીન તારણમાં મૂકતા ગામ નમુના નં ૭ ના બોજા/બીજા હકમાં નોંધ દાખલ કરવા આ નોંધ પાડવામાં આવી.",
+      "raw_row": {
+        "નોંધની વિગત": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર ગોવિંદભાઇ મનજીભાઇ (હે ૦-૩૪-૬૩ ના ખાતા નંબર ૨પ૦ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. આ જમીન ઉપર ઘી હસનનગર સેવા સહકારી મંડળી લી. માંથી ધિરાણ મેળવતા તા.૦૧/૦પ/૨૦૧૮ નાં એકરારનામાં અને અરજીના આધારે જમીન તારણમાં મૂકતા ગામ નમુના નં ૭ ના બોજા/બીજા હકમાં નોંધ દાખલ કરવા આ નોંધ પાડવામાં આવી.",
+        "ફેરફારને સંબંધિત સરવે નંબર": "2(250)",
+        "તપાસણી કરનાર અધિકારીનો શેરો": "મંડળીના એકરારનામા આધારે \n- પ્રમાણિત - \nબી.પી.પરમાર\nસર્કલ ઓફીસર,બાવળા\nતા.૧૮/૦૭/૨૦૧૮",
+        "નોંધ નંબરનોંધની તારીખફેરફારનો પ્રકારનોંધની સ્થિતિ": "712 | 01/05/2018 | બોજો દાખલ | પ્રમાણિત"
+      },
+      "entry_date": "01/05/2018",
+      "entry_number": "712",
+      "survey_numbers": "2(250)",
+      "officer_remarks": "મંડળીના એકરારનામા આધારે \n- પ્રમાણિત - \nબી.પી.પરમાર\nસર્કલ ઓફીસર,બાવળા\nતા.૧૮/૦૭/૨૦૧૮",
+      "transaction_type": "બોજો દાખલ"
+    },
+    "ai_draft": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "01/05/2018",
+      "new_owners": [
+        "ઘી હસનનગર સેવા સહકારી મંડળી લી."
+      ],
+      "survey_numbers": "2(250)",
+      "officer_remarks": "મંડળીના એકરારનામા આધારે \n- પ્રમાણિત - \nબી.પી.પરમાર\nસર્કલ ઓફીસર,બાવળા\nતા.૧૮/૦૭/૨૦૧૮",
+      "previous_owners": [
+        "ગોવિંદભાઇ મનજીભાઇ (હે ૦-૩૪-૬૩"
+      ],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર ગોવિંદભાઇ મનજીભાઇ (હે ૦-૩૪-૬૩ ના ખાતા નંબર ૨પ૦ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. આ જમીન ઉપર ઘી હસનનગર સેવા સહકારી મંડળી લી. માંથી ધિરાણ મેળવતા તા.૦૧/૦પ/૨૦૧૮ નાં ...",
+      "transaction_type": "બોજો દાખલ",
+      "mutation_entry_number": "712"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "01/05/2018",
+      "new_owners": [
+        "ઘી હસનનગર સેવા સહકારી મંડળી લી."
+      ],
+      "survey_numbers": "2",
+      "officer_remarks": "મંડળીના એકરારનામા આધારે \n- પ્રમાણિત - \nબી.પી.પરમાર\nસર્કલ ઓફીસર,બાવળા\nતા.૧૮/૦૭/૨૦૧૮",
+      "previous_owners": [
+        "ગોવિંદભાઇ મનજીભાઇ (હે ૦-૩૪-૬૩"
+      ],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર ગોવિંદભાઇ મનજીભાઇ (હે ૦-૩૪-૬૩ ના ખાતા નંબર ૨પ૦ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. આ જમીન ઉપર ઘી હસનનગર સેવા સહકારી મંડળી લી. માંથી ધિરાણ મેળવતા તા.૦૧/૦પ/૨૦૧૮ નાં ...",
+      "transaction_type": "બોજો દાખલ",
+      "mutation_entry_number": "712"
+    }
+  },
+  {
+    "entry_number": "739",
+    "image_file_path": null,
+    "is_verified": true,
+    "scraped_html": {
+      "status": "પ્રમાણિત",
+      "details": "હસનનગર ગામે શ્રી પુરીબેન અભુભાઇ મેરુભાઇ ના દીકરી તે અમરશીભાઇ ના પત્ની \nવીગેરે ના નામે ખેતી ખાતા નંબર ૨૫૦,૧૦૧ થી માર્જીનમાં જણાવેલ સર્વે નંબર વાળું\nસંયુકત ખાતું ચાલે છે. તેમાથી નીચેના હિસ્સેદારોએ પોતાની રાજીખુશી થી આ ખાતાની \nજમીનમાંથી તેમનો હકહિસ્સો ઉઠાવી લેવા અરજી તથા સોગંદનામું રજુ કરેલ છે. \n\n(૧) પુરીબેન અભુભાઇ મેરુભાઇ ના દીકરી તે અમરશીભાઇ ના પત્ની \n(૨) માલીબેન અભુભાઇ મેરુભાઇ ના દીકરી તે લઘરાભાઇ ના પત્ની \n(૩) કાનીબેન અભુભાઇ મેરુભાઇના દીકરી તે પ્રહલાદભાઇ ના પત્ની \n(૪) કંચનબેન અભુભાઇ મેરુભાઇ ના દીકરી તે ગણેશભાઇ ના પત્ની   \n\nઉપરોકત વિગતેના સહ- હિસ્સેદારોએ તેમનો હકક-હીસ્સો તેમના સંયુકત ખાતેદારોની\nતરફેણમાં હકક જતો કરેલ હોઇ અરજદાર તરફથી અરજી તથા સોગંદનામા ના આધારે\nરજુ કરતાં ઉપરોકત નામ કમી કરવા નોંધ કરી.",
+      "raw_row": {
+        "નોંધની વિગત": "હસનનગર ગામે શ્રી પુરીબેન અભુભાઇ મેરુભાઇ ના દીકરી તે અમરશીભાઇ ના પત્ની \nવીગેરે ના નામે ખેતી ખાતા નંબર ૨૫૦,૧૦૧ થી માર્જીનમાં જણાવેલ સર્વે નંબર વાળું\nસંયુકત ખાતું ચાલે છે. તેમાથી નીચેના હિસ્સેદારોએ પોતાની રાજીખુશી થી આ ખાતાની \nજમીનમાંથી તેમનો હકહિસ્સો ઉઠાવી લેવા અરજી તથા સોગંદનામું રજુ કરેલ છે. \n\n(૧) પુરીબેન અભુભાઇ મેરુભાઇ ના દીકરી તે અમરશીભાઇ ના પત્ની \n(૨) માલીબેન અભુભાઇ મેરુભાઇ ના દીકરી તે લઘરાભાઇ ના પત્ની \n(૩) કાનીબેન અભુભાઇ મેરુભાઇના દીકરી તે પ્રહલાદભાઇ ના પત્ની \n(૪) કંચનબેન અભુભાઇ મેરુભાઇ ના દીકરી તે ગણેશભાઇ ના પત્ની   \n\nઉપરોકત વિગતેના સહ- હિસ્સેદારોએ તેમનો હકક-હીસ્સો તેમના સંયુકત ખાતેદારોની\nતરફેણમાં હકક જતો કરેલ હોઇ અરજદાર તરફથી અરજી તથા સોગંદનામા ના આધારે\nરજુ કરતાં ઉપરોકત નામ કમી કરવા નોંધ કરી.",
+        "ફેરફારને સંબંધિત સરવે નંબર": "2(250), 108(101), 173(101)",
+        "તપાસણી કરનાર અધિકારીનો શેરો": "નોટીસો આર પી એ ડી થી બજાવેલ છે અરજી જવાબ પંચનામુ ઓળખના પુરાવા તથા હકકમીના સોગદનામુ રજુ થયેલ છે કાગળો કુલ પાંચ નામો કમી કરવા રજુ થયેલ છે તેમ છતા મઘીબેન અભુભાઇ ના દિકરી તે જયેશભાઇ ના પત્ની નુ નામ કમી કરવા નોંઘની સ્ક્રીપમા લખાણમા ભુલ થયેલ છે અને રહી ગયેલ છે જેથી મઘીબેન અભુભાઇ સહીત કુલ-૫ પાંચ નામો કાગળો મુજબ કમી કરવા નોંઘ પ્રમાણિત\nબી પી પરમાર\nસ ઓ બાવળા\nતા-૧૭/૭/૧૯",
+        "નોંધ નંબરનોંધની તારીખફેરફારનો પ્રકારનોંધની સ્થિતિ": "739 | 07/06/2019 | હક કમી | પ્રમાણિત"
+      },
+      "entry_date": "07/06/2019",
+      "entry_number": "739",
+      "survey_numbers": "2(250), 108(101), 173(101)",
+      "officer_remarks": "નોટીસો આર પી એ ડી થી બજાવેલ છે અરજી જવાબ પંચનામુ ઓળખના પુરાવા તથા હકકમીના સોગદનામુ રજુ થયેલ છે કાગળો કુલ પાંચ નામો કમી કરવા રજુ થયેલ છે તેમ છતા મઘીબેન અભુભાઇ ના દિકરી તે જયેશભાઇ ના પત્ની નુ નામ કમી કરવા નોંઘની સ્ક્રીપમા લખાણમા ભુલ થયેલ છે અને રહી ગયેલ છે જેથી મઘીબેન અભુભાઇ સહીત કુલ-૫ પાંચ નામો કાગળો મુજબ કમી કરવા નોંઘ પ્રમાણિત\nબી પી પરમાર\nસ ઓ બાવળા\nતા-૧૭/૭/૧૯",
+      "transaction_type": "હક કમી"
+    },
+    "ai_draft": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "07/06/2019",
+      "new_owners": [],
+      "survey_numbers": "2(250), 108(101), 173(101)",
+      "officer_remarks": "નોટીસો આર પી એ ડી થી બજાવેલ છે અરજી જવાબ પંચનામુ ઓળખના પુરાવા તથા હકકમીના સોગદનામુ રજુ થયેલ છે કાગળો કુલ પાંચ નામો કમી કરવા રજુ થયેલ છે તેમ છતા મઘીબેન અભુભાઇ ના દિકરી તે જયેશભાઇ ના પત્ની નુ નામ કમી કરવા નોંઘની સ્ક્રીપમા લખાણમા ભુલ થયેલ છે અને રહી ગયેલ છે જેથી મઘીબેન અભુભાઇ સહીત કુલ-૫ પાંચ નામો કાગળો મુજબ કમી કરવા નોંઘ પ્રમાણિત\nબી પી પરમાર\nસ ઓ બાવળા\nતા-૧૭/૭/૧૯",
+      "previous_owners": [],
+      "remarks_summary": "હસનનગર ગામે શ્રી પુરીબેન અભુભાઇ મેરુભાઇ ના દીકરી તે અમરશીભાઇ ના પત્ની વીગેરે ના નામે ખેતી ખાતા નંબર ૨૫૦,૧૦૧ થી માર્જીનમાં જણાવેલ સર્વે નંબર વાળું સંયુકત ખાતું ચાલે છે. તેમાથી નીચેના હિસ્સેદારોએ પોતાની રાજીખુશી થી આ ખાતાન...",
+      "transaction_type": "હક કમી",
+      "mutation_entry_number": "739"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "07/06/2019",
+      "new_owners": [],
+      "survey_numbers": "2",
+      "officer_remarks": "નોટીસો આર પી એ ડી થી બજાવેલ છે અરજી જવાબ પંચનામુ ઓળખના પુરાવા તથા હકકમીના સોગદનામુ રજુ થયેલ છે કાગળો કુલ પાંચ નામો કમી કરવા રજુ થયેલ છે તેમ છતા મઘીબેન અભુભાઇ ના દિકરી તે જયેશભાઇ ના પત્ની નુ નામ કમી કરવા નોંઘની સ્ક્રીપમા લખાણમા ભુલ થયેલ છે અને રહી ગયેલ છે જેથી મઘીબેન અભુભાઇ સહીત કુલ-૫ પાંચ નામો કાગળો મુજબ કમી કરવા નોંઘ પ્રમાણિત\nબી પી પરમાર\nસ ઓ બાવળા\nતા-૧૭/૭/૧૯",
+      "previous_owners": [],
+      "remarks_summary": "હસનનગર ગામે શ્રી પુરીબેન અભુભાઇ મેરુભાઇ ના દીકરી તે અમરશીભાઇ ના પત્ની વીગેરે ના નામે ખેતી ખાતા નંબર ૨૫૦,૧૦૧ થી માર્જીનમાં જણાવેલ સર્વે નંબર વાળું સંયુકત ખાતું ચાલે છે. તેમાથી નીચેના હિસ્સેદારોએ પોતાની રાજીખુશી થી આ ખાતાન...",
+      "transaction_type": "હક કમી",
+      "mutation_entry_number": "739"
+    }
+  },
+  {
+    "entry_number": "777",
+    "image_file_path": null,
+    "is_verified": true,
+    "scraped_html": {
+      "status": "પ્રમાણિત",
+      "details": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ, જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ, હીરાબેન  તે અભુભાઇ મેરુભાઇ ની , ઉપરોકત ના નામે (હે ૪-૨૧-૪૫) એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે અરજી કરતા ઘી હસનનગર સેવા સહકારી મંડળી લી. ના તા.૧૭/૦૩/૨૦૨૦ નાં દાખલા અને અરજદારની અરજીના આધારે બોજા મુક્તિની નોંધ પાડવામાં આવી.",
+      "raw_row": {
+        "નોંધની વિગત": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ, જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ, હીરાબેન  તે અભુભાઇ મેરુભાઇ ની , ઉપરોકત ના નામે (હે ૪-૨૧-૪૫) એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે અરજી કરતા ઘી હસનનગર સેવા સહકારી મંડળી લી. ના તા.૧૭/૦૩/૨૦૨૦ નાં દાખલા અને અરજદારની અરજીના આધારે બોજા મુક્તિની નોંધ પાડવામાં આવી.",
+        "ફેરફારને સંબંધિત સરવે નંબર": "2(250)",
+        "તપાસણી કરનાર અધિકારીનો શેરો": "૧૩૫ડી નોટીસ RPAD  થી મોકલેલ છે અરજી બોજામુકિત પ્રમાણપત્ર આઘારે પ્રમાણિત\nએચ એમ પટેલ\nસ ઓ બાવળા\nતા-૧૭/૬/૨૦૨૦",
+        "નોંધ નંબરનોંધની તારીખફેરફારનો પ્રકારનોંધની સ્થિતિ": "777 | 20/03/2020 | બોજા મુક્તિ | પ્રમાણિત"
+      },
+      "entry_date": "20/03/2020",
+      "entry_number": "777",
+      "survey_numbers": "2(250)",
+      "officer_remarks": "૧૩૫ડી નોટીસ RPAD  થી મોકલેલ છે અરજી બોજામુકિત પ્રમાણપત્ર આઘારે પ્રમાણિત\nએચ એમ પટેલ\nસ ઓ બાવળા\nતા-૧૭/૬/૨૦૨૦",
+      "transaction_type": "બોજા મુક્તિ"
+    },
+    "ai_draft": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "20/03/2020",
+      "new_owners": [
+        "ઉપરોકત ના નામે (હે ૪-૨૧-૪૫) એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે અરજી કરતા ઘી હસનનગર સેવા સહકારી મંડળી લી."
+      ],
+      "survey_numbers": "2(250)",
+      "officer_remarks": "૧૩૫ડી નોટીસ RPAD  થી મોકલેલ છે અરજી બોજામુકિત પ્રમાણપત્ર આઘારે પ્રમાણિત\nએચ એમ પટેલ\nસ ઓ બાવળા\nતા-૧૭/૬/૨૦૨૦",
+      "previous_owners": [
+        "રણજીતભાઇ ભયરામભાઇ",
+        "જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ",
+        "હીરાબેન તે અભુભાઇ મેરુભાઇ ની",
+        "ઉપરોકત ના નામે"
+      ],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ, જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ, હીરાબેન તે અભુભાઇ મેરુભાઇ ની , ઉપરોકત ના નામે (હે ૪-૨૧-૪૫) એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે...",
+      "transaction_type": "બોજા મુક્તિ",
+      "mutation_entry_number": "777"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "20/03/2020",
+      "new_owners": [
+        "ઉપરોકત ના નામે (હે ૪-૨૧-૪૫) એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે અરજી કરતા ઘી હસનનગર સેવા સહકારી મંડળી લી."
+      ],
+      "survey_numbers": "2",
+      "officer_remarks": "૧૩૫ડી નોટીસ RPAD  થી મોકલેલ છે અરજી બોજામુકિત પ્રમાણપત્ર આઘારે પ્રમાણિત\nએચ એમ પટેલ\nસ ઓ બાવળા\nતા-૧૭/૬/૨૦૨૦",
+      "previous_owners": [
+        "રણજીતભાઇ ભયરામભાઇ",
+        "જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ",
+        "હીરાબેન તે અભુભાઇ મેરુભાઇ ની",
+        "ઉપરોકત ના નામે"
+      ],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ, જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ, હીરાબેન તે અભુભાઇ મેરુભાઇ ની , ઉપરોકત ના નામે (હે ૪-૨૧-૪૫) એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે...",
+      "transaction_type": "બોજા મુક્તિ",
+      "mutation_entry_number": "777"
+    }
+  },
+  {
+    "entry_number": "778",
+    "image_file_path": null,
+    "is_verified": true,
+    "scraped_html": {
+      "status": "પ્રમાણિત",
+      "details": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર ગોવિંદભાઇ મનજીભાઇ (હે ૦-૩૪-૬૩), ------------------------------, રણજીતભાઇ ભયરામભાઇ, જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ, હીરાબેન  તે અભુભાઇ મેરુભાઇ ની , ઉપરોકત ના નામે (હે ૪-૨૧-૪૫) ના ખાતા નંબર ૨પ૦ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. આ જમીન ઉપર આઈ સી આઈ સી આઈ, ICICI Bavla માંથી અંકે રૂપીયા ૮,૦૦,૦૦૦/- નું ધિરાણ મેળવતા તા.૨૧/૦૩/૨૦૨૦ નાં એકરારનામાં અને અરજીના આધારે જમીન તારણમાં મૂકતા ગામ નમુના નં ૭ ના બોજા/બીજા હકમાં નોંધ દાખલ કરવા આ નોંધ પાડવામાં આવી.",
+      "raw_row": {
+        "નોંધની વિગત": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર ગોવિંદભાઇ મનજીભાઇ (હે ૦-૩૪-૬૩), ------------------------------, રણજીતભાઇ ભયરામભાઇ, જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ, હીરાબેન  તે અભુભાઇ મેરુભાઇ ની , ઉપરોકત ના નામે (હે ૪-૨૧-૪૫) ના ખાતા નંબર ૨પ૦ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. આ જમીન ઉપર આઈ સી આઈ સી આઈ, ICICI Bavla માંથી અંકે રૂપીયા ૮,૦૦,૦૦૦/- નું ધિરાણ મેળવતા તા.૨૧/૦૩/૨૦૨૦ નાં એકરારનામાં અને અરજીના આધારે જમીન તારણમાં મૂકતા ગામ નમુના નં ૭ ના બોજા/બીજા હકમાં નોંધ દાખલ કરવા આ નોંધ પાડવામાં આવી.",
+        "ફેરફારને સંબંધિત સરવે નંબર": "2(250)",
+        "તપાસણી કરનાર અધિકારીનો શેરો": "૧૩૫ડી નોટીસ તલાટી રૂબરૂ બજાવેલ છે અરજી એકરારનામા આઘારે પ્રમાણિત\nએચ એમ પટેલ\nસ ઓ બાવળા\nતા-૧૭/૬/૨૦૨૦",
+        "નોંધ નંબરનોંધની તારીખફેરફારનો પ્રકારનોંધની સ્થિતિ": "778 | 21/03/2020 | બોજો દાખલ | પ્રમાણિત"
+      },
+      "entry_date": "21/03/2020",
+      "entry_number": "778",
+      "survey_numbers": "2(250)",
+      "officer_remarks": "૧૩૫ડી નોટીસ તલાટી રૂબરૂ બજાવેલ છે અરજી એકરારનામા આઘારે પ્રમાણિત\nએચ એમ પટેલ\nસ ઓ બાવળા\nતા-૧૭/૬/૨૦૨૦",
+      "transaction_type": "બોજો દાખલ"
+    },
+    "ai_draft": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "21/03/2020",
+      "new_owners": [],
+      "survey_numbers": "2(250)",
+      "officer_remarks": "૧૩૫ડી નોટીસ તલાટી રૂબરૂ બજાવેલ છે અરજી એકરારનામા આઘારે પ્રમાણિત\nએચ એમ પટેલ\nસ ઓ બાવળા\nતા-૧૭/૬/૨૦૨૦",
+      "previous_owners": [
+        "ગોવિંદભાઇ મનજીભાઇ",
+        "------------------------------",
+        "રણજીતભાઇ ભયરામભાઇ",
+        "જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ",
+        "હીરાબેન તે અભુભાઇ મેરુભાઇ ની",
+        "ઉપરોકત ના નામે"
+      ],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર ગોવિંદભાઇ મનજીભાઇ (હે ૦-૩૪-૬૩), ------------------------------, રણજીતભાઇ ભયરામભાઇ, જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ, હીરાબેન તે અભુભાઇ મેરુભાઇ ની , ઉપરોકત ના નામે (હે ૪-૨૧-૪૫)...",
+      "transaction_type": "બોજો દાખલ",
+      "mutation_entry_number": "778"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "21/03/2020",
+      "new_owners": [],
+      "survey_numbers": "2",
+      "officer_remarks": "૧૩૫ડી નોટીસ તલાટી રૂબરૂ બજાવેલ છે અરજી એકરારનામા આઘારે પ્રમાણિત\nએચ એમ પટેલ\nસ ઓ બાવળા\nતા-૧૭/૬/૨૦૨૦",
+      "previous_owners": [
+        "ગોવિંદભાઇ મનજીભાઇ",
+        "------------------------------",
+        "રણજીતભાઇ ભયરામભાઇ",
+        "જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ",
+        "હીરાબેન તે અભુભાઇ મેરુભાઇ ની",
+        "ઉપરોકત ના નામે"
+      ],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર ગોવિંદભાઇ મનજીભાઇ (હે ૦-૩૪-૬૩), ------------------------------, રણજીતભાઇ ભયરામભાઇ, જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ, હીરાબેન તે અભુભાઇ મેરુભાઇ ની , ઉપરોકત ના નામે (હે ૪-૨૧-૪૫)...",
+      "transaction_type": "બોજો દાખલ",
+      "mutation_entry_number": "778"
+    }
+  },
+  {
+    "entry_number": "811",
+    "image_file_path": null,
+    "is_verified": true,
+    "scraped_html": {
+      "status": "પ્રમાણિત",
+      "details": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર બબાભાઇ ગોવાભાઇ, હરગોવિંદભાઇ ભીખાભાઇ, ગગુભાઇ ભીખાભાઇ, બાબુભાઇ ભીખાભાઇ, વીરીબેન કાશીરામ ગટોરભાઈ ની વિધ, ભયરામભાઈ કાશીરામભાઈ, વીરજીભાઈ કાશીરામ, હરગોવિંદભાઇ ભીખાભાઇ, બાબુભાઇ ભીખાભાઇ, ચંપાબેન ભીખાભાઇ ગટોરભાઇની વિધવ, ગગુભાઈ ભીખાભાઈ, બુટાભાઇ વાઘજીભાઇ, પશીબેન ભઇજીભાઇ ઝવેરભાઇની વિઘવા, જલાભાઈ ભઇજીભાઇ, કમાભાઈ ભઇજીભાઇ, વાલજીભાઈ ફુલાભાઈ, સોડાભાઈ ફુલાભાઈ, મોહનભાઈ ફુલાભાઈ, ભાવુભાઇ દેવસીભાઇ, ઈચ્છા રામજી, દેવસીભાઇ રામજીભાઇ, કાન્તીભાઇ દાનાભાઇ, રમણભાઇ દાનાભાઇ, સીતાબેન પેલાદભાઈ દાનાભાઈની વિઘ, તથા સગીરોના વાલી તરીકે, ગુલાબબેન પ્રહેલાદભાઈ, રણજીતભાઈ પ્રહેલાદભાઈ, ગીતાબેન જયંતીભાઈ દાનાભાઈની વિઘ, તથા સગીરના વાલી તરીકે, જગદીશભાઈ જયંતીભાઈ, લક્ષ્મીબેન જયંતીભાઈ, રોહીતભાઈ જયંતીભાઈ, લઘરાભાઈ સોમાભાઈ, કો.પટેલ શાંતાબેન બીજલભાઇના વિઘ, કો.પટેલ અમૃતભાઇ બીજલભાઇ, કો.પટેલ ચંદનભાઇ બીજલભાઇ, કરમશીભાઇ મંગાભાઇ, દયારામભાઇ મંગાભાઇ, ઘનશ્યામ ધરમશીભાઇ, ભરત ધરમશીભાઇ, રંજનબેન સવઘણભાઇ, રાઘીબેન સવઘણભાઇ, હર્ષદભાઇ સવઘણભાઇ, સગીર કોમલબેન સવઘણભાઇ ના વાલી ર, સગીર સુરેશભાઇ સવઘણભાઇ ના વાલી , જયેન્દ્રભાઇ મોહનભાઇ, હર્ષદભાઇ મોહનભાઇ, ભારતીબેન મોહનભાઇ, પુરીબેન હરજીવનદાસ, સવિતાબેન હરજીવનદાસ, ગંગાબેન હરજીવનદાસ ઠાકરદાસની વિ, કમુબેન સરજુદાસ, નવીનચંન્દ્ર સરજુદાસ, ભરતભાઇ સરજુદાસ, વિનોદભાઇ સરજુદાસ, પ્રહલાદભાઇ વાલજીભાઇ, પ્રતાપભાઇ વાલજીભાઇ, ભાઇસંગભાઇ વાલજીભાઇ, મરઘાબેન વાલજીભાઇ રાજાભાઇની વિઘ, નાનજીભાઇ નાગરભાઇ, દીપસંગભાઇ નાગરભાઇ, સાગરભાઇ ગાંડાભાઇ, અજમલભાઇ છગનભાઇ, મનુભાઇ છગનભાઇ, જાલુબા ગાંડાભાઈ, પુરીબેન તે કોદાભાઇ ની વિઘવા, કેશાભાઇ કોદાભાઇ પટેલ, ચંચળબેન કોદાભાઇ પટેલ, શારદાબેન કોદાભાઇ પટેલ, જશુભાઇ કોદાભાઇ પટેલ, હસમુખભાઇ કોદાભાઇ પટેલ, સુબાબેન સુખદેવભાઇ, મઘીબેન સુખદેવભાઇ, વનીબેન સુખદેવભાઇ, કૈલાશબેન સુખદેવભાઇ, ચેહુભાઇ નાગરભાઇ, ભલાભાઇ નાગરભાઇ, ગોવિંદભાઇ છગનભાઇ, ઇશ્વરભાઇ શીવાભાઇ, સમુબેન શીવાભાઇ, નરસીભાઇ શીવાભાઇ, ધીરુભાઈ સોમાભાઈ, મનુભાઈ સોમાભાઈ, લીલાબેન સોમાભાઈ, ગીતાબેન સોમાભાઈ, નર્મદાબેન કાનજીભાઇ, વિક્રમભાઇ કાનજીભાઇ, અલ્કાબેન કાનજીભાઇ, મહેન્દ્રભાઇ કાનજીભાઇ, મુળજીભાઇ જગાભાઇ, રમણભાઇ જગાભાઇ, ખુશાલભાઇ તળશીભાઇ, પારવતીબેન વસરામભાઇ જગાભાઇ ની વ, પુનાભાઈ વસરામભાઇ, ચેલાભાઈ વસરામભાઈ, ગુલાબબેન વસરામભાઈ, મંજુબેન ઇશ્વરભાઇના વિઘવા, માતમભાઇ ઇશ્વરભાઇ, રાયસંગભાઇ ઇશ્વરભાઇ, ગણપતભાઇ ઇશ્વરભાઇ, કરમશીભાઇ તળશીભાઇ, ઘનજીભાઇ તળશીભાઇ, લાભુબેન તળશીભાઇ, બબુબેન નરસિહભાઇ, ભયરામભાઇ નરસિહભાઇ, મઘુબેન નરસિહભાઇ, રામજીભાઇ નરસિહભાઇ, મુળજીભાઇ જગાભાઇ, રમણભાઇ જગાભાઇ, પારવતીબેન વસરામભાઇ જગાભાઇની વિ, પુનાભાઈ વસરામભાઇ, ચેલાભાઈ વસરામભાઇ, ગુલાબબેન વસરામભાઇ, બબુબેન નરસિહભાઇ, ભયરામભાઇ નરસિહભાઇ, મઘુબેન નરસિહભાઇ, રામજીભાઇ નરસિહભાઇ, મેનાબેન તે માવજીભાઈ હીરાભાઈ ની, હરજીભાઇ માવજીભાઇ, મહેન્દ્રભાઇ માવજીભાઇ, નાનજીભાઈ નાગરભાઈ, ચેહુભાઈ નાગરભાઈ, દીપાભાઈ નાગરભાઈ, નામદાર સરકાર, ઘીરુભાઈ સોમાભાઈ, મનુભાઈ સોમાભાઈ, લીલાબેન સોમાભાઈ, ગીતાબેન સોમાભાઈ, નર્મદાબેન કાનજીભાઇ, વિક્રમભાઇ કાનજીભાઇ, અલ્કાબેન કાનજીભાઇ, મહેન્દ્રભાઇ કાનજીભાઇ, ચેહુભાઇ નાગરભાઇ, ભલાભાઇ નાગરભાઇ, નાનજીભાઇ નાગરભાઇ, દીપાભાઇ નાગરભાઇ, કમુબેન તે અમરસીભાઈ બુટાભાઈ ના , કરમણભાઈ અમરશીભાઈ, બળદેવભાઈ અમરશીભાઈ, નટવરભાઈ અમરશીભાઈ, સીતાબેન અમરશીભાઈ, ચેહુભાઈ નાગરભાઈ કો.પટેલ, નાનજીભાઈ નાગરભાઈ કો.પટેલ, દીપાભાઈ નાગરભાઈ કો.પટેલ, પ્રહલાદભાઇ વાલજીભાઇ, પ્રતાપભાઇ વાલજીભાઇ, ભાઇસંગભાઇ વાલજીભાઇ, મરઘાબેન વાલજીભાઇ રાજાભાઇ ની વિ, ઉપરોકત ના નામે (હે ૦-૩૯-૦૩), ------------------------------, પ્રેમલત્તાબેન પ્રવિણચંદ્ર દેસા, રંજનબેન ગૌત્તમભાઇ અમીન, ઉપરોકત ના નામે (હે ૦-૩૯-૦૩), ગોવિંદભાઇ મનજીભાઇ (હે ૦-૩૪-૬૩), ------------------------------, રણજીતભાઇ ભયરામભાઇ, જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ, હીરાબેન  તે અભુભાઇ મેરુભાઇ ની , ઉપરોકત ના નામે (હે ૪-૨૧-૪૫), ઘનજીભાઇ તળશીભાઇ કો.પટેલ   (હે , -----------------------------, શાંતાબેન બીજલભાઇ ના વિઘવા, અમૃતભાઇ બીજલભાઇ, ચંદનભાઇ બીજલભાઇ, ઉપરોકત ના નામે (હે ૧-૩૦-૭૯), બુટાભાઇ વાઘજીભાઇ, પશીબેન ભઇજીભાઇ ઝવેરભાઇ ની વિઘવ, કમાભાઇ ભઇજીભાઇ, વાલજીભાઇ ફુલાભાઇ, સોડાભાઇ ફુલાભાઇ, મોહનભાઇ ફુલાભાઇ, બુટાભાઇ વાઘજીભાઇ, પશીબેન ભઇજીભાઇ ઝવેરભાઇ ની વિઘવ, જલાભાઇ ભઇજીભાઇ, કમાભાઇ ભઇજીભાઇ, સોડાભાઇ ફુલાભાઇ, બુટાભાઇ વાઘજીભાઇ, પશીબેન ભઇજીભાઇ ઝવેરભાઇ ની વિઘવ, જલાભાઇ ભઇજીભાઇ, વાલજીભાઇ ફુલાભાઇ, મોહનભાઇ ફુલાભાઇ ના ખાતા નંબર ૧૦૨,૧૦૮,૧૦૯,૧૧૦,૧૧૩,૧૧પ,૧૧૬,૧૨૦,૧૩૭,૧૪૩,૧૪૭,૧૪૯,૧પ૧,૧પ૩,૧૬૧,૧૬૨,૧૬૯,૧૮૦,૨૦પ,૨૧૪,૨૨પ,૨૨૯,૨૪૯,૨પ૦,૨પ૬,૨પ૭,૨પ૮,૨૬૦ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. આ જમીન ઉપર ઘી હસનનગર સેવા સહકારી મંડળી લી. માંથી ધિરાણ મેળવતા તા.૨૨/૧૨/૨૦૨૦ નાં એકરારનામાં અને અરજીના આધારે જમીન તારણમાં મૂકતા ગામ નમુના નં ૭ ના બોજા/બીજા હકમાં નોંધ દાખલ કરવા આ નોંધ પાડવામાં આવી.",
+      "raw_row": {
+        "નોંધની વિગત": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર બબાભાઇ ગોવાભાઇ, હરગોવિંદભાઇ ભીખાભાઇ, ગગુભાઇ ભીખાભાઇ, બાબુભાઇ ભીખાભાઇ, વીરીબેન કાશીરામ ગટોરભાઈ ની વિધ, ભયરામભાઈ કાશીરામભાઈ, વીરજીભાઈ કાશીરામ, હરગોવિંદભાઇ ભીખાભાઇ, બાબુભાઇ ભીખાભાઇ, ચંપાબેન ભીખાભાઇ ગટોરભાઇની વિધવ, ગગુભાઈ ભીખાભાઈ, બુટાભાઇ વાઘજીભાઇ, પશીબેન ભઇજીભાઇ ઝવેરભાઇની વિઘવા, જલાભાઈ ભઇજીભાઇ, કમાભાઈ ભઇજીભાઇ, વાલજીભાઈ ફુલાભાઈ, સોડાભાઈ ફુલાભાઈ, મોહનભાઈ ફુલાભાઈ, ભાવુભાઇ દેવસીભાઇ, ઈચ્છા રામજી, દેવસીભાઇ રામજીભાઇ, કાન્તીભાઇ દાનાભાઇ, રમણભાઇ દાનાભાઇ, સીતાબેન પેલાદભાઈ દાનાભાઈની વિઘ, તથા સગીરોના વાલી તરીકે, ગુલાબબેન પ્રહેલાદભાઈ, રણજીતભાઈ પ્રહેલાદભાઈ, ગીતાબેન જયંતીભાઈ દાનાભાઈની વિઘ, તથા સગીરના વાલી તરીકે, જગદીશભાઈ જયંતીભાઈ, લક્ષ્મીબેન જયંતીભાઈ, રોહીતભાઈ જયંતીભાઈ, લઘરાભાઈ સોમાભાઈ, કો.પટેલ શાંતાબેન બીજલભાઇના વિઘ, કો.પટેલ અમૃતભાઇ બીજલભાઇ, કો.પટેલ ચંદનભાઇ બીજલભાઇ, કરમશીભાઇ મંગાભાઇ, દયારામભાઇ મંગાભાઇ, ઘનશ્યામ ધરમશીભાઇ, ભરત ધરમશીભાઇ, રંજનબેન સવઘણભાઇ, રાઘીબેન સવઘણભાઇ, હર્ષદભાઇ સવઘણભાઇ, સગીર કોમલબેન સવઘણભાઇ ના વાલી ર, સગીર સુરેશભાઇ સવઘણભાઇ ના વાલી , જયેન્દ્રભાઇ મોહનભાઇ, હર્ષદભાઇ મોહનભાઇ, ભારતીબેન મોહનભાઇ, પુરીબેન હરજીવનદાસ, સવિતાબેન હરજીવનદાસ, ગંગાબેન હરજીવનદાસ ઠાકરદાસની વિ, કમુબેન સરજુદાસ, નવીનચંન્દ્ર સરજુદાસ, ભરતભાઇ સરજુદાસ, વિનોદભાઇ સરજુદાસ, પ્રહલાદભાઇ વાલજીભાઇ, પ્રતાપભાઇ વાલજીભાઇ, ભાઇસંગભાઇ વાલજીભાઇ, મરઘાબેન વાલજીભાઇ રાજાભાઇની વિઘ, નાનજીભાઇ નાગરભાઇ, દીપસંગભાઇ નાગરભાઇ, સાગરભાઇ ગાંડાભાઇ, અજમલભાઇ છગનભાઇ, મનુભાઇ છગનભાઇ, જાલુબા ગાંડાભાઈ, પુરીબેન તે કોદાભાઇ ની વિઘવા, કેશાભાઇ કોદાભાઇ પટેલ, ચંચળબેન કોદાભાઇ પટેલ, શારદાબેન કોદાભાઇ પટેલ, જશુભાઇ કોદાભાઇ પટેલ, હસમુખભાઇ કોદાભાઇ પટેલ, સુબાબેન સુખદેવભાઇ, મઘીબેન સુખદેવભાઇ, વનીબેન સુખદેવભાઇ, કૈલાશબેન સુખદેવભાઇ, ચેહુભાઇ નાગરભાઇ, ભલાભાઇ નાગરભાઇ, ગોવિંદભાઇ છગનભાઇ, ઇશ્વરભાઇ શીવાભાઇ, સમુબેન શીવાભાઇ, નરસીભાઇ શીવાભાઇ, ધીરુભાઈ સોમાભાઈ, મનુભાઈ સોમાભાઈ, લીલાબેન સોમાભાઈ, ગીતાબેન સોમાભાઈ, નર્મદાબેન કાનજીભાઇ, વિક્રમભાઇ કાનજીભાઇ, અલ્કાબેન કાનજીભાઇ, મહેન્દ્રભાઇ કાનજીભાઇ, મુળજીભાઇ જગાભાઇ, રમણભાઇ જગાભાઇ, ખુશાલભાઇ તળશીભાઇ, પારવતીબેન વસરામભાઇ જગાભાઇ ની વ, પુનાભાઈ વસરામભાઇ, ચેલાભાઈ વસરામભાઈ, ગુલાબબેન વસરામભાઈ, મંજુબેન ઇશ્વરભાઇના વિઘવા, માતમભાઇ ઇશ્વરભાઇ, રાયસંગભાઇ ઇશ્વરભાઇ, ગણપતભાઇ ઇશ્વરભાઇ, કરમશીભાઇ તળશીભાઇ, ઘનજીભાઇ તળશીભાઇ, લાભુબેન તળશીભાઇ, બબુબેન નરસિહભાઇ, ભયરામભાઇ નરસિહભાઇ, મઘુબેન નરસિહભાઇ, રામજીભાઇ નરસિહભાઇ, મુળજીભાઇ જગાભાઇ, રમણભાઇ જગાભાઇ, પારવતીબેન વસરામભાઇ જગાભાઇની વિ, પુનાભાઈ વસરામભાઇ, ચેલાભાઈ વસરામભાઇ, ગુલાબબેન વસરામભાઇ, બબુબેન નરસિહભાઇ, ભયરામભાઇ નરસિહભાઇ, મઘુબેન નરસિહભાઇ, રામજીભાઇ નરસિહભાઇ, મેનાબેન તે માવજીભાઈ હીરાભાઈ ની, હરજીભાઇ માવજીભાઇ, મહેન્દ્રભાઇ માવજીભાઇ, નાનજીભાઈ નાગરભાઈ, ચેહુભાઈ નાગરભાઈ, દીપાભાઈ નાગરભાઈ, નામદાર સરકાર, ઘીરુભાઈ સોમાભાઈ, મનુભાઈ સોમાભાઈ, લીલાબેન સોમાભાઈ, ગીતાબેન સોમાભાઈ, નર્મદાબેન કાનજીભાઇ, વિક્રમભાઇ કાનજીભાઇ, અલ્કાબેન કાનજીભાઇ, મહેન્દ્રભાઇ કાનજીભાઇ, ચેહુભાઇ નાગરભાઇ, ભલાભાઇ નાગરભાઇ, નાનજીભાઇ નાગરભાઇ, દીપાભાઇ નાગરભાઇ, કમુબેન તે અમરસીભાઈ બુટાભાઈ ના , કરમણભાઈ અમરશીભાઈ, બળદેવભાઈ અમરશીભાઈ, નટવરભાઈ અમરશીભાઈ, સીતાબેન અમરશીભાઈ, ચેહુભાઈ નાગરભાઈ કો.પટેલ, નાનજીભાઈ નાગરભાઈ કો.પટેલ, દીપાભાઈ નાગરભાઈ કો.પટેલ, પ્રહલાદભાઇ વાલજીભાઇ, પ્રતાપભાઇ વાલજીભાઇ, ભાઇસંગભાઇ વાલજીભાઇ, મરઘાબેન વાલજીભાઇ રાજાભાઇ ની વિ, ઉપરોકત ના નામે (હે ૦-૩૯-૦૩), ------------------------------, પ્રેમલત્તાબેન પ્રવિણચંદ્ર દેસા, રંજનબેન ગૌત્તમભાઇ અમીન, ઉપરોકત ના નામે (હે ૦-૩૯-૦૩), ગોવિંદભાઇ મનજીભાઇ (હે ૦-૩૪-૬૩), ------------------------------, રણજીતભાઇ ભયરામભાઇ, જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ, હીરાબેન  તે અભુભાઇ મેરુભાઇ ની , ઉપરોકત ના નામે (હે ૪-૨૧-૪૫), ઘનજીભાઇ તળશીભાઇ કો.પટેલ   (હે , -----------------------------, શાંતાબેન બીજલભાઇ ના વિઘવા, અમૃતભાઇ બીજલભાઇ, ચંદનભાઇ બીજલભાઇ, ઉપરોકત ના નામે (હે ૧-૩૦-૭૯), બુટાભાઇ વાઘજીભાઇ, પશીબેન ભઇજીભાઇ ઝવેરભાઇ ની વિઘવ, કમાભાઇ ભઇજીભાઇ, વાલજીભાઇ ફુલાભાઇ, સોડાભાઇ ફુલાભાઇ, મોહનભાઇ ફુલાભાઇ, બુટાભાઇ વાઘજીભાઇ, પશીબેન ભઇજીભાઇ ઝવેરભાઇ ની વિઘવ, જલાભાઇ ભઇજીભાઇ, કમાભાઇ ભઇજીભાઇ, સોડાભાઇ ફુલાભાઇ, બુટાભાઇ વાઘજીભાઇ, પશીબેન ભઇજીભાઇ ઝવેરભાઇ ની વિઘવ, જલાભાઇ ભઇજીભાઇ, વાલજીભાઇ ફુલાભાઇ, મોહનભાઇ ફુલાભાઇ ના ખાતા નંબર ૧૦૨,૧૦૮,૧૦૯,૧૧૦,૧૧૩,૧૧પ,૧૧૬,૧૨૦,૧૩૭,૧૪૩,૧૪૭,૧૪૯,૧પ૧,૧પ૩,૧૬૧,૧૬૨,૧૬૯,૧૮૦,૨૦પ,૨૧૪,૨૨પ,૨૨૯,૨૪૯,૨પ૦,૨પ૬,૨પ૭,૨પ૮,૨૬૦ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. આ જમીન ઉપર ઘી હસનનગર સેવા સહકારી મંડળી લી. માંથી ધિરાણ મેળવતા તા.૨૨/૧૨/૨૦૨૦ નાં એકરારનામાં અને અરજીના આધારે જમીન તારણમાં મૂકતા ગામ નમુના નં ૭ ના બોજા/બીજા હકમાં નોંધ દાખલ કરવા આ નોંધ પાડવામાં આવી.",
+        "ફેરફારને સંબંધિત સરવે નંબર": "2(250), 9(109), 13(109), 17(108), 28(108), 29(108), 32(162), 33(109), 38(109), 40(149), 41(116), 43(116), 44(116), 45(149), 48(110), 49(257), 50(161), 54(147), 60(180), 63(256), 66(149), 69(110), 74(162), 75(116), 77(116), 78(151), 80(147), 81(102), 82(205), 84(169), 85(115), 86(115), 94(143), 98(113), 99(120), 141(147), 143(225), 149(109), 167(137), 168(249), 170(147), 175(149), 178(162), 180(161), 181(258), 204(229), 207(115), 208(214), 213(260), 214(108), 217(102), 218(153), 219(151), 221(149), 222(149)",
+        "તપાસણી કરનાર અધિકારીનો શેરો": "૧૩૫ડી નોટીસ તલાટી રૂબરૂ બજાવેલ છે અરજી એકરારનામા આઘારે પ્રમાણિત\nએચ એમ પટેલ\nસ ઓ બાવળા\nતા-૪/૩/૨૧",
+        "નોંધ નંબરનોંધની તારીખફેરફારનો પ્રકારનોંધની સ્થિતિ": "811 | 22/12/2020 | બોજો દાખલ | પ્રમાણિત"
+      },
+      "entry_date": "22/12/2020",
+      "entry_number": "811",
+      "survey_numbers": "2(250), 9(109), 13(109), 17(108), 28(108), 29(108), 32(162), 33(109), 38(109), 40(149), 41(116), 43(116), 44(116), 45(149), 48(110), 49(257), 50(161), 54(147), 60(180), 63(256), 66(149), 69(110), 74(162), 75(116), 77(116), 78(151), 80(147), 81(102), 82(205), 84(169), 85(115), 86(115), 94(143), 98(113), 99(120), 141(147), 143(225), 149(109), 167(137), 168(249), 170(147), 175(149), 178(162), 180(161), 181(258), 204(229), 207(115), 208(214), 213(260), 214(108), 217(102), 218(153), 219(151), 221(149), 222(149)",
+      "officer_remarks": "૧૩૫ડી નોટીસ તલાટી રૂબરૂ બજાવેલ છે અરજી એકરારનામા આઘારે પ્રમાણિત\nએચ એમ પટેલ\nસ ઓ બાવળા\nતા-૪/૩/૨૧",
+      "transaction_type": "બોજો દાખલ"
+    },
+    "ai_draft": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "22/12/2020",
+      "new_owners": [
+        "ઘી હસનનગર સેવા સહકારી મંડળી લી."
+      ],
+      "survey_numbers": "2(250), 9(109), 13(109), 17(108), 28(108), 29(108), 32(162), 33(109), 38(109), 40(149), 41(116), 43(116), 44(116), 45(149), 48(110), 49(257), 50(161), 54(147), 60(180), 63(256), 66(149), 69(110), 74(162), 75(116), 77(116), 78(151), 80(147), 81(102), 82(205), 84(169), 85(115), 86(115), 94(143), 98(113), 99(120), 141(147), 143(225), 149(109), 167(137), 168(249), 170(147), 175(149), 178(162), 180(161), 181(258), 204(229), 207(115), 208(214), 213(260), 214(108), 217(102), 218(153), 219(151), 221(149), 222(149)",
+      "officer_remarks": "૧૩૫ડી નોટીસ તલાટી રૂબરૂ બજાવેલ છે અરજી એકરારનામા આઘારે પ્રમાણિત\nએચ એમ પટેલ\nસ ઓ બાવળા\nતા-૪/૩/૨૧",
+      "previous_owners": [
+        "બબાભાઇ ગોવાભાઇ",
+        "હરગોવિંદભાઇ ભીખાભાઇ",
+        "ગગુભાઇ ભીખાભાઇ",
+        "બાબુભાઇ ભીખાભાઇ",
+        "વીરીબેન કાશીરામ ગટોરભાઈ ની વિધ",
+        "ભયરામભાઈ કાશીરામભાઈ",
+        "વીરજીભાઈ કાશીરામ",
+        "ચંપાબેન ભીખાભાઇ ગટોરભાઇની વિધવ",
+        "ગગુભાઈ ભીખાભાઈ",
+        "બુટાભાઇ વાઘજીભાઇ",
+        "પશીબેન ભઇજીભાઇ ઝવેરભાઇની વિઘવા",
+        "જલાભાઈ ભઇજીભાઇ",
+        "કમાભાઈ ભઇજીભાઇ",
+        "વાલજીભાઈ ફુલાભાઈ",
+        "સોડાભાઈ ફુલાભાઈ",
+        "મોહનભાઈ ફુલાભાઈ",
+        "ભાવુભાઇ દેવસીભાઇ",
+        "ઈચ્છા રામજી",
+        "દેવસીભાઇ રામજીભાઇ",
+        "કાન્તીભાઇ દાનાભાઇ",
+        "રમણભાઇ દાનાભાઇ",
+        "સીતાબેન પેલાદભાઈ દાનાભાઈની વિઘ",
+        "તથા સગીરોના વાલી તરીકે",
+        "ગુલાબબેન પ્રહેલાદભાઈ",
+        "રણજીતભાઈ પ્રહેલાદભાઈ",
+        "ગીતાબેન જયંતીભાઈ દાનાભાઈની વિઘ",
+        "તથા સગીરના વાલી તરીકે",
+        "જગદીશભાઈ જયંતીભાઈ",
+        "લક્ષ્મીબેન જયંતીભાઈ",
+        "રોહીતભાઈ જયંતીભાઈ",
+        "લઘરાભાઈ સોમાભાઈ",
+        "કો.પટેલ શાંતાબેન બીજલભાઇના વિઘ",
+        "કો.પટેલ અમૃતભાઇ બીજલભાઇ",
+        "કો.પટેલ ચંદનભાઇ બીજલભાઇ",
+        "કરમશીભાઇ મંગાભાઇ",
+        "દયારામભાઇ મંગાભાઇ",
+        "ઘનશ્યામ ધરમશીભાઇ",
+        "ભરત ધરમશીભાઇ",
+        "રંજનબેન સવઘણભાઇ",
+        "રાઘીબેન સવઘણભાઇ",
+        "હર્ષદભાઇ સવઘણભાઇ",
+        "સગીર કોમલબેન સવઘણભાઇ ના વાલી ર",
+        "સગીર સુરેશભાઇ સવઘણભાઇ ના વાલી",
+        "જયેન્દ્રભાઇ મોહનભાઇ",
+        "હર્ષદભાઇ મોહનભાઇ",
+        "ભારતીબેન મોહનભાઇ",
+        "પુરીબેન હરજીવનદાસ",
+        "સવિતાબેન હરજીવનદાસ",
+        "ગંગાબેન હરજીવનદાસ ઠાકરદાસની વિ",
+        "કમુબેન સરજુદાસ",
+        "નવીનચંન્દ્ર સરજુદાસ",
+        "ભરતભાઇ સરજુદાસ",
+        "વિનોદભાઇ સરજુદાસ",
+        "પ્રહલાદભાઇ વાલજીભાઇ",
+        "પ્રતાપભાઇ વાલજીભાઇ",
+        "ભાઇસંગભાઇ વાલજીભાઇ",
+        "મરઘાબેન વાલજીભાઇ રાજાભાઇની વિઘ",
+        "નાનજીભાઇ નાગરભાઇ",
+        "દીપસંગભાઇ નાગરભાઇ",
+        "સાગરભાઇ ગાંડાભાઇ",
+        "અજમલભાઇ છગનભાઇ",
+        "મનુભાઇ છગનભાઇ",
+        "જાલુબા ગાંડાભાઈ",
+        "પુરીબેન તે કોદાભાઇ ની વિઘવા",
+        "કેશાભાઇ કોદાભાઇ પટેલ",
+        "ચંચળબેન કોદાભાઇ પટેલ",
+        "શારદાબેન કોદાભાઇ પટેલ",
+        "જશુભાઇ કોદાભાઇ પટેલ",
+        "હસમુખભાઇ કોદાભાઇ પટેલ",
+        "સુબાબેન સુખદેવભાઇ",
+        "મઘીબેન સુખદેવભાઇ",
+        "વનીબેન સુખદેવભાઇ",
+        "કૈલાશબેન સુખદેવભાઇ",
+        "ચેહુભાઇ નાગરભાઇ",
+        "ભલાભાઇ નાગરભાઇ",
+        "ગોવિંદભાઇ છગનભાઇ",
+        "ઇશ્વરભાઇ શીવાભાઇ",
+        "સમુબેન શીવાભાઇ",
+        "નરસીભાઇ શીવાભાઇ",
+        "ધીરુભાઈ સોમાભાઈ",
+        "મનુભાઈ સોમાભાઈ",
+        "લીલાબેન સોમાભાઈ",
+        "ગીતાબેન સોમાભાઈ",
+        "નર્મદાબેન કાનજીભાઇ",
+        "વિક્રમભાઇ કાનજીભાઇ",
+        "અલ્કાબેન કાનજીભાઇ",
+        "મહેન્દ્રભાઇ કાનજીભાઇ",
+        "મુળજીભાઇ જગાભાઇ",
+        "રમણભાઇ જગાભાઇ",
+        "ખુશાલભાઇ તળશીભાઇ",
+        "પારવતીબેન વસરામભાઇ જગાભાઇ ની વ",
+        "પુનાભાઈ વસરામભાઇ",
+        "ચેલાભાઈ વસરામભાઈ",
+        "ગુલાબબેન વસરામભાઈ",
+        "મંજુબેન ઇશ્વરભાઇના વિઘવા",
+        "માતમભાઇ ઇશ્વરભાઇ",
+        "રાયસંગભાઇ ઇશ્વરભાઇ",
+        "ગણપતભાઇ ઇશ્વરભાઇ",
+        "કરમશીભાઇ તળશીભાઇ",
+        "ઘનજીભાઇ તળશીભાઇ",
+        "લાભુબેન તળશીભાઇ",
+        "બબુબેન નરસિહભાઇ",
+        "ભયરામભાઇ નરસિહભાઇ",
+        "મઘુબેન નરસિહભાઇ",
+        "રામજીભાઇ નરસિહભાઇ",
+        "પારવતીબેન વસરામભાઇ જગાભાઇની વિ",
+        "ચેલાભાઈ વસરામભાઇ",
+        "ગુલાબબેન વસરામભાઇ",
+        "મેનાબેન તે માવજીભાઈ હીરાભાઈ ની",
+        "હરજીભાઇ માવજીભાઇ",
+        "મહેન્દ્રભાઇ માવજીભાઇ",
+        "નાનજીભાઈ નાગરભાઈ",
+        "ચેહુભાઈ નાગરભાઈ",
+        "દીપાભાઈ નાગરભાઈ",
+        "નામદાર સરકાર",
+        "ઘીરુભાઈ સોમાભાઈ",
+        "દીપાભાઇ નાગરભાઇ",
+        "કમુબેન તે અમરસીભાઈ બુટાભાઈ ના",
+        "કરમણભાઈ અમરશીભાઈ",
+        "બળદેવભાઈ અમરશીભાઈ",
+        "નટવરભાઈ અમરશીભાઈ",
+        "સીતાબેન અમરશીભાઈ",
+        "ચેહુભાઈ નાગરભાઈ કો.પટેલ",
+        "નાનજીભાઈ નાગરભાઈ કો.પટેલ",
+        "દીપાભાઈ નાગરભાઈ કો.પટેલ",
+        "મરઘાબેન વાલજીભાઇ રાજાભાઇ ની વિ",
+        "ઉપરોકત ના નામે",
+        "------------------------------",
+        "પ્રેમલત્તાબેન પ્રવિણચંદ્ર દેસા",
+        "રંજનબેન ગૌત્તમભાઇ અમીન",
+        "ગોવિંદભાઇ મનજીભાઇ",
+        "રણજીતભાઇ ભયરામભાઇ",
+        "જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ",
+        "હીરાબેન તે અભુભાઇ મેરુભાઇ ની",
+        "ઘનજીભાઇ તળશીભાઇ કો.પટેલ (હે",
+        "-----------------------------",
+        "શાંતાબેન બીજલભાઇ ના વિઘવા",
+        "અમૃતભાઇ બીજલભાઇ",
+        "ચંદનભાઇ બીજલભાઇ",
+        "પશીબેન ભઇજીભાઇ ઝવેરભાઇ ની વિઘવ",
+        "કમાભાઇ ભઇજીભાઇ",
+        "વાલજીભાઇ ફુલાભાઇ",
+        "સોડાભાઇ ફુલાભાઇ",
+        "મોહનભાઇ ફુલાભાઇ",
+        "જલાભાઇ ભઇજીભાઇ"
+      ],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર બબાભાઇ ગોવાભાઇ, હરગોવિંદભાઇ ભીખાભાઇ, ગગુભાઇ ભીખાભાઇ, બાબુભાઇ ભીખાભાઇ, વીરીબેન કાશીરામ ગટોરભાઈ ની વિધ, ભયરામભાઈ કાશીરામભાઈ, વીરજીભાઈ કાશીરામ, હરગોવિંદભાઇ ભીખાભાઇ, બાબુભાઇ ભીખ...",
+      "transaction_type": "બોજો દાખલ",
+      "mutation_entry_number": "811"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "22/12/2020",
+      "new_owners": [
+        "ઘી હસનનગર સેવા સહકારી મંડળી લી."
+      ],
+      "survey_numbers": "2",
+      "officer_remarks": "૧૩૫ડી નોટીસ તલાટી રૂબરૂ બજાવેલ છે અરજી એકરારનામા આઘારે પ્રમાણિત\nએચ એમ પટેલ\nસ ઓ બાવળા\nતા-૪/૩/૨૧",
+      "previous_owners": [
+        "બબાભાઇ ગોવાભાઇ",
+        "હરગોવિંદભાઇ ભીખાભાઇ",
+        "ગગુભાઇ ભીખાભાઇ",
+        "બાબુભાઇ ભીખાભાઇ",
+        "વીરીબેન કાશીરામ ગટોરભાઈ ની વિધ",
+        "ભયરામભાઈ કાશીરામભાઈ",
+        "વીરજીભાઈ કાશીરામ",
+        "ચંપાબેન ભીખાભાઇ ગટોરભાઇની વિધવ",
+        "ગગુભાઈ ભીખાભાઈ",
+        "બુટાભાઇ વાઘજીભાઇ",
+        "પશીબેન ભઇજીભાઇ ઝવેરભાઇની વિઘવા",
+        "જલાભાઈ ભઇજીભાઇ",
+        "કમાભાઈ ભઇજીભાઇ",
+        "વાલજીભાઈ ફુલાભાઈ",
+        "સોડાભાઈ ફુલાભાઈ",
+        "મોહનભાઈ ફુલાભાઈ",
+        "ભાવુભાઇ દેવસીભાઇ",
+        "ઈચ્છા રામજી",
+        "દેવસીભાઇ રામજીભાઇ",
+        "કાન્તીભાઇ દાનાભાઇ",
+        "રમણભાઇ દાનાભાઇ",
+        "સીતાબેન પેલાદભાઈ દાનાભાઈની વિઘ",
+        "તથા સગીરોના વાલી તરીકે",
+        "ગુલાબબેન પ્રહેલાદભાઈ",
+        "રણજીતભાઈ પ્રહેલાદભાઈ",
+        "ગીતાબેન જયંતીભાઈ દાનાભાઈની વિઘ",
+        "તથા સગીરના વાલી તરીકે",
+        "જગદીશભાઈ જયંતીભાઈ",
+        "લક્ષ્મીબેન જયંતીભાઈ",
+        "રોહીતભાઈ જયંતીભાઈ",
+        "લઘરાભાઈ સોમાભાઈ",
+        "કો.પટેલ શાંતાબેન બીજલભાઇના વિઘ",
+        "કો.પટેલ અમૃતભાઇ બીજલભાઇ",
+        "કો.પટેલ ચંદનભાઇ બીજલભાઇ",
+        "કરમશીભાઇ મંગાભાઇ",
+        "દયારામભાઇ મંગાભાઇ",
+        "ઘનશ્યામ ધરમશીભાઇ",
+        "ભરત ધરમશીભાઇ",
+        "રંજનબેન સવઘણભાઇ",
+        "રાઘીબેન સવઘણભાઇ",
+        "હર્ષદભાઇ સવઘણભાઇ",
+        "સગીર કોમલબેન સવઘણભાઇ ના વાલી ર",
+        "સગીર સુરેશભાઇ સવઘણભાઇ ના વાલી",
+        "જયેન્દ્રભાઇ મોહનભાઇ",
+        "હર્ષદભાઇ મોહનભાઇ",
+        "ભારતીબેન મોહનભાઇ",
+        "પુરીબેન હરજીવનદાસ",
+        "સવિતાબેન હરજીવનદાસ",
+        "ગંગાબેન હરજીવનદાસ ઠાકરદાસની વિ",
+        "કમુબેન સરજુદાસ",
+        "નવીનચંન્દ્ર સરજુદાસ",
+        "ભરતભાઇ સરજુદાસ",
+        "વિનોદભાઇ સરજુદાસ",
+        "પ્રહલાદભાઇ વાલજીભાઇ",
+        "પ્રતાપભાઇ વાલજીભાઇ",
+        "ભાઇસંગભાઇ વાલજીભાઇ",
+        "મરઘાબેન વાલજીભાઇ રાજાભાઇની વિઘ",
+        "નાનજીભાઇ નાગરભાઇ",
+        "દીપસંગભાઇ નાગરભાઇ",
+        "સાગરભાઇ ગાંડાભાઇ",
+        "અજમલભાઇ છગનભાઇ",
+        "મનુભાઇ છગનભાઇ",
+        "જાલુબા ગાંડાભાઈ",
+        "પુરીબેન તે કોદાભાઇ ની વિઘવા",
+        "કેશાભાઇ કોદાભાઇ પટેલ",
+        "ચંચળબેન કોદાભાઇ પટેલ",
+        "શારદાબેન કોદાભાઇ પટેલ",
+        "જશુભાઇ કોદાભાઇ પટેલ",
+        "હસમુખભાઇ કોદાભાઇ પટેલ",
+        "સુબાબેન સુખદેવભાઇ",
+        "મઘીબેન સુખદેવભાઇ",
+        "વનીબેન સુખદેવભાઇ",
+        "કૈલાશબેન સુખદેવભાઇ",
+        "ચેહુભાઇ નાગરભાઇ",
+        "ભલાભાઇ નાગરભાઇ",
+        "ગોવિંદભાઇ છગનભાઇ",
+        "ઇશ્વરભાઇ શીવાભાઇ",
+        "સમુબેન શીવાભાઇ",
+        "નરસીભાઇ શીવાભાઇ",
+        "ધીરુભાઈ સોમાભાઈ",
+        "મનુભાઈ સોમાભાઈ",
+        "લીલાબેન સોમાભાઈ",
+        "ગીતાબેન સોમાભાઈ",
+        "નર્મદાબેન કાનજીભાઇ",
+        "વિક્રમભાઇ કાનજીભાઇ",
+        "અલ્કાબેન કાનજીભાઇ",
+        "મહેન્દ્રભાઇ કાનજીભાઇ",
+        "મુળજીભાઇ જગાભાઇ",
+        "રમણભાઇ જગાભાઇ",
+        "ખુશાલભાઇ તળશીભાઇ",
+        "પારવતીબેન વસરામભાઇ જગાભાઇ ની વ",
+        "પુનાભાઈ વસરામભાઇ",
+        "ચેલાભાઈ વસરામભાઈ",
+        "ગુલાબબેન વસરામભાઈ",
+        "મંજુબેન ઇશ્વરભાઇના વિઘવા",
+        "માતમભાઇ ઇશ્વરભાઇ",
+        "રાયસંગભાઇ ઇશ્વરભાઇ",
+        "ગણપતભાઇ ઇશ્વરભાઇ",
+        "કરમશીભાઇ તળશીભાઇ",
+        "ઘનજીભાઇ તળશીભાઇ",
+        "લાભુબેન તળશીભાઇ",
+        "બબુબેન નરસિહભાઇ",
+        "ભયરામભાઇ નરસિહભાઇ",
+        "મઘુબેન નરસિહભાઇ",
+        "રામજીભાઇ નરસિહભાઇ",
+        "પારવતીબેન વસરામભાઇ જગાભાઇની વિ",
+        "ચેલાભાઈ વસરામભાઇ",
+        "ગુલાબબેન વસરામભાઇ",
+        "મેનાબેન તે માવજીભાઈ હીરાભાઈ ની",
+        "હરજીભાઇ માવજીભાઇ",
+        "મહેન્દ્રભાઇ માવજીભાઇ",
+        "નાનજીભાઈ નાગરભાઈ",
+        "ચેહુભાઈ નાગરભાઈ",
+        "દીપાભાઈ નાગરભાઈ",
+        "નામદાર સરકાર",
+        "ઘીરુભાઈ સોમાભાઈ",
+        "દીપાભાઇ નાગરભાઇ",
+        "કમુબેન તે અમરસીભાઈ બુટાભાઈ ના",
+        "કરમણભાઈ અમરશીભાઈ",
+        "બળદેવભાઈ અમરશીભાઈ",
+        "નટવરભાઈ અમરશીભાઈ",
+        "સીતાબેન અમરશીભાઈ",
+        "ચેહુભાઈ નાગરભાઈ કો.પટેલ",
+        "નાનજીભાઈ નાગરભાઈ કો.પટેલ",
+        "દીપાભાઈ નાગરભાઈ કો.પટેલ",
+        "મરઘાબેન વાલજીભાઇ રાજાભાઇ ની વિ",
+        "ઉપરોકત ના નામે",
+        "------------------------------",
+        "પ્રેમલત્તાબેન પ્રવિણચંદ્ર દેસા",
+        "રંજનબેન ગૌત્તમભાઇ અમીન",
+        "ગોવિંદભાઇ મનજીભાઇ",
+        "રણજીતભાઇ ભયરામભાઇ",
+        "જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ",
+        "હીરાબેન તે અભુભાઇ મેરુભાઇ ની",
+        "ઘનજીભાઇ તળશીભાઇ કો.પટેલ (હે",
+        "-----------------------------",
+        "શાંતાબેન બીજલભાઇ ના વિઘવા",
+        "અમૃતભાઇ બીજલભાઇ",
+        "ચંદનભાઇ બીજલભાઇ",
+        "પશીબેન ભઇજીભાઇ ઝવેરભાઇ ની વિઘવ",
+        "કમાભાઇ ભઇજીભાઇ",
+        "વાલજીભાઇ ફુલાભાઇ",
+        "સોડાભાઇ ફુલાભાઇ",
+        "મોહનભાઇ ફુલાભાઇ",
+        "જલાભાઇ ભઇજીભાઇ"
+      ],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર બબાભાઇ ગોવાભાઇ, હરગોવિંદભાઇ ભીખાભાઇ, ગગુભાઇ ભીખાભાઇ, બાબુભાઇ ભીખાભાઇ, વીરીબેન કાશીરામ ગટોરભાઈ ની વિધ, ભયરામભાઈ કાશીરામભાઈ, વીરજીભાઈ કાશીરામ, હરગોવિંદભાઇ ભીખાભાઇ, બાબુભાઇ ભીખ...",
+      "transaction_type": "બોજો દાખલ",
+      "mutation_entry_number": "811"
+    }
+  },
+  {
+    "entry_number": "827",
+    "image_file_path": null,
+    "is_verified": true,
+    "scraped_html": {
+      "status": "પ્રમાણિત",
+      "details": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ, જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ, હીરાબેન  તે અભુભાઇ મેરુભાઇ ની , ઉપરોકત ના નામે (હે ૪-૨૧-૪૫) એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે અરજી કરતા આઇસીઆઇસીઆઇ બેન્ક બાવળા શાખા ના તા.૧૬/૦૩/૨૦૨૧ નાં દાખલા અને અરજદારની અરજીના આધારે બોજા મુક્તિની નોંધ પાડવામાં આવી.",
+      "raw_row": {
+        "નોંધની વિગત": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ, જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ, હીરાબેન  તે અભુભાઇ મેરુભાઇ ની , ઉપરોકત ના નામે (હે ૪-૨૧-૪૫) એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે અરજી કરતા આઇસીઆઇસીઆઇ બેન્ક બાવળા શાખા ના તા.૧૬/૦૩/૨૦૨૧ નાં દાખલા અને અરજદારની અરજીના આધારે બોજા મુક્તિની નોંધ પાડવામાં આવી.",
+        "ફેરફારને સંબંધિત સરવે નંબર": "2(250)",
+        "તપાસણી કરનાર અધિકારીનો શેરો": "૧૩૫ડીની નોટીસ તલાટી રુબરુ બજાવેલ છે. અરજી બોજામુકિત પ્રમાણપત્ર આઘારે \n- પ્રમાણિત - \nએચ.એમ.પટેલ \nસ.ઓ. બાવળા \nતા. ૧૦/૫/૨૦૨૧",
+        "નોંધ નંબરનોંધની તારીખફેરફારનો પ્રકારનોંધની સ્થિતિ": "827 | 19/03/2021 | બોજા મુક્તિ | પ્રમાણિત"
+      },
+      "entry_date": "19/03/2021",
+      "entry_number": "827",
+      "survey_numbers": "2(250)",
+      "officer_remarks": "૧૩૫ડીની નોટીસ તલાટી રુબરુ બજાવેલ છે. અરજી બોજામુકિત પ્રમાણપત્ર આઘારે \n- પ્રમાણિત - \nએચ.એમ.પટેલ \nસ.ઓ. બાવળા \nતા. ૧૦/૫/૨૦૨૧",
+      "transaction_type": "બોજા મુક્તિ"
+    },
+    "ai_draft": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "19/03/2021",
+      "new_owners": [
+        "ઉપરોકત ના નામે (હે ૪-૨૧-૪૫) એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે અરજી કરતા આઇસીઆઇસીઆઇ બેન્ક"
+      ],
+      "survey_numbers": "2(250)",
+      "officer_remarks": "૧૩૫ડીની નોટીસ તલાટી રુબરુ બજાવેલ છે. અરજી બોજામુકિત પ્રમાણપત્ર આઘારે \n- પ્રમાણિત - \nએચ.એમ.પટેલ \nસ.ઓ. બાવળા \nતા. ૧૦/૫/૨૦૨૧",
+      "previous_owners": [
+        "રણજીતભાઇ ભયરામભાઇ",
+        "જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ",
+        "હીરાબેન તે અભુભાઇ મેરુભાઇ ની",
+        "ઉપરોકત ના નામે"
+      ],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ, જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ, હીરાબેન તે અભુભાઇ મેરુભાઇ ની , ઉપરોકત ના નામે (હે ૪-૨૧-૪૫) એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે...",
+      "transaction_type": "બોજા મુક્તિ",
+      "mutation_entry_number": "827"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "19/03/2021",
+      "new_owners": [
+        "ઉપરોકત ના નામે (હે ૪-૨૧-૪૫) એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે અરજી કરતા આઇસીઆઇસીઆઇ બેન્ક"
+      ],
+      "survey_numbers": "2",
+      "officer_remarks": "૧૩૫ડીની નોટીસ તલાટી રુબરુ બજાવેલ છે. અરજી બોજામુકિત પ્રમાણપત્ર આઘારે \n- પ્રમાણિત - \nએચ.એમ.પટેલ \nસ.ઓ. બાવળા \nતા. ૧૦/૫/૨૦૨૧",
+      "previous_owners": [
+        "રણજીતભાઇ ભયરામભાઇ",
+        "જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ",
+        "હીરાબેન તે અભુભાઇ મેરુભાઇ ની",
+        "ઉપરોકત ના નામે"
+      ],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ, જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ, હીરાબેન તે અભુભાઇ મેરુભાઇ ની , ઉપરોકત ના નામે (હે ૪-૨૧-૪૫) એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે...",
+      "transaction_type": "બોજા મુક્તિ",
+      "mutation_entry_number": "827"
+    }
+  },
+  {
+    "entry_number": "829",
+    "image_file_path": null,
+    "is_verified": true,
+    "scraped_html": {
+      "status": "પ્રમાણિત",
+      "details": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ, જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ, હીરાબેન  તે અભુભાઇ મેરુભાઇ ની , ઉપરોકત ના નામે (હે ૪-૨૧-૪૫) ના ખાતા નંબર ૨પ૦ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. આ જમીન ઉપર ઘી હસનનગર સેવા સહકારી મંડળી લી. માંથી ધિરાણ મેળવતા તા.૨૦/૦૩/૨૦૨૧ નાં એકરારનામાં અને અરજીના આધારે જમીન તારણમાં મૂકતા ગામ નમુના નં ૭ ના બોજા/બીજા હકમાં નોંધ દાખલ કરવા આ નોંધ પાડવામાં આવી.",
+      "raw_row": {
+        "નોંધની વિગત": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ, જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ, હીરાબેન  તે અભુભાઇ મેરુભાઇ ની , ઉપરોકત ના નામે (હે ૪-૨૧-૪૫) ના ખાતા નંબર ૨પ૦ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. આ જમીન ઉપર ઘી હસનનગર સેવા સહકારી મંડળી લી. માંથી ધિરાણ મેળવતા તા.૨૦/૦૩/૨૦૨૧ નાં એકરારનામાં અને અરજીના આધારે જમીન તારણમાં મૂકતા ગામ નમુના નં ૭ ના બોજા/બીજા હકમાં નોંધ દાખલ કરવા આ નોંધ પાડવામાં આવી.",
+        "ફેરફારને સંબંધિત સરવે નંબર": "2(250)",
+        "તપાસણી કરનાર અધિકારીનો શેરો": "૧૩૫-ડી નોટીસ તલાટી રૂબરૂ બજાવેલ છે   \nઅરજી, એકરારનામા  આધારે \n- પ્રમાણિત -\nએચ.એમ.પટેલ \nસ.ઓ.બાવળા\nતા.૨૫/૦૫/૨૦૨૧",
+        "નોંધ નંબરનોંધની તારીખફેરફારનો પ્રકારનોંધની સ્થિતિ": "829 | 31/03/2021 | બોજો દાખલ | પ્રમાણિત"
+      },
+      "entry_date": "31/03/2021",
+      "entry_number": "829",
+      "survey_numbers": "2(250)",
+      "officer_remarks": "૧૩૫-ડી નોટીસ તલાટી રૂબરૂ બજાવેલ છે   \nઅરજી, એકરારનામા  આધારે \n- પ્રમાણિત -\nએચ.એમ.પટેલ \nસ.ઓ.બાવળા\nતા.૨૫/૦૫/૨૦૨૧",
+      "transaction_type": "બોજો દાખલ"
+    },
+    "ai_draft": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "31/03/2021",
+      "new_owners": [
+        "ઘી હસનનગર સેવા સહકારી મંડળી લી."
+      ],
+      "survey_numbers": "2(250)",
+      "officer_remarks": "૧૩૫-ડી નોટીસ તલાટી રૂબરૂ બજાવેલ છે   \nઅરજી, એકરારનામા  આધારે \n- પ્રમાણિત -\nએચ.એમ.પટેલ \nસ.ઓ.બાવળા\nતા.૨૫/૦૫/૨૦૨૧",
+      "previous_owners": [
+        "રણજીતભાઇ ભયરામભાઇ",
+        "જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ",
+        "હીરાબેન તે અભુભાઇ મેરુભાઇ ની",
+        "ઉપરોકત ના નામે"
+      ],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ, જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ, હીરાબેન તે અભુભાઇ મેરુભાઇ ની , ઉપરોકત ના નામે (હે ૪-૨૧-૪૫) ના ખાતા નંબર ૨પ૦ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. ...",
+      "transaction_type": "બોજો દાખલ",
+      "mutation_entry_number": "829"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "31/03/2021",
+      "new_owners": [
+        "ઘી હસનનગર સેવા સહકારી મંડળી લી."
+      ],
+      "survey_numbers": "2",
+      "officer_remarks": "૧૩૫-ડી નોટીસ તલાટી રૂબરૂ બજાવેલ છે   \nઅરજી, એકરારનામા  આધારે \n- પ્રમાણિત -\nએચ.એમ.પટેલ \nસ.ઓ.બાવળા\nતા.૨૫/૦૫/૨૦૨૧",
+      "previous_owners": [
+        "રણજીતભાઇ ભયરામભાઇ",
+        "જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ",
+        "હીરાબેન તે અભુભાઇ મેરુભાઇ ની",
+        "ઉપરોકત ના નામે"
+      ],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ, જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ, હીરાબેન તે અભુભાઇ મેરુભાઇ ની , ઉપરોકત ના નામે (હે ૪-૨૧-૪૫) ના ખાતા નંબર ૨પ૦ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. ...",
+      "transaction_type": "બોજો દાખલ",
+      "mutation_entry_number": "829"
+    }
+  },
+  {
+    "entry_number": "915",
+    "image_file_path": null,
+    "is_verified": true,
+    "scraped_html": {
+      "status": "પ્રમાણિત",
+      "details": "ખેતીની જમીનનું રજીસ્ટર દસ્તાવેજથી વેચાણ : - બાજુમાં બતાવેલ સરવે નંબરવાળી જમીન જેનું ક્ષેત્રફળ  : 2    0.5400 કુલ :  1 સરવે નંબર  .. કુલ  : 0.5400 હે.-આરે-ચો.મી. મોજે : હસનનગર તા. બાવળા જી. અમદાવાદ  ખાતે ના કબ્જેદાર (ખાતા નં.)રણજીતભાઈ ભયરામભાઈ પટેલ(), જશીબેન ભયરામભાઇ અભૂભાઈની વિધવા(), હીરાબેન તે અભૂભાઈ મેરૂભાઈની દિકરી(), ના નામે ચાલે છે. જે જમીન તેમણે 02/09/2023 ના રોજ ર.દ.નં. 5437/2023 થી માર્કેટ વેલ્યુ રૂ. 1490400/-  અને અવેજની રકમ  રૂ. 1500000/- માં વેચાણ આપેલ છે. મોજે . (હસનનગર) તા. (બાવળા) જી. (અમદાવાદ) શ્રી (ખાતે ખાતા નં.) પરેશભાઈ ભરતભાઈ સોલંકી(....),  થી ખેતીની જમીન ધારણ કરે છે. ર.વે.દ. આધારે વેચાણ આપનારનું નામ કમી કરી વેચાણ લેનારનું નામ દાખલ કરવા નોંધ કરી.",
+      "raw_row": {
+        "નોંધની વિગત": "ખેતીની જમીનનું રજીસ્ટર દસ્તાવેજથી વેચાણ : - બાજુમાં બતાવેલ સરવે નંબરવાળી જમીન જેનું ક્ષેત્રફળ  : 2    0.5400 કુલ :  1 સરવે નંબર  .. કુલ  : 0.5400 હે.-આરે-ચો.મી. મોજે : હસનનગર તા. બાવળા જી. અમદાવાદ  ખાતે ના કબ્જેદાર (ખાતા નં.)રણજીતભાઈ ભયરામભાઈ પટેલ(), જશીબેન ભયરામભાઇ અભૂભાઈની વિધવા(), હીરાબેન તે અભૂભાઈ મેરૂભાઈની દિકરી(), ના નામે ચાલે છે. જે જમીન તેમણે 02/09/2023 ના રોજ ર.દ.નં. 5437/2023 થી માર્કેટ વેલ્યુ રૂ. 1490400/-  અને અવેજની રકમ  રૂ. 1500000/- માં વેચાણ આપેલ છે. મોજે . (હસનનગર) તા. (બાવળા) જી. (અમદાવાદ) શ્રી (ખાતે ખાતા નં.) પરેશભાઈ ભરતભાઈ સોલંકી(....),  થી ખેતીની જમીન ધારણ કરે છે. ર.વે.દ. આધારે વેચાણ આપનારનું નામ કમી કરી વેચાણ લેનારનું નામ દાખલ કરવા નોંધ કરી.",
+        "ફેરફારને સંબંધિત સરવે નંબર": ",2(250)",
+        "તપાસણી કરનાર અધિકારીનો શેરો": "અરજી, રજી.વેચાણ દસ્તાવેજની નકલ તથા ઇન્ડેક્ષ રજુ થયેલ છે. વે.રા બાવળા તાલુકાના સાંકોડના સ.નં. ૭૪૩ થી ખેડૂત હોવા બાબતે ૭/૧૨ના ઉતારા રજુ થયેલ છે. સબબ રજુ રેકર્ડ આધારે\n--પ્રમાણીત--\nએચ.કે.દેસાઇ\nસ.ઓ.બાવળા\nતા.૦૧/૧૧/૨૦૨૩",
+        "નોંધ નંબરનોંધની તારીખફેરફારનો પ્રકારનોંધની સ્થિતિ": "915 | 05/09/2023 | વેચાણ | પ્રમાણિત"
+      },
+      "entry_date": "05/09/2023",
+      "entry_number": "915",
+      "survey_numbers": ",2(250)",
+      "officer_remarks": "અરજી, રજી.વેચાણ દસ્તાવેજની નકલ તથા ઇન્ડેક્ષ રજુ થયેલ છે. વે.રા બાવળા તાલુકાના સાંકોડના સ.નં. ૭૪૩ થી ખેડૂત હોવા બાબતે ૭/૧૨ના ઉતારા રજુ થયેલ છે. સબબ રજુ રેકર્ડ આધારે\n--પ્રમાણીત--\nએચ.કે.દેસાઇ\nસ.ઓ.બાવળા\nતા.૦૧/૧૧/૨૦૨૩",
+      "transaction_type": "વેચાણ"
+    },
+    "ai_draft": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "05/09/2023",
+      "new_owners": [],
+      "survey_numbers": ",2(250)",
+      "officer_remarks": "અરજી, રજી.વેચાણ દસ્તાવેજની નકલ તથા ઇન્ડેક્ષ રજુ થયેલ છે. વે.રા બાવળા તાલુકાના સાંકોડના સ.નં. ૭૪૩ થી ખેડૂત હોવા બાબતે ૭/૧૨ના ઉતારા રજુ થયેલ છે. સબબ રજુ રેકર્ડ આધારે\n--પ્રમાણીત--\nએચ.કે.દેસાઇ\nસ.ઓ.બાવળા\nતા.૦૧/૧૧/૨૦૨૩",
+      "previous_owners": [],
+      "remarks_summary": "ખેતીની જમીનનું રજીસ્ટર દસ્તાવેજથી વેચાણ : - બાજુમાં બતાવેલ સરવે નંબરવાળી જમીન જેનું ક્ષેત્રફળ : 2 0.5400 કુલ : 1 સરવે નંબર .. કુલ : 0.5400 હે.-આરે-ચો.મી. મોજે : હસનનગર તા. બાવળા જી. અમદાવાદ ખાતે ના કબ્જેદાર (ખાતા નં.)રણ...",
+      "transaction_type": "વેચાણ",
+      "mutation_entry_number": "915"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "05/09/2023",
+      "new_owners": [],
+      "survey_numbers": "2",
+      "officer_remarks": "અરજી, રજી.વેચાણ દસ્તાવેજની નકલ તથા ઇન્ડેક્ષ રજુ થયેલ છે. વે.રા બાવળા તાલુકાના સાંકોડના સ.નં. ૭૪૩ થી ખેડૂત હોવા બાબતે ૭/૧૨ના ઉતારા રજુ થયેલ છે. સબબ રજુ રેકર્ડ આધારે\n--પ્રમાણીત--\nએચ.કે.દેસાઇ\nસ.ઓ.બાવળા\nતા.૦૧/૧૧/૨૦૨૩",
+      "previous_owners": [],
+      "remarks_summary": "ખેતીની જમીનનું રજીસ્ટર દસ્તાવેજથી વેચાણ : - બાજુમાં બતાવેલ સરવે નંબરવાળી જમીન જેનું ક્ષેત્રફળ : 2 0.5400 કુલ : 1 સરવે નંબર .. કુલ : 0.5400 હે.-આરે-ચો.મી. મોજે : હસનનગર તા. બાવળા જી. અમદાવાદ ખાતે ના કબ્જેદાર (ખાતા નં.)રણ...",
+      "transaction_type": "વેચાણ",
+      "mutation_entry_number": "915"
+    }
+  },
+  {
+    "entry_number": "916",
+    "image_file_path": null,
+    "is_verified": true,
+    "scraped_html": {
+      "status": "પ્રમાણિત",
+      "details": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ, જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ, હીરાબેન  તે અભુભાઇ મેરુભાઇ ની , ઉપરોકત ના નામે (હે ૪-૨૧-૪૫) એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે અરજી કરતા ધી હસનનગર સેવા સહકારી મંડળી લી ના તા.૦૧/૦૯/૨૦૨૩ નાં દાખલા અને અરજદારની અરજીના આધારે બોજા મુક્તિની નોંધ પાડવામાં આવી.",
+      "raw_row": {
+        "નોંધની વિગત": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ, જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ, હીરાબેન  તે અભુભાઇ મેરુભાઇ ની , ઉપરોકત ના નામે (હે ૪-૨૧-૪૫) એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે અરજી કરતા ધી હસનનગર સેવા સહકારી મંડળી લી ના તા.૦૧/૦૯/૨૦૨૩ નાં દાખલા અને અરજદારની અરજીના આધારે બોજા મુક્તિની નોંધ પાડવામાં આવી.",
+        "ફેરફારને સંબંધિત સરવે નંબર": "2(250)",
+        "તપાસણી કરનાર અધિકારીનો શેરો": "અરજી તથા બોજામુક્તિના દાખલા તથા 135 Dની નોટીસ આધારે\n--પ્રમાણીત--\nએચ.કે.દેસાઇ\nસ.ઓ.બાવળા\nતા.૩૦/૧૦/૨૦૨૩",
+        "નોંધ નંબરનોંધની તારીખફેરફારનો પ્રકારનોંધની સ્થિતિ": "916 | 20/09/2023 | બોજા મુક્તિ | પ્રમાણિત"
+      },
+      "entry_date": "20/09/2023",
+      "entry_number": "916",
+      "survey_numbers": "2(250)",
+      "officer_remarks": "અરજી તથા બોજામુક્તિના દાખલા તથા 135 Dની નોટીસ આધારે\n--પ્રમાણીત--\nએચ.કે.દેસાઇ\nસ.ઓ.બાવળા\nતા.૩૦/૧૦/૨૦૨૩",
+      "transaction_type": "બોજા મુક્તિ"
+    },
+    "ai_draft": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "20/09/2023",
+      "new_owners": [
+        "ઉપરોકત ના નામે (હે ૪-૨૧-૪૫) એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે અરજી કરતા ધી હસનનગર સેવા સહકારી મંડળી"
+      ],
+      "survey_numbers": "2(250)",
+      "officer_remarks": "અરજી તથા બોજામુક્તિના દાખલા તથા 135 Dની નોટીસ આધારે\n--પ્રમાણીત--\nએચ.કે.દેસાઇ\nસ.ઓ.બાવળા\nતા.૩૦/૧૦/૨૦૨૩",
+      "previous_owners": [
+        "રણજીતભાઇ ભયરામભાઇ",
+        "જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ",
+        "હીરાબેન તે અભુભાઇ મેરુભાઇ ની",
+        "ઉપરોકત ના નામે"
+      ],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ, જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ, હીરાબેન તે અભુભાઇ મેરુભાઇ ની , ઉપરોકત ના નામે (હે ૪-૨૧-૪૫) એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે...",
+      "transaction_type": "બોજા મુક્તિ",
+      "mutation_entry_number": "916"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "20/09/2023",
+      "new_owners": [
+        "ઉપરોકત ના નામે (હે ૪-૨૧-૪૫) એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે અરજી કરતા ધી હસનનગર સેવા સહકારી મંડળી"
+      ],
+      "survey_numbers": "2",
+      "officer_remarks": "અરજી તથા બોજામુક્તિના દાખલા તથા 135 Dની નોટીસ આધારે\n--પ્રમાણીત--\nએચ.કે.દેસાઇ\nસ.ઓ.બાવળા\nતા.૩૦/૧૦/૨૦૨૩",
+      "previous_owners": [
+        "રણજીતભાઇ ભયરામભાઇ",
+        "જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ",
+        "હીરાબેન તે અભુભાઇ મેરુભાઇ ની",
+        "ઉપરોકત ના નામે"
+      ],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ, જશીબેન ભયરામભાઇ અભુભાઇ ની વિઘવ, હીરાબેન તે અભુભાઇ મેરુભાઇ ની , ઉપરોકત ના નામે (હે ૪-૨૧-૪૫) એ માર્જિનમાં જણાવેલ સરવે નંબરની જમીન ઉપર રહેલ બોજો રદ કરવા માટે...",
+      "transaction_type": "બોજા મુક્તિ",
+      "mutation_entry_number": "916"
+    }
+  },
+  {
+    "entry_number": "941",
+    "image_file_path": null,
+    "is_verified": true,
+    "scraped_html": {
+      "status": "પ્રમાણિત",
+      "details": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ, જશીબેન ભયરામભાઇ અભુભાઇની વિધવા, હેરાબેન તે અભુભાઇ મેરૂભાઇની દિ, ઉપરોક્ત ના નામે (હે ૩-૬૭-૪૫ ચો, ના ખાતા નંબર ૨૮૧ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. આ જમીન ઉપર ઘી હસનનગર સેવા સહકારી મંડળી લી. માંથી ધિરાણ મેળવતા તા.૨૬/૦૩/૨૦૨૪ નાં એકરારનામાં અને અરજીના આધારે જમીન તારણમાં મૂકતા ગામ નમુના નં ૭ ના બોજા/બીજા હકમાં નોંધ દાખલ કરવા આ નોંધ પાડવામાં આવી.",
+      "raw_row": {
+        "નોંધની વિગત": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ, જશીબેન ભયરામભાઇ અભુભાઇની વિધવા, હેરાબેન તે અભુભાઇ મેરૂભાઇની દિ, ઉપરોક્ત ના નામે (હે ૩-૬૭-૪૫ ચો, ના ખાતા નંબર ૨૮૧ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. આ જમીન ઉપર ઘી હસનનગર સેવા સહકારી મંડળી લી. માંથી ધિરાણ મેળવતા તા.૨૬/૦૩/૨૦૨૪ નાં એકરારનામાં અને અરજીના આધારે જમીન તારણમાં મૂકતા ગામ નમુના નં ૭ ના બોજા/બીજા હકમાં નોંધ દાખલ કરવા આ નોંધ પાડવામાં આવી.",
+        "ફેરફારને સંબંધિત સરવે નંબર": "2(281)",
+        "તપાસણી કરનાર અધિકારીનો શેરો": "અરજી, એકરારનામું તથા ૭/૧૨ ની નકલ રજુ થયેલ છે. \n૧૩૫ ડીની નોટીસ તલાટી રુબરુ/RPAD થી મોકલેલ છે \nસબબ રજુ રેકર્ડ આધારે \nપ્રમાણિત \nએચ કે દેસાઇ \nસ.ઓ.બાવળા \nતા.૦૬/૦૫/૨૦૨૪",
+        "નોંધ નંબરનોંધની તારીખફેરફારનો પ્રકારનોંધની સ્થિતિ": "941 | 26/03/2024 | બોજો દાખલ | પ્રમાણિત"
+      },
+      "entry_date": "26/03/2024",
+      "entry_number": "941",
+      "survey_numbers": "2(281)",
+      "officer_remarks": "અરજી, એકરારનામું તથા ૭/૧૨ ની નકલ રજુ થયેલ છે. \n૧૩૫ ડીની નોટીસ તલાટી રુબરુ/RPAD થી મોકલેલ છે \nસબબ રજુ રેકર્ડ આધારે \nપ્રમાણિત \nએચ કે દેસાઇ \nસ.ઓ.બાવળા \nતા.૦૬/૦૫/૨૦૨૪",
+      "transaction_type": "બોજો દાખલ"
+    },
+    "ai_draft": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "26/03/2024",
+      "new_owners": [
+        "ઘી હસનનગર સેવા સહકારી મંડળી લી."
+      ],
+      "survey_numbers": "2(281)",
+      "officer_remarks": "અરજી, એકરારનામું તથા ૭/૧૨ ની નકલ રજુ થયેલ છે. \n૧૩૫ ડીની નોટીસ તલાટી રુબરુ/RPAD થી મોકલેલ છે \nસબબ રજુ રેકર્ડ આધારે \nપ્રમાણિત \nએચ કે દેસાઇ \nસ.ઓ.બાવળા \nતા.૦૬/૦૫/૨૦૨૪",
+      "previous_owners": [
+        "રણજીતભાઇ ભયરામભાઇ",
+        "જશીબેન ભયરામભાઇ અભુભાઇની વિધવા",
+        "હેરાબેન તે અભુભાઇ મેરૂભાઇની દિ",
+        "ઉપરોક્ત ના નામે (હે ૩-૬૭-૪૫ ચો"
+      ],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ, જશીબેન ભયરામભાઇ અભુભાઇની વિધવા, હેરાબેન તે અભુભાઇ મેરૂભાઇની દિ, ઉપરોક્ત ના નામે (હે ૩-૬૭-૪૫ ચો, ના ખાતા નંબર ૨૮૧ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે...",
+      "transaction_type": "બોજો દાખલ",
+      "mutation_entry_number": "941"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "26/03/2024",
+      "new_owners": [
+        "ઘી હસનનગર સેવા સહકારી મંડળી લી."
+      ],
+      "survey_numbers": "2",
+      "officer_remarks": "અરજી, એકરારનામું તથા ૭/૧૨ ની નકલ રજુ થયેલ છે. \n૧૩૫ ડીની નોટીસ તલાટી રુબરુ/RPAD થી મોકલેલ છે \nસબબ રજુ રેકર્ડ આધારે \nપ્રમાણિત \nએચ કે દેસાઇ \nસ.ઓ.બાવળા \nતા.૦૬/૦૫/૨૦૨૪",
+      "previous_owners": [
+        "રણજીતભાઇ ભયરામભાઇ",
+        "જશીબેન ભયરામભાઇ અભુભાઇની વિધવા",
+        "હેરાબેન તે અભુભાઇ મેરૂભાઇની દિ",
+        "ઉપરોક્ત ના નામે (હે ૩-૬૭-૪૫ ચો"
+      ],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર રણજીતભાઇ ભયરામભાઇ, જશીબેન ભયરામભાઇ અભુભાઇની વિધવા, હેરાબેન તે અભુભાઇ મેરૂભાઇની દિ, ઉપરોક્ત ના નામે (હે ૩-૬૭-૪૫ ચો, ના ખાતા નંબર ૨૮૧ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે...",
+      "transaction_type": "બોજો દાખલ",
+      "mutation_entry_number": "941"
+    }
+  },
+  {
+    "entry_number": "955",
+    "image_file_path": null,
+    "is_verified": true,
+    "scraped_html": {
+      "status": "પ્રમાણિત",
+      "details": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર ગોવિંદભાઇ મનજીભાઇ (હે ૦-૩૪-૬૪ ,ના ખાતા નંબર ૨૮૧ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. આ જમીન ઉપર ઘી હસનનગર સેવા સહકારી મંડળી લી. માંથી ધિરાણ મેળવતા તા.૨૪/૦પ/૨૦૨૪ નાં એકરારનામાં અને અરજીના આધારે જમીન તારણમાં મૂકતા ગામ નમુના નં ૭ ના બોજા/બીજા હકમાં નોંધ દાખલ કરવા આ નોંધ પાડવામાં આવી.",
+      "raw_row": {
+        "નોંધની વિગત": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર ગોવિંદભાઇ મનજીભાઇ (હે ૦-૩૪-૬૪ ,ના ખાતા નંબર ૨૮૧ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. આ જમીન ઉપર ઘી હસનનગર સેવા સહકારી મંડળી લી. માંથી ધિરાણ મેળવતા તા.૨૪/૦પ/૨૦૨૪ નાં એકરારનામાં અને અરજીના આધારે જમીન તારણમાં મૂકતા ગામ નમુના નં ૭ ના બોજા/બીજા હકમાં નોંધ દાખલ કરવા આ નોંધ પાડવામાં આવી.",
+        "ફેરફારને સંબંધિત સરવે નંબર": "2(281)",
+        "તપાસણી કરનાર અધિકારીનો શેરો": "અરજી એકરારનામુ તથા ૭/૧૨ની નકલ રજુ થયેલ છે. ૧૩૫ ડીની નોટીસ RPAD થી મોકલેલ છે. સબબ રજૂ રેકર્ડ આધારે\n--પ્રમાણિત--\nએચ.કે.દેસાઇ\nસ.ઓ.બાવળા\nતા.૨૮/૦૬/૨૦૨૪",
+        "નોંધ નંબરનોંધની તારીખફેરફારનો પ્રકારનોંધની સ્થિતિ": "955 | 24/05/2024 | બોજો દાખલ | પ્રમાણિત"
+      },
+      "entry_date": "24/05/2024",
+      "entry_number": "955",
+      "survey_numbers": "2(281)",
+      "officer_remarks": "અરજી એકરારનામુ તથા ૭/૧૨ની નકલ રજુ થયેલ છે. ૧૩૫ ડીની નોટીસ RPAD થી મોકલેલ છે. સબબ રજૂ રેકર્ડ આધારે\n--પ્રમાણિત--\nએચ.કે.દેસાઇ\nસ.ઓ.બાવળા\nતા.૨૮/૦૬/૨૦૨૪",
+      "transaction_type": "બોજો દાખલ"
+    },
+    "ai_draft": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "24/05/2024",
+      "new_owners": [
+        "ઘી હસનનગર સેવા સહકારી મંડળી લી."
+      ],
+      "survey_numbers": "2(281)",
+      "officer_remarks": "અરજી એકરારનામુ તથા ૭/૧૨ની નકલ રજુ થયેલ છે. ૧૩૫ ડીની નોટીસ RPAD થી મોકલેલ છે. સબબ રજૂ રેકર્ડ આધારે\n--પ્રમાણિત--\nએચ.કે.દેસાઇ\nસ.ઓ.બાવળા\nતા.૨૮/૦૬/૨૦૨૪",
+      "previous_owners": [
+        "ગોવિંદભાઇ મનજીભાઇ (હે ૦-૩૪-૬૪"
+      ],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર ગોવિંદભાઇ મનજીભાઇ (હે ૦-૩૪-૬૪ ,ના ખાતા નંબર ૨૮૧ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. આ જમીન ઉપર ઘી હસનનગર સેવા સહકારી મંડળી લી. માંથી ધિરાણ મેળવતા તા.૨૪/૦પ/૨૦૨૪ નાં...",
+      "transaction_type": "બોજો દાખલ",
+      "mutation_entry_number": "955"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "24/05/2024",
+      "new_owners": [
+        "ઘી હસનનગર સેવા સહકારી મંડળી લી."
+      ],
+      "survey_numbers": "2",
+      "officer_remarks": "અરજી એકરારનામુ તથા ૭/૧૨ની નકલ રજુ થયેલ છે. ૧૩૫ ડીની નોટીસ RPAD થી મોકલેલ છે. સબબ રજૂ રેકર્ડ આધારે\n--પ્રમાણિત--\nએચ.કે.દેસાઇ\nસ.ઓ.બાવળા\nતા.૨૮/૦૬/૨૦૨૪",
+      "previous_owners": [
+        "ગોવિંદભાઇ મનજીભાઇ (હે ૦-૩૪-૬૪"
+      ],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર ગોવિંદભાઇ મનજીભાઇ (હે ૦-૩૪-૬૪ ,ના ખાતા નંબર ૨૮૧ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. આ જમીન ઉપર ઘી હસનનગર સેવા સહકારી મંડળી લી. માંથી ધિરાણ મેળવતા તા.૨૪/૦પ/૨૦૨૪ નાં...",
+      "transaction_type": "બોજો દાખલ",
+      "mutation_entry_number": "955"
+    }
+  },
+  {
+    "entry_number": "1095",
+    "image_file_path": null,
+    "is_verified": true,
+    "scraped_html": {
+      "status": "પ્રમાણિત",
+      "details": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર પરેશભાઇ  ભરતભાઇ સોલંકી (હે ૦-૫૪-૦૦ ના ખાતા નંબર ૨૮૧ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. આ જમીન ઉપર સરી સેવા સહકારી મંડળી,લી  ધિરાણ મેળવતા તા.૨૭/૦૩/૨૦૨૬ નાં એકરારનામાં અને અરજીના આધારે જમીન તારણમાં મૂકતા ગામ નમુના નં ૭ ના બોજા/બીજા હકમાં નોંધ દાખલ કરવા આ નોંધ પાડવામાં આવી.",
+      "raw_row": {
+        "નોંધની વિગત": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર પરેશભાઇ  ભરતભાઇ સોલંકી (હે ૦-૫૪-૦૦ ના ખાતા નંબર ૨૮૧ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. આ જમીન ઉપર સરી સેવા સહકારી મંડળી,લી  ધિરાણ મેળવતા તા.૨૭/૦૩/૨૦૨૬ નાં એકરારનામાં અને અરજીના આધારે જમીન તારણમાં મૂકતા ગામ નમુના નં ૭ ના બોજા/બીજા હકમાં નોંધ દાખલ કરવા આ નોંધ પાડવામાં આવી.",
+        "ફેરફારને સંબંધિત સરવે નંબર": "2(281)",
+        "તપાસણી કરનાર અધિકારીનો શેરો": "અરજી એકરારનામુ રજુ થયેલ છે. ૧૩૫-ડીની નોટીસ RPAD થી બજવણી થયેલ છે. જેથી રેકર્ડ આધારે\n--પ્રમાણિત--\nએચ.કે.ચૌહાણ\nસ.ઓ.બાવળા-૨\nતા.૦૭/૦૫/૨૦૨૬",
+        "નોંધ નંબરનોંધની તારીખફેરફારનો પ્રકારનોંધની સ્થિતિ": "1095 | 27/03/2026 | બોજો દાખલ | પ્રમાણિત"
+      },
+      "entry_date": "27/03/2026",
+      "entry_number": "1095",
+      "survey_numbers": "2(281)",
+      "officer_remarks": "અરજી એકરારનામુ રજુ થયેલ છે. ૧૩૫-ડીની નોટીસ RPAD થી બજવણી થયેલ છે. જેથી રેકર્ડ આધારે\n--પ્રમાણિત--\nએચ.કે.ચૌહાણ\nસ.ઓ.બાવળા-૨\nતા.૦૭/૦૫/૨૦૨૬",
+      "transaction_type": "બોજો દાખલ"
+    },
+    "ai_draft": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "27/03/2026",
+      "new_owners": [
+        "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર પરેશભાઇ ભરતભાઇ સોલંકી (હે ૦-૫૪-૦૦ ના ખાતા નંબર ૨૮૧ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. આ જમીન ઉપર સરી સેવા સહકારી મંડળી"
+      ],
+      "survey_numbers": "2(281)",
+      "officer_remarks": "અરજી એકરારનામુ રજુ થયેલ છે. ૧૩૫-ડીની નોટીસ RPAD થી બજવણી થયેલ છે. જેથી રેકર્ડ આધારે\n--પ્રમાણિત--\nએચ.કે.ચૌહાણ\nસ.ઓ.બાવળા-૨\nતા.૦૭/૦૫/૨૦૨૬",
+      "previous_owners": [
+        "પરેશભાઇ ભરતભાઇ સોલંકી (હે ૦-૫૪-૦૦"
+      ],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર પરેશભાઇ ભરતભાઇ સોલંકી (હે ૦-૫૪-૦૦ ના ખાતા નંબર ૨૮૧ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. આ જમીન ઉપર સરી સેવા સહકારી મંડળી,લી ધિરાણ મેળવતા તા.૨૭/૦૩/૨૦૨૬ નાં એકરારનામા...",
+      "transaction_type": "બોજો દાખલ",
+      "mutation_entry_number": "1095"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "27/03/2026",
+      "new_owners": [
+        "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર પરેશભાઇ ભરતભાઇ સોલંકી (હે ૦-૫૪-૦૦ ના ખાતા નંબર ૨૮૧ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. આ જમીન ઉપર સરી સેવા સહકારી મંડળી"
+      ],
+      "survey_numbers": "2",
+      "officer_remarks": "અરજી એકરારનામુ રજુ થયેલ છે. ૧૩૫-ડીની નોટીસ RPAD થી બજવણી થયેલ છે. જેથી રેકર્ડ આધારે\n--પ્રમાણિત--\nએચ.કે.ચૌહાણ\nસ.ઓ.બાવળા-૨\nતા.૦૭/૦૫/૨૦૨૬",
+      "previous_owners": [
+        "પરેશભાઇ ભરતભાઇ સોલંકી (હે ૦-૫૪-૦૦"
+      ],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર પરેશભાઇ ભરતભાઇ સોલંકી (હે ૦-૫૪-૦૦ ના ખાતા નંબર ૨૮૧ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. આ જમીન ઉપર સરી સેવા સહકારી મંડળી,લી ધિરાણ મેળવતા તા.૨૭/૦૩/૨૦૨૬ નાં એકરારનામા...",
+      "transaction_type": "બોજો દાખલ",
+      "mutation_entry_number": "1095"
+    }
+  },
+  {
+    "entry_number": "1107",
+    "image_file_path": null,
+    "is_verified": true,
+    "scraped_html": {
+      "status": "પ્રમાણિત",
+      "details": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર પરેશભાઇ ભરતભાઇ સોલંકી (હે ૦-૫૪ ના ખાતા નંબર ૨૮૧ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. આ જમીન ઉપર સરી સેવા સહકારી મંડળી લી (0-54-00) માંથી ધિરાણ મેળવતા તા.૧૨/૦૮/૨૦૨૬ નાં એકરારનામાં અને અરજીના આધારે જમીન તારણમાં મૂકતા ગામ નમુના નં ૭ ના બોજા/બીજા હકમાં નોંધ દાખલ કરવા આ નોંધ પાડવામાં આવી.",
+      "raw_row": {
+        "નોંધની વિગત": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર પરેશભાઇ ભરતભાઇ સોલંકી (હે ૦-૫૪ ના ખાતા નંબર ૨૮૧ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. આ જમીન ઉપર સરી સેવા સહકારી મંડળી લી (0-54-00) માંથી ધિરાણ મેળવતા તા.૧૨/૦૮/૨૦૨૬ નાં એકરારનામાં અને અરજીના આધારે જમીન તારણમાં મૂકતા ગામ નમુના નં ૭ ના બોજા/બીજા હકમાં નોંધ દાખલ કરવા આ નોંધ પાડવામાં આવી.",
+        "ફેરફારને સંબંધિત સરવે નંબર": "2(281)",
+        "તપાસણી કરનાર અધિકારીનો શેરો": "- અરજી, એકરારનામું  રજુ થયેલ છે. \n- ૧૩૫-ડી ની નોટીસ RPAD થી બજવણી થયેલ છે. \nજેથી \nરેકર્ડ આધારે \n-પ્રમાણિત-\nએચ.કે.ચૌહાણ \nસર્કલ ઓફિસર-૨\nબાવળા \n૨૫/૦૯/૨૦૨૬",
+        "નોંધ નંબરનોંધની તારીખફેરફારનો પ્રકારનોંધની સ્થિતિ": "1107 | 14/08/2026 | બોજો દાખલ | પ્રમાણિત"
+      },
+      "entry_date": "14/08/2026",
+      "entry_number": "1107",
+      "survey_numbers": "2(281)",
+      "officer_remarks": "- અરજી, એકરારનામું  રજુ થયેલ છે. \n- ૧૩૫-ડી ની નોટીસ RPAD થી બજવણી થયેલ છે. \nજેથી \nરેકર્ડ આધારે \n-પ્રમાણિત-\nએચ.કે.ચૌહાણ \nસર્કલ ઓફિસર-૨\nબાવળા \n૨૫/૦૯/૨૦૨૬",
+      "transaction_type": "બોજો દાખલ"
+    },
+    "ai_draft": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "14/08/2026",
+      "new_owners": [
+        "સરી સેવા સહકારી મંડળી લી (0-54-00)"
+      ],
+      "survey_numbers": "2(281)",
+      "officer_remarks": "- અરજી, એકરારનામું  રજુ થયેલ છે. \n- ૧૩૫-ડી ની નોટીસ RPAD થી બજવણી થયેલ છે. \nજેથી \nરેકર્ડ આધારે \n-પ્રમાણિત-\nએચ.કે.ચૌહાણ \nસર્કલ ઓફિસર-૨\nબાવળા \n૨૫/૦૯/૨૦૨૬",
+      "previous_owners": [
+        "પરેશભાઇ ભરતભાઇ સોલંકી (હે ૦-૫૪"
+      ],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર પરેશભાઇ ભરતભાઇ સોલંકી (હે ૦-૫૪ ના ખાતા નંબર ૨૮૧ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. આ જમીન ઉપર સરી સેવા સહકારી મંડળી લી (0-54-00) માંથી ધિરાણ મેળવતા તા.૧૨/૦૮/૨૦૨૬ ...",
+      "transaction_type": "બોજો દાખલ",
+      "mutation_entry_number": "1107"
+    },
+    "final_verified": {
+      "status": "પ્રમાણિત",
+      "ai_source": "nlp_fallback",
+      "entry_date": "14/08/2026",
+      "new_owners": [
+        "સરી સેવા સહકારી મંડળી લી (0-54-00)"
+      ],
+      "survey_numbers": "2",
+      "officer_remarks": "- અરજી, એકરારનામું  રજુ થયેલ છે. \n- ૧૩૫-ડી ની નોટીસ RPAD થી બજવણી થયેલ છે. \nજેથી \nરેકર્ડ આધારે \n-પ્રમાણિત-\nએચ.કે.ચૌહાણ \nસર્કલ ઓફિસર-૨\nબાવળા \n૨૫/૦૯/૨૦૨૬",
+      "previous_owners": [
+        "પરેશભાઇ ભરતભાઇ સોલંકી (હે ૦-૫૪"
+      ],
+      "remarks_summary": "બાવળા તાલુકાના મોજે હસનનગર ગામના ખેડૂત ખાતેદાર પરેશભાઇ ભરતભાઇ સોલંકી (હે ૦-૫૪ ના ખાતા નંબર ૨૮૧ થી માર્જિનમાં જણાવેલ જમીન તેઓના ખાતે ચાલે છે. આ જમીન ઉપર સરી સેવા સહકારી મંડળી લી (0-54-00) માંથી ધિરાણ મેળવતા તા.૧૨/૦૮/૨૦૨૬ ...",
+      "transaction_type": "બોજો દાખલ",
+      "mutation_entry_number": "1107"
+    }
+  }
+]

@@ -49,17 +49,46 @@ export default function SharedDossier() {
 
         if (rec) {
           const ext = rec.extracted_data || {};
-          const risks = ext.risk_assessment || FALLBACK_DOSSIER.risk_assessment;
+          const basic = ext.Basic_Details || ext["Basic Details"] || {};
+          const rf = ext.Risk_Flags || {};
+          
+          const dynamicRisks = {
+            ownership: {
+              status: rf.A_Ownership?.status?.replace(/^[🟢🟡🔴⚪]\s*/, "") || "Private",
+              is_flagged: rf.A_Ownership?.color === "red"
+            },
+            tenure: {
+              status: rf.B_Tenure?.status?.replace(/^[🟢🟡🔴⚪]\s*/, "") || "Freehold",
+              is_flagged: rf.B_Tenure?.color === "red"
+            },
+            encumbrance: {
+              status: rf.C_Encumbrance?.status?.replace(/^[🟢🟡🔴⚪]\s*/, "") || "Clear",
+              is_flagged: rf.C_Encumbrance?.color === "yellow" || rf.C_Encumbrance?.color === "red"
+            },
+            litigation: {
+              status: rf.D_Litigation?.status?.replace(/^[🟢🟡🔴⚪]\s*/, "") || "Clear",
+              is_flagged: rf.D_Litigation?.color === "red"
+            }
+          };
+
+          const rawTimeline = (tl && tl.data && Array.isArray(tl.data)) 
+            ? tl.data 
+            : (Array.isArray(tl) ? tl : []);
+
+          const finalTimeline = rawTimeline.length > 0 
+            ? rawTimeline 
+            : FALLBACK_DOSSIER.timeline;
+
           const genDate = rec.scraped_at ? new Date(rec.scraped_at).toLocaleDateString("en-GB") : new Date().toLocaleDateString("en-GB");
           
           setData({
             survey_no: rec.survey_no || surveyNo,
-            village: ext.Village || rec.village_code || "Hasan Nagar",
-            taluka: ext.Taluka || rec.taluka_code || "Bavla",
-            district: ext.District || rec.district_code || "Ahmedabad",
+            village: basic.Village || ext.Village || rec.village_code || "Hasan Nagar",
+            taluka: basic.Taluka || ext.Taluka || rec.taluka_code || "Bavla",
+            district: basic.District || ext.District || rec.district_code || "Ahmedabad",
             generated_date: genDate,
-            risk_assessment: risks,
-            timeline: Array.isArray(tl) && tl.length > 0 ? tl : FALLBACK_DOSSIER.timeline
+            risk_assessment: dynamicRisks,
+            timeline: finalTimeline
           });
         }
       } catch (err) {

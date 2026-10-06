@@ -12,24 +12,47 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from app.api.v1.endpoints import portfolio
 
-# Import our database init and our router endpoints
+from app.core.config import settings
 from app.db.session import init_db
-from app.api.v1.endpoints import records, mutations
+from app.api.v1.endpoints import records, mutations, hierarchy
+from app.scraper.browser import browser_manager
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    print("EVENT LOOP RUNNING:", type(asyncio.get_running_loop()))
     # Startup: Initialize the database tables
-    print("Database initializing...")
     await init_db()
     
-    # Ensure output directory exists when server starts so StaticFiles doesn't crash
-    os.makedirs("output", exist_ok=True)
+    # Ensure output and storage directories exist
+    settings.OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    settings.STORAGE_DIR.mkdir(parents=True, exist_ok=True)
+
+    # Ensure Xvfb virtual display is active on Linux for full headed Chromium stealth
+    xvfb_process = None
+    if sys.platform != "win32" and "DISPLAY" not in os.environ:
+        import subprocess
+        import shutil
+        if shutil.which("Xvfb"):
+            try:
+                xvfb_process = subprocess.Popen(
+                    ["Xvfb", ":99", "-screen", "0", "1920x1080x24", "-ac"],
+                    stdout=subprocess.DEVNULL,
+                    stderr=subprocess.DEVNULL
+                )
+                os.environ["DISPLAY"] = ":99"
+                print("Auto-started Xvfb on DISPLAY=:99 for full Headed Chromium support.")
+            except Exception as e:
+                print(f"Warning: Could not start Xvfb: {e}")
     
     yield
-    # Shutdown logic goes here (if any)
+    # Shutdown logic
+    await browser_manager.shutdown()
+    if xvfb_process:
+        try:
+            xvfb_process.terminate()
+        except Exception:
+            pass
 
-app = FastAPI(title="AnyROR SaaS API", lifespan=lifespan)
+app = FastAPI(title="TitleNode API (AnyRoR Intelligence)", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
@@ -44,13 +67,14 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# 🚨 FIX 2: Serve the downloaded mutation images over the network for the HITL UI
-app.mount("/static/images", StaticFiles(directory="output"), name="static_images")
+# Serve downloaded mutation images over the network for the HitL UI
+app.mount("/static/images", StaticFiles(directory=str(settings.OUTPUT_DIR)), name="static_images")
 
-# 🚨 FIX 3: Register the Routers
+# Register API Routers
 app.include_router(records.router, prefix="/api/v1/records", tags=["Records"])
 app.include_router(mutations.router, prefix="/api/v1/mutations", tags=["Mutations Review"])
 app.include_router(portfolio.router, prefix="/api/v1/portfolio", tags=["Portfolio Bulk Processing"])
+app.include_router(hierarchy.router, prefix="/api/v1/hierarchy", tags=["Administrative Hierarchy"])
 
 @app.get("/")
 def read_root():

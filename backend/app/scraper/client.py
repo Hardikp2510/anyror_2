@@ -1,5 +1,6 @@
 import asyncio
 import random
+import re
 from pathlib import Path
 from playwright.async_api import Page, TimeoutError as PlaywrightTimeoutError
 from app.core.config import settings
@@ -12,6 +13,7 @@ from app.core.exceptions import (
 from app.core.logging import logger
 from app.scraper.captcha import captcha_solver
 from app.scraper.parser import IntegratedParser, ParsedRecordResult
+from app.utils.encoding import fix_mojibake
 
 
 class AnyRORIntegratedClient:
@@ -26,20 +28,22 @@ class AnyRORIntegratedClient:
     async def _select_dropdown(self, selector: str, value: str, description: str) -> None:
         """
         Selects an ASP.NET dropdown option and pauses for ASP.NET partial postback to settle.
+        Emulates genuine human behavior with realistic delays to bypass IP blocks.
         """
         logger.info(f"Selecting {description}", value=value)
-        await self.page.wait_for_selector(selector, timeout=20000)
+        loc = self.page.locator(selector)
+        await loc.wait_for(state="attached", timeout=30000)
         
-        # Human hesitation before clicking
-        await asyncio.sleep(random.uniform(0.5, 1.2))
-        await self.page.select_option(selector, value=value)
+        # Human hesitation before clicking (1.2 to 2.4s)
+        await asyncio.sleep(random.uniform(1.2, 2.4))
+        await loc.select_option(value=value)
         
-        # Wait for ASP.NET UpdatePanel postback
+        # Wait for ASP.NET UpdatePanel postback to settle
+        await asyncio.sleep(random.uniform(1.8, 2.8))
         try:
-            await self.page.wait_for_load_state("networkidle", timeout=5000)
+            await self.page.wait_for_load_state("networkidle", timeout=6000)
         except Exception:
             pass
-        await asyncio.sleep(random.uniform(0.5, 1.0))
 
     async def fetch_integrated_record(
         self,
@@ -133,9 +137,18 @@ class AnyRORIntegratedClient:
                 predicted_text = await captcha_solver.solve(img_bytes)
                 logger.info("CAPTCHA solved via CNN", predicted=predicted_text)
 
-                # Type like human (150ms delay per key)
-                await self.page.type(settings.SELECTORS["captcha_input"], predicted_text, delay=150)
-                await asyncio.sleep(random.uniform(0.8, 1.5))
+                # Click input field with human hesitation
+                await asyncio.sleep(random.uniform(0.6, 1.2))
+                await self.page.click(settings.SELECTORS["captcha_input"])
+                await self.page.fill(settings.SELECTORS["captcha_input"], "")
+
+                # Type like human (110ms - 220ms delay per key)
+                for ch in predicted_text:
+                    await self.page.keyboard.type(ch, delay=random.randint(110, 220))
+                    await asyncio.sleep(random.uniform(0.04, 0.12))
+
+                # Human hesitation before clicking submit (1.0 to 2.2s)
+                await asyncio.sleep(random.uniform(1.0, 2.2))
 
                 # Submit form via DOM click to trigger ASP.NET validation correctly
                 await self.page.evaluate("document.getElementById('ContentPlaceHolder1_btnGo').click()")
@@ -171,19 +184,20 @@ class AnyRORIntegratedClient:
         if not is_success:
             raise CaptchaSolveError(f"Exhausted {max_attempts} CAPTCHA attempts without success.")
 
-        # 4. Extract Structured Data
+        # 4. Extract Structured Data with Mojibake repair
         html_content = await self.page.content()
         parsed_result = IntegratedParser.parse_response(html_content)
+        parsed_result.extracted_data = fix_mojibake(parsed_result.extracted_data)
 
         # Smart Caching Check: Compare Portal Processing Date with Database
         basic_new = parsed_result.extracted_data.get("Basic_Details", {})
         new_date = str(basic_new.get("Processing Date", "")).strip()
         if cached_processing_date and new_date:
-            clean_new = new_date.replace("તા.", "").replace("*", "").replace("ની સ્થિતિએ", "").strip()
-            clean_old = str(cached_processing_date).replace("તા.", "").replace("*", "").replace("ની સ્થિતિએ", "").strip()
+            clean_new = re.sub(r'[\s\*તા\.નીસ્થિતિએ:/\-]', '', new_date)
+            clean_old = re.sub(r'[\s\*તા\.નીસ્થિતિએ:/\-]', '', str(cached_processing_date))
             if clean_new and clean_old and clean_new == clean_old:
                 logger.info(
-                    f"[CACHE HIT] AnyRoR Processing Date match ({new_date}). Record unchanged on portal. Skipping document downloads.",
+                    f"[CACHE HIT] AnyRoR Processing Date match (Live: {new_date} | DB: {cached_processing_date}). Record unchanged on live portal. Skipping document and mutation scans downloads.",
                     survey=survey
                 )
                 return parsed_result, html_content, None, [], True
@@ -214,24 +228,29 @@ class AnyRORIntegratedClient:
         try:
             entry_table = self.page.locator("#ContentPlaceHolder1_gvEntryResult")
             if await entry_table.count() > 0:
-                entry_links = entry_table.locator("a")
-                link_count = await entry_links.count()
+                link_count = await self.page.locator("#ContentPlaceHolder1_gvEntryResult a").count()
                 logger.info(f"Found {link_count} mutation entries to scan.")
 
                 for i in range(link_count):
-                    link = entry_links.nth(i)
-                    entry_text = await link.inner_text()
+                    links = self.page.locator("#ContentPlaceHolder1_gvEntryResult a")
+                    if await links.count() <= i:
+                        break
+                    link = links.nth(i)
+                    entry_text = (await link.inner_text()).strip()
                     await link.click()
-                    await asyncio.sleep(2.5)  # ASP.NET postback settle
+                    await asyncio.sleep(2.0)  # ASP.NET postback settle
 
                     try:
                         await self.page.wait_for_load_state("networkidle", timeout=5000)
                     except Exception:
                         pass
 
-                    img_locator = self.page.locator("#ContentPlaceHolder1_gvImages_ientryimage_0")
-                    if await img_locator.count() > 0:
-                        raw_src = await img_locator.get_attribute("src")
+                    # Detect all images on page (including multi-page scanned deeds: ientryimage_0, ientryimage_1, etc.)
+                    img_locators = self.page.locator("img[id*='ientryimage_']")
+                    img_count = await img_locators.count()
+                    for p_idx in range(img_count):
+                        img_elem = img_locators.nth(p_idx)
+                        raw_src = await img_elem.get_attribute("src")
                         if raw_src:
                             if raw_src.startswith("../"):
                                 absolute_url = raw_src.replace("../", "https://anyror.gujarat.gov.in/")
@@ -242,13 +261,14 @@ class AnyRORIntegratedClient:
 
                             response = await self.page.context.request.get(absolute_url)
                             img_bytes = await response.body()
-                            img_path = output_dir / f"mutation_entry_{entry_text.strip()}.jpg"
+                            suffix = f"_p{p_idx}" if img_count > 1 else ""
+                            img_path = output_dir / f"mutation_entry_{entry_text}{suffix}.jpg"
 
                             with open(img_path, "wb") as f:
                                 f.write(img_bytes)
 
                             downloaded_images.append(str(img_path))
-                            logger.info(f"Downloaded handwritten scan for Entry #{entry_text.strip()}", file=img_path.name)
+                            logger.info(f"Downloaded handwritten scan for Entry #{entry_text} (page {p_idx+1})", file=img_path.name)
         except Exception as img_scan_err:
             logger.warning(f"Error during mutation scans extraction: {img_scan_err}")
 

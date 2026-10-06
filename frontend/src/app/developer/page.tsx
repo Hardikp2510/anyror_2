@@ -3,14 +3,8 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import TitleNodeLogo from "@/components/TitleNodeLogo";
-import { getRecordsByVillage, scrapeLandRecord, uploadPortfolioCsv } from "@/lib/api";
-
-const BAVLA_VILLAGES = [
-  { code: "007", name: "અમીપુરા - 007" }, 
-  { code: "045", name: "આદરોડા - 045" },
-  { code: "001", name: "હસનનગર - 001" }
-];
-const HASANNAGAR_SURVEYS = ["2", "3", "4", "6", "7", "8", "9", "10", "11", "12", "14", "22", "45", "101"];
+import { getRecordsByVillage, scrapeLandRecord, uploadPortfolioCsv, getIndexedVillages, getIndexedSurveys } from "@/lib/api";
+import { GUJARAT_DISTRICTS, BAVLA_VILLAGES, HASANNAGAR_SURVEYS } from "@/lib/gujaratData";
 
 export default function DeveloperPortal() {
   const router = useRouter();
@@ -25,8 +19,28 @@ export default function DeveloperPortal() {
   const [taluka, setTaluka] = useState("08");
   const [village, setVillage] = useState("001");
   const [survey, setSurvey] = useState("2");
+  
+  const [villages, setVillages] = useState<Array<{ code: string; name: string; total_surveys?: number }>>(BAVLA_VILLAGES);
+  const [surveys, setSurveys] = useState<string[]>(HASANNAGAR_SURVEYS);
+  const [isManualSurvey, setIsManualSurvey] = useState(false);
+  const [isLoadingVillages, setIsLoadingVillages] = useState(false);
+  const [isLoadingSurveys, setIsLoadingSurveys] = useState(false);
+
   const [isSearching, setIsSearching] = useState(false);
   const [requestStatus, setRequestStatus] = useState<string | null>(null);
+
+  const currentDistrictObj = GUJARAT_DISTRICTS.find(d => d.code === district) || GUJARAT_DISTRICTS[0];
+  const talukaList = currentDistrictObj?.talukas || [];
+
+  const handleDistrictChange = (dCode: string) => {
+    setDistrict(dCode);
+    const dObj = GUJARAT_DISTRICTS.find(d => d.code === dCode);
+    if (dObj && dObj.talukas.length > 0) {
+      setTaluka(dObj.talukas[0].code);
+    } else {
+      setTaluka("");
+    }
+  };
 
   // Rollup Grid State from Database
   const [parcels, setParcels] = useState<any[]>([]);
@@ -53,6 +67,81 @@ export default function DeveloperPortal() {
     }
   }, [village]);
 
+  // Dynamically load villages when District or Taluka changes
+  useEffect(() => {
+    let isMounted = true;
+    if (!district || !taluka) {
+      setVillages([]);
+      return;
+    }
+    setIsLoadingVillages(true);
+    getIndexedVillages(district, taluka)
+      .then((data) => {
+        if (!isMounted) return;
+        if (data && data.length > 0) {
+          setVillages(data);
+          if (!data.some((v) => v.code === village)) {
+            setVillage(data[0].code);
+          }
+        } else if (district === "07" && taluka === "08") {
+          setVillages(BAVLA_VILLAGES);
+        } else {
+          setVillages([]);
+        }
+      })
+      .catch((err) => {
+        console.error("Failed to load indexed villages:", err);
+        if (district === "07" && taluka === "08") setVillages(BAVLA_VILLAGES);
+      })
+      .finally(() => {
+        if (isMounted) setIsLoadingVillages(false);
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, [district, taluka]);
+
+  // Dynamically load survey numbers when Village changes
+  useEffect(() => {
+    let isMounted = true;
+    if (!district || !taluka || !village) {
+      setSurveys([]);
+      return;
+    }
+    setIsLoadingSurveys(true);
+    getIndexedSurveys(district, taluka, village)
+      .then((res) => {
+        if (!isMounted) return;
+        if (res && res.data && res.data.length > 0) {
+          setSurveys(res.data);
+          setIsManualSurvey(false);
+          if (!res.data.includes(survey)) {
+            setSurvey(res.data[0]);
+          }
+        } else if (village === "001" && district === "07" && taluka === "08") {
+          setSurveys(HASANNAGAR_SURVEYS);
+          setIsManualSurvey(false);
+        } else {
+          setSurveys([]);
+          setIsManualSurvey(true);
+        }
+      })
+      .catch((err) => {
+        console.error("Failed to load indexed surveys:", err);
+        if (village === "001" && district === "07" && taluka === "08") {
+          setSurveys(HASANNAGAR_SURVEYS);
+        }
+      })
+      .finally(() => {
+        if (isMounted) setIsLoadingSurveys(false);
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, [district, taluka, village]);
+
   const filteredData = parcels.filter(parcel => filter === "All" || parcel.status === filter);
   const isCurrentlyProcessed = parcels.some(parcel => parcel.survey_no === survey);
 
@@ -61,7 +150,7 @@ export default function DeveloperPortal() {
     if (survey === "-1" || village === "0") return;
 
     if (isCurrentlyProcessed) {
-      router.push(`/advocate/dossier/${survey}`);
+      router.push(`/advocate/dossier/${survey}?village=${village}`);
     } else {
       setIsSearching(true);
       setRequestStatus(`Querying AnyRoR for Survey ${survey}...`);
@@ -69,14 +158,11 @@ export default function DeveloperPortal() {
         await scrapeLandRecord(district, taluka, village, survey);
         setRequestStatus(`Survey ${survey} successfully extracted. Loading dossier...`);
         setTimeout(() => {
-          router.push(`/advocate/dossier/${survey}`);
+          router.push(`/advocate/dossier/${survey}?village=${village}`);
         }, 1200);
       } catch (err: any) {
         console.warn("Live search notice:", err);
-        setRequestStatus(`Notice: ${err.message || "Record added to processing queue"}`);
-        setTimeout(() => {
-          router.push(`/advocate/dossier/${survey}`);
-        }, 2000);
+        setRequestStatus(`Notice: ${err.message || "Scraping failed or portal unreachable. Please retry."}`);
       } finally {
         setIsSearching(false);
       }
@@ -113,7 +199,7 @@ export default function DeveloperPortal() {
     return <div className="w-3 h-3 rounded-full bg-red-500 shadow-sm mx-auto"></div>;
   };
 
-  const selectedVillageName = BAVLA_VILLAGES.find(v => v.code === village)?.name.split(" - ")[0] || "Unknown";
+  const selectedVillageName = BAVLA_VILLAGES.find(v => v.code === village)?.name.split(" - ")[0] || village;
 
   return (
     <div className="min-h-screen bg-[#F8F0E5] font-sans p-8 relative">
@@ -134,35 +220,77 @@ export default function DeveloperPortal() {
           <form onSubmit={handleSearchAction} className="flex flex-wrap items-end gap-4">
             <div className="flex-1 min-w-[150px]">
               <label className="block text-xs font-bold text-[#0F2C59] uppercase tracking-wider mb-2">District</label>
-              <select value={district} onChange={(e) => setDistrict(e.target.value)} className="w-full border-b-2 border-[#0F2C59]/20 px-3 py-2 bg-slate-50 focus:border-[#0F2C59] outline-none text-[#0F2C59]">
-                <option value="07">અમદાવાદ (Ahmedabad)</option>
+              <select value={district} onChange={(e) => handleDistrictChange(e.target.value)} className="w-full border-b-2 border-[#0F2C59]/20 px-3 py-2 bg-slate-50 focus:border-[#0F2C59] outline-none text-[#0F2C59]">
+                {GUJARAT_DISTRICTS.map((d) => (
+                  <option key={d.code} value={d.code}>{d.name}</option>
+                ))}
               </select>
             </div>
             
             <div className="flex-1 min-w-[150px]">
               <label className="block text-xs font-bold text-[#0F2C59] uppercase tracking-wider mb-2">Taluka</label>
               <select value={taluka} onChange={(e) => setTaluka(e.target.value)} className="w-full border-b-2 border-[#0F2C59]/20 px-3 py-2 bg-slate-50 focus:border-[#0F2C59] outline-none text-[#0F2C59]">
-                <option value="08">બાવળા (Bavla)</option>
+                {talukaList.map((t) => (
+                  <option key={t.code} value={t.code}>{t.name}</option>
+                ))}
               </select>
             </div>
 
-            <div className="flex-1 min-w-[150px]">
-              <label className="block text-xs font-bold text-[#0F2C59] uppercase tracking-wider mb-2">Village</label>
-              <select value={village} onChange={(e) => setVillage(e.target.value)} className="w-full border-b-2 border-[#0F2C59]/20 px-3 py-2 bg-slate-50 focus:border-[#0F2C59] outline-none text-[#0F2C59] cursor-pointer">
-                <option value="0">Select...</option>
-                {BAVLA_VILLAGES.map((v) => <option key={v.code} value={v.code}>{v.name}</option>)}
-              </select>
-            </div>
-
-            <div className="flex-1 min-w-[150px]">
-              <label className="block text-xs font-bold text-[#0F2C59] uppercase tracking-wider mb-2">Survey No.</label>
-              {village === "001" ? (
-                <select value={survey} onChange={(e) => setSurvey(e.target.value)} className="w-full border-b-2 border-[#0F2C59]/20 px-3 py-2 bg-slate-50 focus:border-[#0F2C59] outline-none text-[#0F2C59] cursor-pointer">
-                  <option value="-1">Select...</option>
-                  {HASANNAGAR_SURVEYS.map((sno) => <option key={sno} value={sno}>{sno}</option>)}
+            <div className="flex-1 min-w-[160px]">
+              <div className="flex justify-between items-center mb-2">
+                <label className="block text-xs font-bold text-[#0F2C59] uppercase tracking-wider">Village</label>
+                {isLoadingVillages && <span className="text-[10px] text-amber-700 font-medium animate-pulse">Loading...</span>}
+              </div>
+              {villages.length > 0 ? (
+                <select value={village} onChange={(e) => setVillage(e.target.value)} className="w-full border-b-2 border-[#0F2C59]/20 px-3 py-2 bg-slate-50 focus:border-[#0F2C59] outline-none text-[#0F2C59] cursor-pointer">
+                  {villages.map((v) => <option key={v.code} value={v.code}>{v.name}</option>)}
                 </select>
               ) : (
-                <input type="text" value={survey} onChange={(e) => setSurvey(e.target.value)} className="w-full border-b-2 border-[#0F2C59]/20 px-3 py-2 bg-slate-50 focus:border-[#0F2C59] outline-none text-[#0F2C59]" required />
+                <input 
+                  type="text" 
+                  value={village} 
+                  onChange={(e) => setVillage(e.target.value)} 
+                  placeholder="Village Code (e.g. 001)"
+                  className="w-full border-b-2 border-[#0F2C59]/20 px-3 py-2 bg-slate-50 focus:border-[#0F2C59] outline-none text-[#0F2C59]" 
+                  required 
+                />
+              )}
+            </div>
+
+            <div className="flex-1 min-w-[150px]">
+              <div className="flex justify-between items-center mb-2">
+                <label className="block text-xs font-bold text-[#0F2C59] uppercase tracking-wider">
+                  Survey No. {surveys.length > 0 && !isManualSurvey ? `(${surveys.length})` : ""}
+                </label>
+                {surveys.length > 0 && (
+                  <button
+                    type="button"
+                    onClick={() => setIsManualSurvey(!isManualSurvey)}
+                    className="text-[10px] font-bold text-[#7A5C2E] hover:text-[#0F2C59] underline cursor-pointer"
+                  >
+                    {isManualSurvey ? "Dropdown" : "Manual"}
+                  </button>
+                )}
+              </div>
+              {surveys.length > 0 && !isManualSurvey ? (
+                <select
+                  value={survey}
+                  onChange={(e) => setSurvey(e.target.value)}
+                  className="w-full border-b-2 border-[#0F2C59]/20 px-3 py-2 bg-slate-50 focus:border-[#0F2C59] outline-none text-[#0F2C59] font-medium cursor-pointer"
+                >
+                  {surveys.map((s) => (
+                    <option key={s} value={s}>{s}</option>
+                  ))}
+                </select>
+              ) : (
+                <input 
+                  type="text" 
+                  value={survey} 
+                  onChange={(e) => setSurvey(e.target.value)} 
+                  placeholder="e.g. 2, 3, 14, 101" 
+                  className="w-full border-b-2 border-[#0F2C59]/20 px-3 py-2 bg-slate-50 focus:border-[#0F2C59] outline-none text-[#0F2C59] font-medium" 
+                  required 
+                />
               )}
             </div>
 
@@ -256,7 +384,7 @@ export default function DeveloperPortal() {
                       </span>
                     </td>
                     <td className="p-4 text-right">
-                      <Link href={`/advocate/dossier/${parcel.survey_no}`} className="text-xs font-bold text-[#0F2C59] border border-[#0F2C59]/20 hover:bg-[#0F2C59] hover:text-[#F8F0E5] px-4 py-2 rounded-sm transition-colors uppercase tracking-widest inline-block">
+                      <Link href={`/advocate/dossier/${parcel.survey_no}?village=${parcel.village_code || village}`} className="text-xs font-bold text-[#0F2C59] border border-[#0F2C59]/20 hover:bg-[#0F2C59] hover:text-[#F8F0E5] px-4 py-2 rounded-sm transition-colors uppercase tracking-widest inline-block">
                         View Dossier
                       </Link>
                     </td>

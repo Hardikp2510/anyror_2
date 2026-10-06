@@ -1,11 +1,13 @@
 import os
 from pathlib import Path
-from pydantic import PostgresDsn, Field
+from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
+
+BACKEND_DIR = Path(__file__).resolve().parent.parent.parent
 
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(
-        env_file=".env",
+        env_file=str(BACKEND_DIR / ".env"),
         env_file_encoding="utf-8",
         extra="ignore"
     )
@@ -16,7 +18,6 @@ class Settings(BaseSettings):
     DEBUG: bool = Field(default=True)
 
     # Database Settings
-    # 🚨 Updated to match the fresh Docker configuration
     DATABASE_URL: str = os.getenv("DATABASE_URL", "postgresql+asyncpg://anyror_admin:supersecretpassword123@localhost:5435/anyror_saas_db")
     DB_POOL_SIZE: int = Field(default=10)
     DB_MAX_OVERFLOW: int = Field(default=20)
@@ -32,10 +33,11 @@ class Settings(BaseSettings):
     INTEGRATED_RECORD_TYPE_VALUE: str = "8"
 
     # CAPTCHA Model
-    CAPTCHA_MODEL_PATH: Path = Field(default=Path("captcha/captcha_model_v1.pth"))
+    CAPTCHA_MODEL_PATH: Path = Field(default=BACKEND_DIR / "captcha" / "captcha_model_v1.pth")
 
     # File Storage Paths
-    STORAGE_DIR: Path = Field(default=Path("storage"))
+    STORAGE_DIR: Path = Field(default=BACKEND_DIR / "storage")
+    OUTPUT_DIR: Path = Field(default=BACKEND_DIR / "output")
     
     # Target CSS Selectors
     SELECTORS: dict[str, str] = {

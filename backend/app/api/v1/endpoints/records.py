@@ -8,6 +8,7 @@ from app.db.session import get_db
 from app.db.models import LandRecord
 from app.services.record_service import scrape_and_save_record
 from app.core.logging import logger
+from app.utils.encoding import fix_mojibake
 
 router = APIRouter()
 
@@ -24,6 +25,7 @@ class ScrapeResponse(BaseModel):
 
 @router.post("/scrape", response_model=ScrapeResponse)
 async def fetch_record(req: ScrapeRequest, db: AsyncSession = Depends(get_db)):
+    cached_record = None
     try:
         # 1. Check for existing verified record in PostgreSQL repository
         query = select(LandRecord).where(
@@ -54,39 +56,45 @@ async def fetch_record(req: ScrapeRequest, db: AsyncSession = Depends(get_db)):
         return ScrapeResponse(
             status="success",
             message=msg,
-            data=final_record.extracted_data
+            data=fix_mojibake(final_record.extracted_data)
         )
         
     except Exception as e:
         error_msg = str(e)
         logger.warning(f"Live scrape notice for Survey {req.survey}: {error_msg}")
         
-        # 3. If live portal is unreachable, return verified database record
+        # 3. If live portal is unreachable, return verified database record if cached
         if cached_record:
             return ScrapeResponse(
                 status="warning",
                 message=f"AnyRoR government portal is currently unreachable / rate-limiting connections. Serving verified record from repository for Survey {req.survey}.",
-                data=cached_record.extracted_data
+                data=fix_mojibake(cached_record.extracted_data)
             )
         
-        # 4. Clean offline response if no record exists in repository
-        return ScrapeResponse(
-            status="offline",
-            message=f"Gujarat AnyRoR portal is temporarily unreachable or rate-limiting connections ({error_msg}). Please retry once the government portal reconnects.",
-            data={}
+        # 4. Clean error response if no record exists in repository
+        raise HTTPException(
+            status_code=502,
+            detail=f"Gujarat AnyRoR portal notice: {error_msg}"
         )
 
 @router.get("/survey/{survey_no}")
-async def get_record_by_survey(survey_no: str, db: AsyncSession = Depends(get_db)):
+async def get_record_by_survey(survey_no: str, village_code: str | None = None, db: AsyncSession = Depends(get_db)):
     query = select(LandRecord).where(
         LandRecord.survey_no == str(survey_no)
-    ).order_by(LandRecord.scraped_at.desc())
+    )
+    if village_code:
+        query = query.where(LandRecord.village_code == str(village_code))
+        
+    query = query.order_by(LandRecord.scraped_at.desc())
     
     result = await db.execute(query)
     record = result.scalars().first()
     
     if not record:
-        raise HTTPException(status_code=404, detail=f"No record found for Survey No {survey_no}")
+        detail_msg = f"No record found for Survey No {survey_no}"
+        if village_code:
+            detail_msg += f" in Village {village_code}"
+        raise HTTPException(status_code=404, detail=detail_msg)
         
     return {
         "id": record.id,
@@ -94,7 +102,7 @@ async def get_record_by_survey(survey_no: str, db: AsyncSession = Depends(get_db
         "village_code": record.village_code,
         "taluka_code": record.taluka_code,
         "district_code": record.district_code,
-        "extracted_data": record.extracted_data,
+        "extracted_data": fix_mojibake(record.extracted_data),
         "pdf_file_path": record.pdf_file_path,
         "scraped_at": record.scraped_at.isoformat() if record.scraped_at else None
     }

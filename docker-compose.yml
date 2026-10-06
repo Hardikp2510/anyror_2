@@ -8,6 +8,7 @@ services:
       POSTGRES_DB: anyror_saas_db
     ports:
       - "5435:5432" # Exposed on host port 5435
+    restart: unless-stopped
     volumes:
       - anyror_fresh_pgdata:/var/lib/postgresql/data
       - ./backend/seed_dump.sql:/docker-entrypoint-initdb.d/init.sql:ro
@@ -27,9 +28,15 @@ services:
       - "8000:8000"
     environment:
       - DATABASE_URL=postgresql+asyncpg://anyror_admin:supersecretpassword123@db:5432/anyror_saas_db
-      - HEADLESS=true
+      - HEADLESS=${HEADLESS:-false}
       - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+      - DISPLAY=:99
+    command: ["sh", "/app/start.sh"]
     volumes:
+      - ./backend/app:/app/app
+      - ./backend/main.py:/app/main.py
+      - ./backend/scripts:/app/scripts
+      - ./backend/start.sh:/app/start.sh
       - ./backend/output:/app/output
       - ./backend/storage:/app/storage
     depends_on:
@@ -40,12 +47,17 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
+      args:
+        - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL:-http://localhost:8000}
     container_name: anyror_frontend
     restart: unless-stopped
     ports:
       - "3000:3000"
     environment:
-      - NEXT_PUBLIC_API_URL=http://localhost:8000
+      - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL:-http://localhost:8000}
+    volumes:
+      - ./frontend/src:/app/src
+      - ./frontend/public:/app/public
     depends_on:
       - backend
 

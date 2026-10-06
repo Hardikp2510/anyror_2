@@ -1,4 +1,5 @@
 import io
+from pathlib import Path
 import torch
 import torch.nn as nn
 from PIL import Image
@@ -48,19 +49,26 @@ class CaptchaSolver:
         if self._is_loaded:
             return
             
-        model_path = settings.CAPTCHA_MODEL_PATH
-        if not model_path.exists():
-            logger.error("CAPTCHA model weights file missing!", path=str(model_path))
-            raise CaptchaSolveError(f"Model file not found at {model_path}")
+        candidates = [
+            settings.CAPTCHA_MODEL_PATH,
+            Path("captcha/captcha_model_v1.pth"),
+            Path("backend/captcha/captcha_model_v1.pth"),
+            Path("captcha_model_v1.pth"),
+            Path("backend/captcha_model_v1.pth")
+        ]
+        model_path = next((p for p in candidates if p.exists()), None)
+        if not model_path:
+            logger.error("CAPTCHA model weights file missing!", tried=[str(p) for p in candidates])
+            raise CaptchaSolveError(f"Model file not found in any expected location: {[str(p) for p in candidates]}")
 
         try:
             self.model.load_state_dict(torch.load(model_path, map_location=self.device, weights_only=True))
             self.model.eval()
             self._is_loaded = True
-            logger.info("PyTorch CAPTCHA AI Loaded Successfully.")
+            logger.info("PyTorch CAPTCHA AI Loaded Successfully.", path=str(model_path))
         except Exception as e:
-            logger.error("Failed to load CAPTCHA model weights", error=str(e))
-            raise CaptchaSolveError(f"Failed loading weights: {e}") from e
+            logger.error("Failed to load CAPTCHA model weights", error=str(e), path=str(model_path))
+            raise CaptchaSolveError(f"Failed loading weights from {model_path}: {e}") from e
 
     async def solve(self, image_bytes: bytes) -> str:
         if not self._is_loaded:
