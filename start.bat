@@ -39,8 +39,8 @@ if %ERRORLEVEL% neq 0 (
 )
 
 echo.
-echo [*] Starting containers (PostgreSQL, Backend, Frontend)...
-docker compose up -d
+echo [*] Starting containers with latest code (PostgreSQL, Backend, Frontend)...
+docker compose up -d --build
 
 if %ERRORLEVEL% neq 0 (
     echo.

@@ -64,3 +64,4 @@ Thumbs.db
 # Temporary scratch scripts
 backend/sample_entry.json
 backend/check_sample.py
+chrome_crawler_profile/

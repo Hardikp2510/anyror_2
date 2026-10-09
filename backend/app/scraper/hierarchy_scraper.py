@@ -75,7 +75,8 @@ class AnyRoRHierarchyScraper:
             "--no-sandbox",
             "--disable-infobars",
             "--start-maximized",
-            "--window-size=1366,768"
+            "--window-size=1366,768",
+            "--host-resolver-rules=MAP anyror.gujarat.gov.in 103.234.162.103"
         ]
         try:
             browser = await playwright.chromium.launch(
@@ -122,15 +123,26 @@ class AnyRoRHierarchyScraper:
     async def _select_and_wait(self, page: Page, selector: str, value: str, next_selector: Optional[str] = None):
         """Selects an option and waits for the ASP.NET postback to complete."""
         await page.wait_for_selector(selector, state="visible", timeout=20000)
+        
+        old_count = 0
+        if next_selector:
+            try:
+                old_count = await page.locator(f"{next_selector} option").count()
+            except Exception:
+                pass
+
         await page.select_option(selector, value)
-        await self._human_pause(1.2, 2.2)
+        await self._human_pause(1.5, 2.5)
 
         if next_selector:
             try:
-                await page.wait_for_selector(f"{next_selector} option", state="attached", timeout=20000)
+                await page.wait_for_function(
+                    f"document.querySelector('{next_selector}') && document.querySelector('{next_selector}').options.length !== {old_count}",
+                    timeout=15000
+                )
             except Exception:
                 pass
-            await self._human_pause(0.5, 1.2)
+            await self._human_pause(0.8, 1.6)
 
     async def scrape_all_districts(self, db: AsyncSession) -> List[Dict[str, str]]:
         """Scrapes all 34 districts from live AnyRoR and stores them in DistrictIndex."""
