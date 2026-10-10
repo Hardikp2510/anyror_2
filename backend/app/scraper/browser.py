@@ -41,7 +41,9 @@ class BrowserManager:
                     "--no-sandbox",
                     "--disable-infobars",
                     "--start-maximized",
-                    "--window-size=1366,768"
+                    "--window-size=1366,768",
+                    "--host-resolver-rules=MAP anyror.gujarat.gov.in 103.234.162.103",
+                    "--disable-gpu"
                 ]
                 try:
                     self._browser = await self._playwright.chromium.launch(

@@ -1,4 +1,5 @@
 import asyncio
+import re
 from pathlib import Path
 from datetime import datetime, timezone
 from sqlalchemy.future import select
@@ -264,6 +265,8 @@ async def scrape_and_save_record(
                         if not ex_entry.image_file_path:
                             ex_entry.ai_draft_data = raw_draft
                         else:
+                            if not isinstance(ex_entry.ai_draft_data, dict):
+                                ex_entry.ai_draft_data = {}
                             ex_entry.ai_draft_data["entry_date"] = entry_date or ex_entry.ai_draft_data.get("entry_date", "")
                             ex_entry.ai_draft_data["transaction_type"] = trans_type or ex_entry.ai_draft_data.get("transaction_type", "")
                             ex_entry.ai_draft_data["officer_remarks"] = officer_remarks

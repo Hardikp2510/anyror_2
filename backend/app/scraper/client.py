@@ -157,8 +157,8 @@ class AnyRORIntegratedClient:
                 for _ in range(15):
                     await asyncio.sleep(1.0)
                     msg = dialog_state["message"]
-                    if "verification" in msg or "captcha" in msg or "invalid" in msg or "match" in msg:
-                        logger.warning("Server rejected CAPTCHA via popup alert.", message=msg)
+                    if msg:
+                        logger.warning(f"Server rejected CAPTCHA or returned alert popup: {msg}")
                         break
 
                     if await self.page.locator("#ContentPlaceHolder1_lblDistrict").count() > 0:
