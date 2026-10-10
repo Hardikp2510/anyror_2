@@ -53,6 +53,9 @@ export default function ReviewPipeline() {
   const [scrapeLiveStatus, setScrapeLiveStatus] = useState("Establishing secure connection to AnyRoR...");
   const [scrapeLiveError, setScrapeLiveError] = useState<string | null>(null);
 
+  // Layout Mode: 'split' or 'fullscreen_deed' (allows advocate to focus 100% on deed without side fields)
+  const [layoutMode, setLayoutMode] = useState<"split" | "fullscreen_deed">("split");
+
   // Advanced Pan & Zoom Canvas State
   const [zoomLevel, setZoomLevel] = useState(1);
   const [pan, setPan] = useState({ x: 0, y: 0 });
@@ -224,8 +227,12 @@ export default function ReviewPipeline() {
   };
 
   // Zoom & Pan Handlers
-  const zoomIn = () => setZoomLevel(prev => Math.min(Number((prev + 0.25).toFixed(2)), 4));
-  const zoomOut = () => setZoomLevel(prev => Math.max(Number((prev - 0.25).toFixed(2)), 0.5));
+  const zoomIn = () => setZoomLevel(prev => Math.min(Number((prev + 0.25).toFixed(2)), 5.0));
+  const zoomOut = () => setZoomLevel(prev => Math.max(Number((prev - 0.25).toFixed(2)), 0.4));
+  const setZoomPreset = (val: number) => {
+    setZoomLevel(val);
+    setPan({ x: 0, y: 0 });
+  };
   const resetZoom = () => {
     setZoomLevel(1);
     setPan({ x: 0, y: 0 });
@@ -233,6 +240,27 @@ export default function ReviewPipeline() {
   const fitWidth = () => {
     setZoomLevel(1.5);
     setPan({ x: 0, y: 0 });
+  };
+
+  // Double-click to toggle 1x / 2.4x zoom directly at mouse point
+  const handleDoubleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    if (zoomLevel > 1.25) {
+      resetZoom();
+    } else {
+      const rect = container.getBoundingClientRect();
+      const mouseX = e.clientX - rect.left - rect.width / 2;
+      const mouseY = e.clientY - rect.top - rect.height / 2;
+      const targetZoom = 2.4;
+      const ratio = targetZoom / zoomLevel;
+      setPan({
+        x: Math.round(mouseX - (mouseX - pan.x) * ratio),
+        y: Math.round(mouseY - (mouseY - pan.y) * ratio)
+      });
+      setZoomLevel(targetZoom);
+    }
   };
 
   const handleMouseDown = (e: React.MouseEvent) => {
@@ -253,10 +281,84 @@ export default function ReviewPipeline() {
     setIsDragging(false);
   };
 
-  const handleWheel = (e: React.WheelEvent) => {
-    const delta = e.deltaY < 0 ? 0.15 : -0.15;
-    setZoomLevel(prev => Math.min(Math.max(0.5, Number((prev + delta).toFixed(2))), 4.0));
-  };
+  // NATIVE NON-PASSIVE WHEEL LISTENER:
+  // Strictly blocks browser-level page zoom/scroll and zooms ONLY the deed image centered on cursor
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const onNativeWheel = (e: WheelEvent) => {
+      // 100% prevent browser window zoom and page scroll
+      e.preventDefault();
+      e.stopPropagation();
+
+      const rect = container.getBoundingClientRect();
+      const mouseX = e.clientX - rect.left - rect.width / 2;
+      const mouseY = e.clientY - rect.top - rect.height / 2;
+
+      // Smooth zoom factor (smooth on both mousewheel steps and trackpad pinch)
+      const zoomFactor = e.deltaY < 0 ? 1.15 : 0.87;
+
+      setZoomLevel(prevZoom => {
+        const nextZoom = Math.min(Math.max(0.4, Number((prevZoom * zoomFactor).toFixed(2))), 5.0);
+        const ratio = nextZoom / prevZoom;
+
+        // Anchor zoom directly at mouse cursor position
+        setPan(prevPan => ({
+          x: Math.round(mouseX - (mouseX - prevPan.x) * ratio),
+          y: Math.round(mouseY - (mouseY - prevPan.y) * ratio)
+        }));
+
+        return nextZoom;
+      });
+    };
+
+    container.addEventListener("wheel", onNativeWheel, { passive: false });
+    return () => {
+      container.removeEventListener("wheel", onNativeWheel);
+    };
+  }, [task?.image_file_path, currentPageIdx]);
+
+  // Window-level guard: Block Ctrl+Wheel / pinch page zoom across review screen
+  useEffect(() => {
+    const onGlobalWheel = (e: WheelEvent) => {
+      if (e.ctrlKey) {
+        e.preventDefault();
+      }
+    };
+    window.addEventListener("wheel", onGlobalWheel, { passive: false });
+    return () => {
+      window.removeEventListener("wheel", onGlobalWheel);
+    };
+  }, []);
+
+  // Keyboard Shortcuts: +, -, 0, f, Esc
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (["INPUT", "TEXTAREA", "SELECT"].includes((e.target as HTMLElement)?.tagName)) {
+        return;
+      }
+      if (e.key === "+" || e.key === "=") {
+        e.preventDefault();
+        zoomIn();
+      } else if (e.key === "-" || e.key === "_") {
+        e.preventDefault();
+        zoomOut();
+      } else if (e.key === "0") {
+        e.preventDefault();
+        resetZoom();
+      } else if (e.key.toLowerCase() === "f") {
+        e.preventDefault();
+        fitWidth();
+      } else if (e.key === "Escape" && layoutMode === "fullscreen_deed") {
+        setLayoutMode("split");
+      }
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [layoutMode]);
 
   const handleScrapeFromReview = async () => {
     setIsScrapingLive(true);
@@ -414,8 +516,8 @@ export default function ReviewPipeline() {
   return (
     <div className="flex h-screen bg-[#F8F0E5] overflow-hidden font-sans">
       
-      {/* LEFT HALF: The Smart Source Viewer */}
-      <div className="w-1/2 p-4 flex flex-col border-r border-[#0F2C59]/10 bg-[#0a192f] relative shadow-2xl z-10 select-none">
+      {/* LEFT HALF / FULLSCREEN: The Smart Source Viewer */}
+      <div className={`${layoutMode === "fullscreen_deed" ? "w-full" : "w-1/2 min-w-0"} p-4 flex flex-col border-r border-[#0F2C59]/10 bg-[#0a192f] relative shadow-2xl z-10 select-none transition-all duration-300 flex-shrink-0`}>
         
         {/* Header Bar */}
         <div className="flex justify-between items-center text-[#F8F0E5] mb-3 px-2">
@@ -428,9 +530,20 @@ export default function ReviewPipeline() {
               Survey <span className="text-[#DAC0A3]">{surveyId}</span> <span className="opacity-50 mx-2">|</span> Entry {task.entry_number}
             </h2>
           </div>
-          <span className="bg-[#DAC0A3] text-[#0F2C59] px-3 py-1 text-xs font-bold uppercase tracking-widest rounded-sm shadow-sm">
-            {task.image_file_path ? "Historical Scan (VF-6)" : "Digital Portal Record"}
-          </span>
+          <div className="flex items-center gap-2">
+            {task.image_file_path && (
+              <button
+                onClick={() => setLayoutMode(prev => prev === "split" ? "fullscreen_deed" : "split")}
+                className="bg-[#0F2C59] border border-[#DAC0A3]/40 text-[#DAC0A3] hover:text-white px-2.5 py-1 text-xs font-bold uppercase tracking-wider rounded-sm transition-colors flex items-center gap-1.5 shadow-sm"
+                title={layoutMode === "split" ? "Expand Deed to Fullscreen" : "Return to Split Screen (Esc)"}
+              >
+                {layoutMode === "split" ? "⛶ Maximize Deed" : "⇄ Split Screen"}
+              </button>
+            )}
+            <span className="bg-[#DAC0A3] text-[#0F2C59] px-3 py-1 text-xs font-bold uppercase tracking-widest rounded-sm shadow-sm">
+              {task.image_file_path ? "Historical Scan (VF-6)" : "Digital Portal Record"}
+            </span>
+          </div>
         </div>
         
         {task.image_file_path ? (
@@ -468,7 +581,7 @@ export default function ReviewPipeline() {
             <div className="absolute top-16 right-8 z-20 flex items-center gap-1.5 bg-[#0F2C59]/95 px-3 py-1.5 rounded-sm backdrop-blur-md border border-[#DAC0A3]/30 shadow-2xl">
               <button 
                 onClick={zoomOut} 
-                title="Zoom Out"
+                title="Zoom Out (-)"
                 className="text-[#DAC0A3] hover:text-white p-1.5 rounded hover:bg-white/10 transition-colors"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12H4" /></svg>
@@ -476,7 +589,7 @@ export default function ReviewPipeline() {
               
               <button 
                 onClick={resetZoom} 
-                title="Reset to 100%"
+                title="Reset to 100% (0)"
                 className="text-[#F8F0E5] text-xs font-mono font-bold px-2 py-1 rounded hover:bg-white/10 transition-colors"
               >
                 {Math.round(zoomLevel * 100)}%
@@ -484,7 +597,7 @@ export default function ReviewPipeline() {
 
               <button 
                 onClick={zoomIn} 
-                title="Zoom In"
+                title="Zoom In (+)"
                 className="text-[#DAC0A3] hover:text-white p-1.5 rounded hover:bg-white/10 transition-colors"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" /></svg>
@@ -493,17 +606,53 @@ export default function ReviewPipeline() {
               <div className="h-4 w-px bg-white/20 mx-1"></div>
 
               <button 
+                onClick={() => setZoomPreset(1.5)} 
+                title="150% Zoom"
+                className={`text-[11px] font-mono px-1.5 py-0.5 rounded transition-colors ${Math.round(zoomLevel * 100) === 150 ? "bg-[#DAC0A3] text-[#0F2C59] font-bold" : "text-[#DAC0A3] hover:text-white"}`}
+              >
+                1.5x
+              </button>
+
+              <button 
+                onClick={() => setZoomPreset(2.5)} 
+                title="250% Zoom (Detailed Reading)"
+                className={`text-[11px] font-mono px-1.5 py-0.5 rounded transition-colors ${Math.round(zoomLevel * 100) === 250 ? "bg-[#DAC0A3] text-[#0F2C59] font-bold" : "text-[#DAC0A3] hover:text-white"}`}
+              >
+                2.5x
+              </button>
+
+              <button 
                 onClick={fitWidth} 
-                title="Fit to Width"
+                title="Fit to Viewport (F)"
                 className="text-xs text-[#DAC0A3] hover:text-white px-2 py-1 rounded hover:bg-white/10 transition-colors uppercase font-bold"
               >
                 Fit
               </button>
+
+              <div className="h-4 w-px bg-white/20 mx-1"></div>
+
+              <button 
+                onClick={() => setLayoutMode(prev => prev === "split" ? "fullscreen_deed" : "split")} 
+                title={layoutMode === "split" ? "Expand Deed to Fullscreen" : "Return to Split Screen (Esc)"}
+                className="text-xs text-amber-300 hover:text-white px-2 py-1 rounded hover:bg-white/10 transition-colors font-bold flex items-center gap-1"
+              >
+                {layoutMode === "split" ? "⛶ Maximize" : "⇄ Split"}
+              </button>
             </div>
 
             {/* Hint Badge */}
-            <div className="absolute bottom-6 left-8 z-20 bg-black/70 text-[#DAC0A3] px-3 py-1 rounded text-[11px] font-mono backdrop-blur-sm pointer-events-none border border-white/10">
-              ✋ Drag anywhere to pan • 🔍 Scroll wheel to zoom {allPages.length > 1 ? `• Page ${currentPageIdx + 1}/${allPages.length}` : ""}
+            <div className="absolute bottom-6 left-8 z-20 bg-black/80 text-[#DAC0A3] px-3 py-1.5 rounded text-[11px] font-mono backdrop-blur-sm pointer-events-none border border-white/10 flex items-center gap-2">
+              <span>✋ Drag to pan</span>
+              <span>•</span>
+              <span className="text-emerald-300 font-semibold">🔍 Scroll wheel zooms ONLY image</span>
+              <span>•</span>
+              <span>⚡ Double-click to toggle 2.4x</span>
+              {allPages.length > 1 && (
+                <>
+                  <span>•</span>
+                  <span>Page {currentPageIdx + 1}/{allPages.length}</span>
+                </>
+              )}
             </div>
 
             {/* Infinite Drag & Pan Viewport */}
@@ -513,23 +662,29 @@ export default function ReviewPipeline() {
               onMouseMove={handleMouseMove}
               onMouseUp={handleMouseUp}
               onMouseLeave={handleMouseUp}
-              onWheel={handleWheel}
-              className="flex-1 overflow-hidden bg-black/95 border border-[#0F2C59] rounded-sm relative flex items-center justify-center cursor-grab active:cursor-grabbing shadow-inner"
+              onDoubleClick={handleDoubleClick}
+              style={{
+                isolation: "isolate",
+                contain: "paint",
+                touchAction: "none"
+              }}
+              className="flex-1 overflow-hidden bg-black/95 border border-[#0F2C59] rounded-sm relative flex items-center justify-center cursor-grab active:cursor-grabbing shadow-inner select-none"
             >
               <div
                 style={{
                   transform: `translate(${pan.x}px, ${pan.y}px) scale(${zoomLevel})`,
                   transformOrigin: "center center",
-                  transition: isDragging ? "none" : "transform 0.08s ease-out"
+                  transition: isDragging ? "none" : "transform 0.08s ease-out",
+                  willChange: "transform"
                 }}
-                className="relative inline-block"
+                className="relative inline-block pointer-events-none"
               >
                 <img 
                   src={activeImageUrl} 
                   alt={`Mutation Entry ${task.entry_number} (Page ${currentPageIdx + 1})`} 
                   draggable={false}
                   className="max-w-none shadow-2xl rounded-sm pointer-events-none select-none"
-                  style={{ maxHeight: "75vh" }}
+                  style={{ maxHeight: layoutMode === "fullscreen_deed" ? "88vh" : "75vh" }}
                 />
               </div>
             </div>
@@ -664,8 +819,9 @@ export default function ReviewPipeline() {
         )}
       </div>
 
-      {/* RIGHT HALF: Advocate Resolution Editor */}
-      <div className="w-1/2 p-8 overflow-y-auto bg-[#F8F0E5] flex flex-col">
+      {/* RIGHT HALF: Advocate Resolution Editor (isolated layout, hidden in fullscreen deed mode) */}
+      {layoutMode === "split" && (
+        <div className="w-1/2 min-w-0 flex-1 p-8 overflow-y-auto bg-[#F8F0E5] flex flex-col">
         
         {/* Title & Phase Bar */}
         <div className="mb-4 pb-4 border-b border-[#0F2C59]/10 flex justify-between items-start">
@@ -858,6 +1014,7 @@ export default function ReviewPipeline() {
           </button>
         </div>
       </div>
+      )}
 
       {/* GEMINI API KEY MODAL */}
       {showKeyModal && (
