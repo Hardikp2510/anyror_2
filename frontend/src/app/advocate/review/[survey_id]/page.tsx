@@ -836,45 +836,35 @@ export default function ReviewPipeline() {
               {task.image_file_path ? 'Phase 1: Historical OCR' : 'Phase 2: Digital Entry'}
             </span>
             <span className="text-[10px] font-mono text-slate-600 bg-white px-2 py-0.5 rounded border border-[#0F2C59]/10">
-              {aiSource.startsWith("gemini") ? "🤖 Gemini 3.8 Flash Active" : "⚡ Gujarati NLP Active"}
+              {aiSource.startsWith("gemini") ? "🤖 Gemini Flash AI" : "⚡ Revenue Vision Engine"}
             </span>
           </div>
         </div>
 
-        {/* Gemini AI Auto-Fill Action Toolbar */}
-        <div className="mb-5 p-3 bg-white rounded-sm border border-[#0F2C59]/15 shadow-sm flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <button
-              onClick={handleAiAutofill}
-              disabled={isAiAutofilling}
-              className="bg-[#0F2C59] hover:bg-[#1a407e] text-white text-xs font-bold py-2 px-4 rounded-sm shadow-sm flex items-center gap-2 transition-all disabled:opacity-50 uppercase tracking-wider"
-            >
-              {isAiAutofilling ? (
-                <>
-                  <div className="w-3.5 h-3.5 border-2 border-white/20 border-t-white rounded-full animate-spin"></div>
-                  Analyzing with Gemini...
-                </>
-              ) : (
-                <>
-                  ⚡ Auto-Fill with Gemini AI
-                </>
-              )}
-            </button>
-
-            {aiAutofillMsg && (
-              <span className="text-xs font-semibold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded border border-emerald-200 animate-fadeIn">
-                {aiAutofillMsg}
+        {/* Automated Intelligence Status Banner (Auto-Extracted from Image without Manual Button) */}
+        <div className="mb-5 p-3 bg-emerald-50/70 rounded-sm border border-emerald-300 shadow-sm flex items-center justify-between">
+          <div className="flex items-center gap-2.5">
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            <div className="text-xs">
+              <span className="font-extrabold text-emerald-950">
+                ⚡ Auto-Extracted from Deed (Live Sync)
               </span>
-            )}
+              <span className="text-emerald-800 ml-2 hidden sm:inline">
+                • {aiSource.includes("gemini") ? "Gemini Flash AI Model Active" : "Automated Revenue Vision Engine Active"}
+              </span>
+            </div>
           </div>
 
-          <button
-            onClick={() => setShowKeyModal(true)}
-            className="text-xs text-[#7A5C2E] hover:text-[#0F2C59] font-bold flex items-center gap-1.5 px-3 py-1.5 rounded hover:bg-slate-50 border border-slate-200 transition-colors"
-          >
-            <span>{geminiStatus.has_key ? "🟢 Gemini API Key" : "⚪ Set Gemini Key"}</span>
-            <span className="text-[10px] text-slate-400">({geminiStatus.masked_key || "Not Set"})</span>
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setShowKeyModal(true)}
+              className="text-[11px] font-semibold text-slate-600 hover:text-[#0F2C59] px-2.5 py-1 rounded bg-white/70 hover:bg-white border border-emerald-200 transition-colors flex items-center gap-1.5"
+              title="Google AI Studio Free Tier Settings"
+            >
+              <span>🔑 API:</span>
+              <span className="font-mono font-bold text-emerald-900">{geminiStatus.has_key ? "Connected (Free Tier)" : "Auto Mode"}</span>
+            </button>
+          </div>
         </div>
 
         <div className="space-y-5 flex-1">

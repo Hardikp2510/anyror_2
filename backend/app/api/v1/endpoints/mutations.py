@@ -35,6 +35,51 @@ async def get_unverified_mutation(survey_no: str = None, village_code: str = Non
         return {"data": None}
         
     entry, s_no, v_code = row
+
+    # Automatic Extraction: Never return empty fields or require manual button click
+    draft = entry.ai_draft_data if isinstance(entry.ai_draft_data, dict) else {}
+    has_date = bool(draft.get("entry_date"))
+    has_owners = bool(draft.get("previous_owners") or draft.get("new_owners"))
+
+    if not has_date or not has_owners:
+        extracted = {}
+        api_key = os.getenv("GEMINI_API_KEY")
+        if entry.scraped_html_text and isinstance(entry.scraped_html_text, dict):
+            html = entry.scraped_html_text
+            extracted = await extract_mutation_from_text(
+                details_text=html.get("details") or html.get("Details") or "",
+                trans_type=html.get("transaction_type") or html.get("Type") or "",
+                officer_remarks=html.get("officer_remarks") or html.get("Officer Remarks") or "",
+                survey_no=str(s_no),
+                api_key=api_key
+            )
+        elif entry.image_file_path:
+            filename = Path(entry.image_file_path).name
+            disk_path = Path("output") / f"survey_{s_no}" / filename
+            if not disk_path.exists():
+                disk_path = Path(entry.image_file_path.lstrip("/"))
+            ocr_res = await extract_mutation_data(str(disk_path), api_key=api_key)
+            entries = ocr_res.get("entries", [])
+            if entries:
+                extracted = entries[0]
+
+        if extracted:
+            updated_draft = {
+                **draft,
+                "mutation_entry_number": str(entry.entry_number),
+                "entry_date": extracted.get("entry_date") or draft.get("entry_date", ""),
+                "transaction_type": extracted.get("transaction_type") or draft.get("transaction_type", ""),
+                "survey_numbers": str(s_no),
+                "previous_owners": extracted.get("previous_owners", []) or draft.get("previous_owners", []),
+                "new_owners": extracted.get("new_owners", []) or draft.get("new_owners", []),
+                "remarks_summary": extracted.get("remarks_summary") or draft.get("remarks_summary", ""),
+                "officer_remarks": extracted.get("officer_remarks") or draft.get("officer_remarks", ""),
+                "ai_source": extracted.get("source", "gemini_auto")
+            }
+            entry.ai_draft_data = fix_mojibake(updated_draft)
+            await db.commit()
+            await db.refresh(entry)
+
     return {
         "data": {
             "id": entry.id,
