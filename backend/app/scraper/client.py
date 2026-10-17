@@ -223,6 +223,31 @@ class AnyRORIntegratedClient:
             except Exception as pdf_err:
                 logger.warning(f"PDF extraction failed: {pdf_err}")
 
+        # 5b. Download Cadastral Plot Map / FMB Sketch if present on the page
+        try:
+            map_locator = self.page.locator("img[id*='Map'], img[id*='FMB'], img[id*='Image1'], img[src*='Map'], img[src*='FMB'], img[src*='DrawMap']")
+            if await map_locator.count() > 0:
+                map_src = await map_locator.first.get_attribute("src")
+                if map_src and "spacer" not in map_src.lower():
+                    if map_src.startswith("/"):
+                        map_url = "https://anyror.gujarat.gov.in" + map_src
+                    elif not map_src.startswith("http"):
+                        map_url = "https://anyror.gujarat.gov.in/" + map_src
+                    else:
+                        map_url = map_src
+                    
+                    map_resp = await self.page.context.request.get(map_url)
+                    map_bytes = await map_resp.body()
+                    map_file = output_dir / f"cadastral_map_{survey}.png"
+                    with open(map_file, "wb") as f:
+                        f.write(map_bytes)
+                    map_client_path = f"/static/images/survey_{survey}/{map_file.name}"
+                    if "Promolgation_Details" in parsed_result.extracted_data:
+                        parsed_result.extracted_data["Promolgation_Details"]["Parcel_Map_Local_Path"] = map_client_path
+                    logger.info("Saved Cadastral Plot Map image", path=map_client_path)
+        except Exception as map_err:
+            logger.warning(f"Cadastral map extraction notice: {map_err}")
+
         # 6. Extract Scanned Handwritten Mutation Deeds
         downloaded_images: list[str] = []
         try:

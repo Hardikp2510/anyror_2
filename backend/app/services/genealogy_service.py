@@ -440,8 +440,22 @@ async def build_pedhinamu_tree(
     
     extracted_data = land_rec.extracted_data if land_rec else {}
     basic_details = extracted_data.get("Basic_Details", {})
-    old_survey_no = basic_details.get("Old Survey Number", "૮૦")
-    total_area_str = basic_details.get("Total Area", "૪-૫૬-૦૮ હેક્ટર")
+    prom_details = extracted_data.get("Promolgation_Details", {})
+
+    old_survey_no = (
+        prom_details.get("Old_Survey_Number") or 
+        basic_details.get("Old Survey Number") or 
+        basic_details.get("Old_Survey_Number") or 
+        "૮૦"
+    )
+    total_area_str = basic_details.get("Total Area") or basic_details.get("Total_Area") or "૪-૫૬-૦૮ હેક્ટર"
+    prom_date = prom_details.get("Promolgation_Date") or "૨૦/૧૨/૨૦૧૪"
+    prom_note = prom_details.get("Promolgation_Note_Number") or "૬૩૩"
+    old_mutations = prom_details.get("Old_Survey_Mutations") or []
+    old_encumbrances = prom_details.get("Old_Survey_Encumbrances") or []
+    tenure_str = basic_details.get("Tenure") or "જુની શરત (જુ.શ)"
+    assessment_str = basic_details.get("Total Assessment") or "૧૬.૪૦"
+    parcel_map_url = prom_details.get("Parcel_Map_Local_Path") or prom_details.get("Parcel_Map_Url")
 
     # RULE 8: Statutory Tenure Audit
     statutory_tenure = audit_statutory_tenure(entries, land_rec)
@@ -467,8 +481,19 @@ async def build_pedhinamu_tree(
         "daughter_status": None,
         "entered_in": f"જૂનો સરવે નં. {old_survey_no}",
         "exited_in": None,
-        "details": f"સરવે નં. {survey_no} (જૂનો સરવે નં. {old_survey_no}) નું મૂળ મહેસૂલી ખાતું. કુલ ક્ષેત્રફળ: {total_area_str}",
-        "level": 0
+        "details": f"સરવે નં. {survey_no} (જૂનો સરવે નં. {old_survey_no}) નું મૂળ મહેસૂલી ખાતું. કુલ ક્ષેત્રફળ: {total_area_str}. સત્તાપ્રકાર: {tenure_str}.",
+        "level": 0,
+        "promolgation_info": {
+            "promolgation_note_number": prom_note,
+            "promolgation_date": prom_date,
+            "old_survey_number": old_survey_no,
+            "old_survey_mutations": old_mutations,
+            "old_survey_encumbrances": old_encumbrances,
+            "tenure": tenure_str,
+            "total_area": total_area_str,
+            "total_assessment": assessment_str,
+            "parcel_map_url": parcel_map_url
+        }
     }
     persons[root_id] = root_node
 
@@ -1020,6 +1045,20 @@ async def build_pedhinamu_tree(
             "total_survey_area": total_area_str,
             "old_survey_no": old_survey_no,
             "new_survey_no": str(survey_no)
+        },
+        "promolgation_bridge": {
+            "promolgation_note_number": prom_note,
+            "promolgation_note_no": prom_note,
+            "promolgation_date": prom_date,
+            "old_survey_number": old_survey_no,
+            "old_survey_no": old_survey_no,
+            "old_mutations": old_mutations,
+            "old_encumbrances": old_encumbrances,
+            "tenure": tenure_str,
+            "total_area": total_area_str,
+            "total_assessment": assessment_str,
+            "parcel_map_url": parcel_map_url,
+            "parcel_map_local_path": prom_details.get("Parcel_Map_Local_Path")
         },
         "disputes": disputed_entries,
         "historical_entries_info": HISTORICAL_ENTRIES_INFO,

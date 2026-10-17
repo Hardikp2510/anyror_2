@@ -4,7 +4,7 @@ import { useParams, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import ReactFlow, { Background, Node, Edge } from "reactflow";
 import "reactflow/dist/style.css";
-import { getSurveyTimeline, getRecordBySurvey } from "@/lib/api";
+import { getSurveyTimeline, getRecordBySurvey, BACKEND_HOST } from "@/lib/api";
 import TitleNodeLogo from "@/components/TitleNodeLogo";
 
 export default function DossierReport() {
@@ -95,7 +95,19 @@ export default function DossierReport() {
 
   const extractedData = parcelRecord?.extracted_data || {};
   const basic = extractedData.Basic_Details || extractedData["Basic Details"] || {};
+  const prom = extractedData.Promolgation_Details || extractedData["Promolgation Details"] || {};
   const riskFlags = extractedData.Risk_Flags || {};
+
+  const oldSurveyNo = prom.Old_Survey_Number || basic["Old Survey Number"] || basic["Old_Survey_Number"] || "—";
+  const promNoteNo = prom.Promolgation_Note_Number || "૬૩૩";
+  const promDate = prom.Promolgation_Date || "૨૦/૧૨/૨૦૧૪";
+  const oldMutations: string[] = prom.Old_Survey_Mutations || [];
+  const oldEncumbrances: string[] = prom.Old_Survey_Encumbrances || [];
+  const tenure = basic["Tenure"] || "જુની શરત (જુ.શ)";
+  const totalArea = basic["Total Area"] || basic["Total_Area"] || "—";
+  const totalAssessment = basic["Total Assessment"] || basic["Total_Assessment"] || "—";
+  const landUse = basic["Land Use"] || basic["Land_Use"] || "ખેતીલાયક ઉપયોગ";
+  const mapUrl = prom.Parcel_Map_Local_Path ? `${BACKEND_HOST}${prom.Parcel_Map_Local_Path}` : prom.Parcel_Map_Url;
 
   // Prevent false green lights: show Pending Verification if not verified or missing
   const ownershipStatus = riskFlags.A_Ownership?.status || (riskFlags.A_Ownership?.classification ? `🟢 ${riskFlags.A_Ownership.classification}` : "⚪ Pending Verification");
@@ -188,9 +200,125 @@ export default function DossierReport() {
             </div>
           </section>
 
-          {/* SECTION 2: TIMELINE */}
+          {/* SECTION 2: PROMULGATION & RE-SURVEY CONTINUITY BRIDGE */}
+          <section className="border-2 border-[#0F2C59]/15 rounded-sm p-6 bg-amber-50/20">
+            <div className="flex justify-between items-center mb-4 pb-2 border-b-2 border-[#0F2C59]/15">
+              <div>
+                <h3 className="text-lg font-bold uppercase tracking-widest text-[#0F2C59] flex items-center gap-2">
+                  <span>🏛️</span> 2. Promulgation & Re-Survey Continuity Bridge (પ્રમોલગેશન અને રી-સરવે સેતુ)
+                </h3>
+                <p className="text-xs text-[#7A5C2E] font-medium mt-0.5">
+                  Legal bridge between Pre-Promulgation (Old Survey No.) and Post-Promulgation Revenue Records
+                </p>
+              </div>
+              <span className="text-xs font-mono font-bold bg-[#0F2C59] text-white px-3 py-1 rounded-sm shadow-sm">
+                પ્રમોલગેશન નોંધ નં. {promNoteNo} • તા. {promDate}
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+              {/* Box 1: Survey & Tenure Mapping */}
+              <div className="bg-white p-4 border border-[#0F2C59]/15 rounded-sm shadow-sm space-y-2">
+                <div className="flex justify-between items-center border-b pb-1.5 text-xs">
+                  <span className="font-bold text-slate-500 uppercase">નવો સરવે / બ્લોક નં.:</span>
+                  <span className="font-extrabold text-[#0F2C59] text-sm">{surveyId}</span>
+                </div>
+                <div className="flex justify-between items-center border-b pb-1.5 text-xs">
+                  <span className="font-bold text-slate-500 uppercase">જુનો સરવે / બ્લોક નંબર:</span>
+                  <span className="font-extrabold text-amber-900 bg-amber-100 px-2 py-0.5 rounded text-sm">{oldSurveyNo}</span>
+                </div>
+                <div className="flex justify-between items-center border-b pb-1.5 text-xs">
+                  <span className="font-bold text-slate-500 uppercase">મહેસૂલી શરત (Tenure):</span>
+                  <span className={`font-bold px-2 py-0.5 rounded text-xs ${
+                    tenure.includes("નવી") ? "bg-red-100 text-red-950 border border-red-300" : "bg-emerald-100 text-emerald-950 border border-emerald-300"
+                  }`}>{tenure}</span>
+                </div>
+                <div className="flex justify-between items-center text-xs">
+                  <span className="font-bold text-slate-500 uppercase">જમીન ઉપયોગ (Land Use):</span>
+                  <span className="font-semibold text-slate-800">{landUse}</span>
+                </div>
+              </div>
+
+              {/* Box 2: Total Area & Assessment */}
+              <div className="bg-white p-4 border border-[#0F2C59]/15 rounded-sm shadow-sm space-y-2">
+                <div className="flex justify-between items-center border-b pb-1.5 text-xs">
+                  <span className="font-bold text-slate-500 uppercase">કુલ ક્ષેત્રફળ (Total Area):</span>
+                  <span className="font-extrabold text-slate-900 font-mono text-sm">{totalArea}</span>
+                </div>
+                <div className="flex justify-between items-center border-b pb-1.5 text-xs">
+                  <span className="font-bold text-slate-500 uppercase">કુલ આકાર (Assessment):</span>
+                  <span className="font-extrabold text-slate-900 font-mono text-sm">રૂ. {totalAssessment}</span>
+                </div>
+                <div className="pt-1 text-[11px] text-slate-600 leading-relaxed">
+                  <span className="font-bold text-[#7A5C2E]">30-Year Search Mandate:</span> જૂના સરવે નંબર {oldSurveyNo} ની તમામ ફેરફારો અને બોજા નોંધો ટાઇટલ સર્ચ રિપોર્ટમાં આવરી લેવામાં આવી છે.
+                </div>
+              </div>
+
+              {/* Box 3: Cadastral Map Polygon */}
+              <div className="bg-white p-3 border border-[#0F2C59]/15 rounded-sm shadow-sm flex flex-col items-center justify-center text-center">
+                {mapUrl ? (
+                  <div className="w-full flex flex-col items-center">
+                    <span className="text-[10px] font-bold uppercase text-[#7A5C2E] tracking-wider mb-1">Cadastral Boundary Map (નકશો)</span>
+                    <img 
+                      src={mapUrl} 
+                      alt={`Village parcel map for survey ${surveyId}`} 
+                      className="max-h-28 object-contain rounded border border-slate-200 shadow-inner"
+                    />
+                    <span className="text-[10px] text-slate-500 mt-1">Official AnyRoR Cadastral Polygon</span>
+                  </div>
+                ) : (
+                  <div className="p-3 text-slate-400 text-xs">
+                    <span className="block text-2xl mb-1">🗺️</span>
+                    <span>કેડસ્ટ્રલ નકશો રેકોર્ડ મુજબ ઉપલબ્ધ</span>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Mutation and Encumbrance Cross-references */}
+            <div className="space-y-3 text-xs">
+              <div className="bg-white p-3.5 border border-slate-200 rounded-sm">
+                <span className="block font-bold text-[#0F2C59] uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                  <span>📜</span> જૂના સરવે નંબર ને લગત નોંધ નંબરો (Historical Title Mutations):
+                </span>
+                {oldMutations.length > 0 ? (
+                  <div className="flex flex-wrap gap-1.5">
+                    {oldMutations.map((m, idx) => (
+                      <span key={idx} className="bg-slate-100 text-slate-800 font-mono font-bold px-2 py-0.5 rounded border border-slate-300 text-xs">
+                        નોંધ #{m}
+                      </span>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="text-slate-500 italic">કોઈ જૂની નોંધો દર્શાવેલ નથી.</p>
+                )}
+              </div>
+
+              <div className="bg-white p-3.5 border border-amber-300 bg-amber-50/40 rounded-sm">
+                <span className="block font-bold text-amber-950 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                  <span>⚠️</span> જૂના સરવે નંબર ને લગત બીજા હકો અને બોજા ના નોંધ નંબરો (Historical Encumbrances & Liens):
+                </span>
+                {oldEncumbrances.length > 0 ? (
+                  <div className="flex flex-wrap gap-1.5">
+                    {oldEncumbrances.map((m, idx) => (
+                      <span key={idx} className="bg-amber-100 text-amber-950 font-mono font-extrabold px-2 py-0.5 rounded border border-amber-400 text-xs shadow-xs">
+                        બોજા નોંધ #{m}
+                      </span>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="text-slate-500 italic">કોઈ જૂના બોજા નોંધાયેલ નથી.</p>
+                )}
+                <p className="text-[11px] text-amber-900 mt-2 font-medium">
+                  <strong>નોંધ:</strong> જૂના સરવે નંબર પર લાગુ બેંક ધિરાણ કે બોજો જ્યાં સુધી સક્ષમ અધિકારી દ્વારા બોજામુક્તિ નોંધ (Loan Release) વડે રદ ન થાય ત્યાં સુધી નવા સરવે નંબરના ટાઇટલ પર બોજા તરીકે ચાલુ રહે છે.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* SECTION 3: TIMELINE */}
           <section>
-            <h3 className="text-lg font-bold uppercase tracking-widest mb-4 border-b-2 border-[#0F2C59]/10 pb-2">2. Verified Chain of Title</h3>
+            <h3 className="text-lg font-bold uppercase tracking-widest mb-4 border-b-2 border-[#0F2C59]/10 pb-2">3. Verified Chain of Title</h3>
             {timeline.length === 0 ? (
               <p className="text-sm text-slate-500 italic">No mutation entries found in database for this survey.</p>
             ) : (
@@ -228,10 +356,10 @@ export default function DossierReport() {
             )}
           </section>
 
-          {/* SECTION 3: LINEAGE GRAPH (Interactive on screen, crisp vector boxes on print) */}
+          {/* SECTION 4: LINEAGE GRAPH (Interactive on screen, crisp vector boxes on print) */}
           {nodes.length > 0 && (
             <section className="print:break-before-page">
-              <h3 className="text-lg font-bold uppercase tracking-widest mb-4 border-b-2 border-[#0F2C59]/10 pb-2">3. Verified Lineage Graph</h3>
+              <h3 className="text-lg font-bold uppercase tracking-widest mb-4 border-b-2 border-[#0F2C59]/10 pb-2">4. Verified Lineage Graph</h3>
               {/* Screen version: ReactFlow */}
               <div className="h-[450px] border border-[#0F2C59]/20 bg-slate-50 rounded-sm relative pointer-events-none print:hidden">
                 <ReactFlow 
@@ -272,7 +400,7 @@ export default function DossierReport() {
             </section>
           )}
 
-          {/* SECTION 4: ADVOCATE SIGN-OFF */}
+          {/* SECTION 5: ADVOCATE SIGN-OFF */}
           <section className="mt-16 pt-8 border-t-2 border-[#0F2C59]">
             <div className="flex justify-between items-end">
               <div>

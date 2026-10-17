@@ -289,6 +289,15 @@ export default function TreeEditor() {
             </span>
           </div>
 
+          {treeData?.promolgation_bridge?.old_survey_no && (
+            <div className="flex items-center gap-1.5">
+              <span className="font-bold text-amber-900 uppercase tracking-wider text-[11px]">જૂનો સરવે:</span>
+              <span className="bg-amber-100 text-amber-950 font-mono font-bold px-2 py-0.5 rounded border border-amber-300">
+                🏛️ {treeData.promolgation_bridge.old_survey_no} (નોંધ #{treeData.promolgation_bridge.promolgation_note_no})
+              </span>
+            </div>
+          )}
+
           {treeData?.statutory_tenure?.tenure_type && (
             <div className="flex items-center gap-1.5">
               <span className="font-bold text-indigo-900 uppercase tracking-wider text-[11px]">મહેસૂલી શરત:</span>
@@ -692,6 +701,103 @@ export default function TreeEditor() {
                   })}
                 </div>
               </div>
+
+              {/* Promulgation & Re-Survey Continuity Bridge Section */}
+              {treeData?.promolgation_bridge && (
+                <div className="bg-white border border-amber-300/80 rounded-sm p-6 shadow-sm bg-gradient-to-br from-white to-amber-50/20">
+                  <div className="flex justify-between items-center mb-4 pb-2 border-b border-amber-200">
+                    <h3 className="font-bold text-sm text-[#0F2C59] uppercase tracking-wider flex items-center gap-2">
+                      🏛️ પ્રમોલગેશન અને રી-સરવે સેતુ (Promulgation Bridge & 30-Year Continuity)
+                    </h3>
+                    <span className="text-xs font-bold text-amber-950 bg-amber-100 px-3 py-1 rounded border border-amber-300">
+                      નોંધ નં. {treeData.promolgation_bridge.promolgation_note_no} • તા. {treeData.promolgation_bridge.promolgation_date}
+                    </span>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 text-xs">
+                    <div className="bg-amber-50/60 p-3.5 rounded border border-amber-200 space-y-1.5">
+                      <div className="flex justify-between">
+                        <span className="text-slate-600 font-semibold">નવો સરવે / બ્લોક નં.:</span>
+                        <span className="font-bold text-[#0F2C59]">{surveyId}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-slate-600 font-semibold">જુનો સરવે / બ્લોક નંબર:</span>
+                        <span className="font-extrabold text-amber-900 bg-amber-100 px-1.5 py-0.5 rounded">{treeData.promolgation_bridge.old_survey_no}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-slate-600 font-semibold">મહેસૂલી શરત:</span>
+                        <span className="font-bold text-emerald-800">{treeData.promolgation_bridge.tenure}</span>
+                      </div>
+                    </div>
+
+                    <div className="bg-slate-50 p-3.5 rounded border border-slate-200 space-y-1.5">
+                      <div className="flex justify-between">
+                        <span className="text-slate-600 font-semibold">કુલ ક્ષેત્રફળ:</span>
+                        <span className="font-mono font-bold text-slate-900">{treeData.promolgation_bridge.total_area}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-slate-600 font-semibold">કુલ આકાર:</span>
+                        <span className="font-mono font-bold text-slate-900">રૂ. {treeData.promolgation_bridge.total_assessment}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-slate-600 font-semibold">જમીન ઉપયોગ:</span>
+                        <span className="font-semibold text-slate-800">{treeData.promolgation_bridge.land_use}</span>
+                      </div>
+                    </div>
+
+                    <div className="bg-white p-3 rounded border border-slate-200 flex flex-col items-center justify-center text-center">
+                      {(treeData.promolgation_bridge.parcel_map_local_path || treeData.promolgation_bridge.parcel_map_url) ? (
+                        <div className="flex flex-col items-center">
+                          <span className="text-[10px] font-bold text-[#7A5C2E] uppercase mb-1">Cadastral Boundary Polygon</span>
+                          <img 
+                            src={treeData.promolgation_bridge.parcel_map_local_path ? `${BACKEND_HOST}${treeData.promolgation_bridge.parcel_map_local_path}` : treeData.promolgation_bridge.parcel_map_url} 
+                            alt="Cadastral Map" 
+                            className="max-h-24 object-contain rounded border border-slate-200"
+                          />
+                        </div>
+                      ) : (
+                        <div className="text-slate-400 text-xs py-2">
+                          <span className="text-2xl block mb-1">🗺️</span>
+                          <span>કેડસ્ટ્રલ નકશો રેકોર્ડ મુજબ ઉપલબ્ધ</span>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Badges for old mutations & encumbrances */}
+                  <div className="space-y-2.5 text-xs">
+                    {treeData.promolgation_bridge.old_mutations?.length > 0 && (
+                      <div className="p-3 bg-white border border-slate-200 rounded">
+                        <span className="block font-bold text-[#0F2C59] mb-1.5">
+                          📜 જૂના સરવે નંબર ને લગત નોંધ નંબરો ({treeData.promolgation_bridge.old_mutations.length}):
+                        </span>
+                        <div className="flex flex-wrap gap-1">
+                          {treeData.promolgation_bridge.old_mutations.map((m: string, mIdx: number) => (
+                            <span key={mIdx} className="bg-slate-100 text-slate-800 font-mono font-bold px-2 py-0.5 rounded border border-slate-300 text-[11px]">
+                              #{m}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {treeData.promolgation_bridge.old_encumbrances?.length > 0 && (
+                      <div className="p-3 bg-amber-50/70 border border-amber-300 rounded">
+                        <span className="block font-bold text-amber-950 mb-1.5">
+                          ⚠️ જૂના સરવે નંબર ને લગત બીજા હકો અને બોજા ના નોંધ નંબરો ({treeData.promolgation_bridge.old_encumbrances.length}):
+                        </span>
+                        <div className="flex flex-wrap gap-1">
+                          {treeData.promolgation_bridge.old_encumbrances.map((m: string, mIdx: number) => (
+                            <span key={mIdx} className="bg-amber-100 text-amber-950 font-mono font-bold px-2 py-0.5 rounded border border-amber-400 text-[11px]">
+                              બોજા #{m}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
 
               {/* Statutory Tenure & Restrictions Section */}
               {treeData?.statutory_tenure && (
