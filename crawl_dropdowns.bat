@@ -24,6 +24,13 @@ if %ERRORLEVEL% neq 0 (
     timeout /t 3 /nobreak >nul
 )
 
+:: Ensure python dependencies exist on host
+python -c "import selenium, psycopg2" >nul 2>&1
+if %ERRORLEVEL% neq 0 (
+    echo [*] Installing required Python crawler packages (selenium, psycopg2-binary)...
+    pip install selenium psycopg2-binary
+)
+
 echo.
 echo ====================================================================
 echo Select Crawl Scope:
